@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="133px" height="83px" viewBox="0 0 133 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>exchange</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="exchange" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
+            <rect id="Rectangle-132" stroke="#93C4D2" sketch:type="MSShapeGroup" x="0" y="0" width="131" height="81"></rect>
+            <rect id="Rectangle-87" fill="#93C4D2" sketch:type="MSShapeGroup" x="65" y="0" width="67" height="81"></rect>
+            <text id="B" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="59.7916667" font-weight="260" fill="#FFFFFF">
+                <tspan x="79.7579976" y="62">B</tspan>
+            </text>
+            <path d="M95.1786325,67.75 L95.1786325,61.2307976 L95.1786325,67.75 Z M102.623077,67.75 L102.623077,61.2307976 L102.623077,67.75 Z" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M102.623077,20.75 L102.623077,14.2307976 L102.623077,20.75 Z M95.1786325,20.75 L95.1786325,14.2307976 L95.1786325,20.75 Z" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <text id="€" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="60" font-weight="260" fill="#93C4D2">
+                <tspan x="16" y="62">€</tspan>
+            </text>
+            <path d="M70,48 L70,34 L78,41 L70,48 Z M65,39 L70,39 L70,43 L65,43 L65,39 Z" id="Triangle-3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M60,48 L60,34 L52,41 L60,48 Z M60,39 L65,39 L65,43 L60,43 L60,39 Z" id="Triangle-3" fill="#93C4D2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

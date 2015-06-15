@@ -1,0 +1,19 @@
+<svg width="133" height="83" viewBox="0 0 133 83" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        exchange
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#93C4D2" d="M1 1h131v81H1z"/>
+        <path fill="#93C4D2" d="M66 1h67v81H66z"/>
+        <text font-family="Avenir Next" font-size="59.792" font-weight="260" fill="#FFF" transform="translate(1 1)">
+            <tspan x="79.758" y="62">B</tspan>
+        </text>
+        <path d="M96.18 68.75v-6.52 6.52zm7.443 0v-6.52 6.52z" stroke="#FFF" stroke-width="2" stroke-linecap="square"/>
+        <path d="M103.623 21.75v-6.52 6.52zm-7.444 0v-6.52 6.52z" stroke="#FFF" stroke-width="2" stroke-linecap="square"/>
+        <text font-family="Avenir Next" font-size="60" font-weight="260" fill="#93C4D2" transform="translate(1 1)">
+            <tspan x="16" y="62">€</tspan>
+        </text>
+        <path d="M71 49V35l8 7-8 7zm-5-9h5v4h-5v-4z" id="Triangle-3" fill="#FFF"/>
+        <path d="M61 49V35l-8 7 8 7zm0-9h5v4h-5v-4z" fill="#93C4D2"/>
+    </g>
+</svg>

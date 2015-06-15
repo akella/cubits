@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="80px" viewBox="0 0 100 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>sign-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="sign-up" sketch:type="MSLayerGroup">
+            <rect id="Rectangle-126" stroke="#93C4D2" sketch:type="MSShapeGroup" x="0" y="0" width="100" height="17" rx="3"></rect>
+            <rect id="Rectangle-126" stroke="#93C4D2" sketch:type="MSShapeGroup" x="0" y="21" width="100" height="17" rx="3"></rect>
+            <rect id="Rectangle-126" stroke="#93C4D2" sketch:type="MSShapeGroup" x="0" y="42" width="100" height="17" rx="3"></rect>
+            <rect id="Rectangle-126" fill="#93C4D2" sketch:type="MSShapeGroup" x="0" y="63" width="100" height="17" rx="3"></rect>
+            <text id="NAME" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="10" font-weight="260" fill="#343558">
+                <tspan x="5" y="12">NAME</tspan>
+            </text>
+            <text id="EMAIL" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="10" font-weight="260" fill="#343558">
+                <tspan x="5" y="33">EMAIL</tspan>
+            </text>
+            <text id="••••••" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="10" font-weight="260" fill="#343558">
+                <tspan x="5" y="54">••••••</tspan>
+            </text>
+            <text id="SIGNUP" sketch:type="MSTextLayer" font-family="Avenir Next" font-size="10" font-weight="526" sketch:alignment="middle" fill="#FFFFFF">
+                <tspan x="31.835" y="75">SIGNUP</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

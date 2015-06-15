@@ -1,0 +1,131 @@
+.toparea
+  position: relative
+  margin-bottom: 118px
+  z-index: 0
+  min-height: 100vh
+  color: #FFF
+  +clr
+
+.toparea__bg
+  position: absolute
+  z-index: 0
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow: hidden
+  background: $lightblue
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    height: 100%
+    width: percentage(900/1440)
+    background: #C1A988 img-url('toparea-iphone.jpg') no-repeat center center
+    background-size: cover
+  &:after
+    content: ""
+    position: absolute
+    z-index: 1
+    top: 0
+    right: -140px
+    bottom: 0
+    width: percentage(900/1440)
+    min-width: 840px
+    background: $lightblue
+    +skew
+
+.toparea__content
+  float: right
+  position: relative
+  z-index: 1
+  padding: 25px 0 40px
+  margin-right: percentage(225/1440)
+  max-width: 404px
+  .bold-title
+    margin-bottom: 3px
+  .list-circle
+    margin-left: 45px
+  .form
+    margin-top: 50px
+
+
+.step
+  text-align: center
+  +f(m, 18)
+  line-height: 1.333
+  color: $darkblue
+  a
+    color: inherit
+
+.step__icon
+  font-size: 0
+  min-height: 83px
+  margin-bottom: 18px
+
+.step__title
+  display: block
+  margin-bottom: 19px
+  +f(demi-b, 28)
+  text-transform: uppercase
+
+.step__text
+  max-width: 200px
+  margin: auto
+
+
+.usage-map
+  float: left
+  width: percentage(440/960)
+  img
+    margin-left: -70px
+
+
+.currencies
+  float: right
+  width: percentage(480/960)
+  +clr
+  .icon
+    font-size: 12px
+  .icon-skrill
+    font-size: 13px
+
+.currencies__left
+  float: left
+  width: percentage(240/480)
+
+.currencies__right
+  float: right
+  width: percentage(200/480)
+
+
+.small-table
+  table-layout: fixed
+  +f(demi-b, 15)
+  line-height: 1.55
+
+  caption
+    margin-bottom: 4px
+    +f(ul, 18)
+    line-height: 1.38
+    text-transform: uppercase
+    text-align: left
+
+  td, th
+    padding: 8px 0
+    &:last-child
+      padding-right: 0
+    &:first-child
+      padding-left: 0
+
+  tr
+    border: 1px solid $lightblue
+    border-width: 1px 0
+
+  + .small-text
+    margin-top: 12px
+
+.small-table_mod
+  text-align: center
+  & + &
+    margin-top: 51px

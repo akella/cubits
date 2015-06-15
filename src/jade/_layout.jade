@@ -1,0 +1,17 @@
+include _mixins
+doctype html
+html
+  head
+    include _head
+  body
+
+    //BEGIN out
+    .out
+      block header
+        include _header
+      
+      block content
+    //END out
+
+    //LOAD SCRIPTS
+    script(src="js/main.js")

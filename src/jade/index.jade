@@ -1,0 +1,142 @@
+extends _layout
+
+block title
+  title Index
+
+block header
+  //BEGIN toparea
+  .toparea
+    .toparea__bg
+    
+    include _header
+    
+    .toparea__content
+      h1.bold-title
+        | Europes number one  bitcoin service
+
+      ul.list-circle
+        li As easy to use as online banking
+        li Super Secure: <a href="#">Read it all here…</a>
+        li Risk-Free: sell your Bitcoins anytime
+
+      form.form.form_white-bounds
+        h3.form__title
+          | <b>Signup</b> for a <b>wallet</b>
+
+        .field
+          input.input(type="text", placeholder="First name")
+        .field
+          input.input(type="text", placeholder="Last name")
+        p.form__text
+          | Please enter your real name to perform financial operations
+        
+        .field
+          input.input(type="email", placeholder="Email")
+        .field
+          input.input(type="password", placeholder="Desired password")
+          
+        button.btn(type="submit")
+          | Create account
+  //END toparea
+
+block content
+  //BEGIN principle
+  section.section
+    .l-center
+      h2.title
+        b The Cubits principle:
+        br
+        | we make bitcoin simple
+
+      .l-columns.three
+        .l-column.step
+          .step__icon
+            img(src="img/svg/sign-up.svg", alt="")
+          strong.step__title
+            | 1. Sign-up
+          p.step__text
+            | Use the form above to <a href="#">sign up</a> for your own Cubits wallet. Easy.
+            
+        .l-column.step
+          .step__icon
+            img(src="img/svg/verification.svg", alt="")
+          strong.step__title
+            | 2. Verification
+          p.step__text
+            | We’ve built the easiest identity verification ever. Just one SMS.
+      
+        .l-column.step
+          .step__icon
+            img(src="img/svg/exchange.svg", alt="")
+          strong.step__title
+            | 3. Buy bitcoin
+          p.step__text
+            | Instantly buy Bitcoins from your bankaccount. It couldn’t be simpler.
+
+      hr.divider.divider_mrg80
+
+      .usage-map
+        h2.title
+          b Cubits usage 
+          br
+          | worldwide
+
+        img(src="img/cubits-map.png", alt="")
+
+        p.small-text
+          Buy Bitcoin from all over the world  <br> (except from U.S.A.)
+
+      .currencies
+        h2.title
+          b Buy and sell bitcoins 
+          br
+          | to 17 currencies
+
+        .currencies__left
+          table.small-table
+            caption Supported currencies
+            tr
+              td EUR
+              td SEK
+              td HUF
+              td USD
+              td JPY
+            tr
+              td GBP 
+              td NOK
+              td HRK
+              td CAD
+              td
+            tr
+              td CHF
+              td CZK
+              td RSD
+              td TRY
+              td
+            tr
+              td DKK
+              td PLN
+              td AUD
+              td RUB
+              td
+
+          p.small-text
+            | Deposits from other currencies can  <br> be converted automatically
+        
+        .currencies__right
+          table.small-table.small-table_mod
+            caption Payment methods
+            tr
+              td: i.icon.icon-sofort
+              td: i.icon.icon-skrill
+              td: i.icon.icon-okpay
+
+          table.small-table.small-table_mod
+            caption Banking standards
+            tr
+              td: i.icon.icon-swift
+              td: i.icon.icon-sepa
+              td
+
+      .clearfix
+  //END principle

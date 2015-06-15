@@ -1,0 +1,23 @@
+<svg width="100" height="80" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        sign-up
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-126" stroke="#93C4D2" width="100" height="17" rx="3"/>
+        <rect id="Rectangle-126" stroke="#93C4D2" y="21" width="100" height="17" rx="3"/>
+        <rect id="Rectangle-126" stroke="#93C4D2" y="42" width="100" height="17" rx="3"/>
+        <rect fill="#93C4D2" y="63" width="100" height="17" rx="3"/>
+        <text font-family="Avenir Next" font-size="10" font-weight="260" fill="#343558">
+            <tspan x="5" y="12">NAME</tspan>
+        </text>
+        <text font-family="Avenir Next" font-size="10" font-weight="260" fill="#343558">
+            <tspan x="5" y="33">EMAIL</tspan>
+        </text>
+        <text font-family="Avenir Next" font-size="10" font-weight="260" fill="#343558">
+            <tspan x="5" y="54">••••••</tspan>
+        </text>
+        <text font-family="Avenir Next" font-size="10" font-weight="526" fill="#FFF">
+            <tspan x="31.835" y="75">SIGNUP</tspan>
+        </text>
+    </g>
+</svg>

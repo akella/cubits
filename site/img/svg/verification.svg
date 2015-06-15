@@ -1,0 +1,15 @@
+<svg width="131" height="83" viewBox="0 0 131 83" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        verification
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M102.547 74.748C92.063 79.318 79.287 82 65.5 82 29.878 82 1 64.09 1 42S29.878 2 65.5 2 130 19.91 130 42c0 10.436-6.444 19.94-17 27.06V79l-10.453-4.252z" stroke="#93C4D2"/>
+        <text font-family="Avenir Next" font-size="12" font-weight="260" fill="#343558" transform="translate(1)">
+            <tspan x="26.11" y="41">IDENT-CODE</tspan> <tspan x="46" y="57">#####</tspan>
+        </text>
+        <path d="M107 24c6.627 0 12-5.373 12-12s-5.373-12-12-12-12 5.373-12 12 5.373 12 12 12z" fill="#93C4D2"/>
+        <text font-family="Avenir Next" font-size="10" font-weight="526" fill="#FFF" transform="translate(1)">
+            <tspan x="103" y="15">1</tspan>
+        </text>
+    </g>
+</svg>

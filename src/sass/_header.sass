@@ -1,0 +1,66 @@
+.header
+  height: 100px
+  line-height: 100px
+  box-sizing: border-box
+  padding: 0 50px 0 60px
+  color: #FFF
+  +clr
+
+.header__left
+  float: left
+
+.header__right
+  float: right
+
+
+.logo
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  top: -1px
+  line-height: 1
+  +hide-text
+  background: img-url('svg/logo.svg') no-repeat center center
+  width: 143px
+  height: 40px
+
+
+.nav
+  font-size: 0
+
+.nav__menu
+  display: inline-block
+  vertical-align: middle
+
+.nav__login
+  display: inline-block
+  vertical-align: middle
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    margin: 0 15px
+    width: 1px
+    height: 50px
+    background: #EFEFEF
+    opacity: 0.5
+
+.nav__list-item
+  display: inline-block
+  vertical-align: middle
+  margin-right: 15px
+  &:last-child
+    margin-right: 0
+
+.nav__link
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  top: 1px
+  +f(m, 13)
+  line-height: 1.5
+  color: inherit
+  text-transform: uppercase
+  text-decoration: none
+  > b, strong
+    +f(b)
