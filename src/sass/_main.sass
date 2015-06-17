@@ -185,6 +185,18 @@
     padding: 110px 0
 
 
+.gray-wrapper
+  margin: 60px 0
+  padding: 60px 0 120px
+  position: relative
+  background: $gray
+  > .divider:first-child
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+
+
 .interface
   margin: 40px -20px 0
   +clr
@@ -427,3 +439,68 @@
 .expert__contact
   display: inline-block
   margin-top: 1.38em
+
+
+.member
+  display: table
+  width: 100%
+  table-layout: fixed
+
+.member__pic
+  display: table-cell
+  vertical-align: top
+  width: 220px
+  overflow: hidden
+  img
+    display: block
+    width: 100%
+    max-width: 100%
+
+.member__info
+  display: table-cell
+  vertical-align: middle
+  padding-left: percentage(65/640)
+
+.member__quote
+  min-height: 260px
+  position: relative
+  font-size: 35px
+  line-height: 1.22
+  text-transform: uppercase
+  box-sizing: border-box
+  padding-bottom: 35px
+  b, strong
+    +f(b)
+  .member__cite
+    position: absolute
+    bottom: 0
+    left: 0
+
+.member__cite
+  +f(m, 14)
+  font-style: normal
+  display: block
+  text-transform: none
+
+.member_mrg
+  margin-top: 60px
+  margin-bottom: 60px
+
+
+.text
+  +f(m, 18)
+  line-height: 1.7
+  p, ul, ol
+    margin: 1.4em 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  blockquote
+    display: block
+    width: 60%
+    margin: 80px 0 80px -50px
+    text-transform: uppercase
+    +f(r, 28)
+    line-height: 1.35
+    color: $lightblue

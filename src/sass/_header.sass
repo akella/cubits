@@ -1,10 +1,21 @@
 .header
   height: 100px
   line-height: 100px
+  margin-bottom: 70px
   box-sizing: border-box
   padding: 0 50px 0 60px
   color: #FFF
+  background: $darkblue
   +clr
+
+.header_transparent
+  background: none
+  position: relative
+  z-index: 1
+  margin-bottom: 0
+  .nav__link
+    &:hover
+      color: $darkblue
 
 .header__left
   float: left
@@ -65,7 +76,7 @@
   > b, strong
     +f(b)
   &:hover
-    color: $darkblue
+    color: $lightblue
   &:active,
   &.is-active
     color: $yellow

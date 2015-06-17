@@ -9,6 +9,9 @@
   font-style: normal;
 }
 
+$icon-gears: "\e60a";
+$icon-heart-bitcoin: "\e609";
+$icon-safe: "\e60b";
 $icon-fb: "\e606";
 $icon-gplus: "\e607";
 $icon-tw: "\e608";
@@ -34,6 +37,15 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gears:before {
+  content: "\e60a";
+}
+.icon-heart-bitcoin:before {
+  content: "\e609";
+}
+.icon-safe:before {
+  content: "\e60b";
+}
 .icon-fb:before {
   content: "\e606";
 }

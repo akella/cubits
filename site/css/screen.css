@@ -23,6 +23,12 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: 'icons'; src: url("../fonts/icons.eot?dmsddr"); src: url("../fonts/icons.eot?#iefixdmsddr") format("embedded-opentype"), url("../fonts/icons.ttf?dmsddr") format("truetype"), url("../fonts/icons.woff?dmsddr") format("woff"), url("../fonts/icons.svg?dmsddr#icons") format("svg"); font-weight: normal; font-style: normal; }
 .icon { font-family: 'icons'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
+.icon-gears:before { content: "\e60a"; }
+
+.icon-heart-bitcoin:before { content: "\e609"; }
+
+.icon-safe:before { content: "\e60b"; }
+
 .icon-fb:before { content: "\e606"; }
 
 .icon-gplus:before { content: "\e607"; }
@@ -99,10 +105,14 @@ b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-w
 
 .title { display: block; margin-bottom: 40px; text-align: center; font-family: "AvenirNext-UltraLight", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; line-height: 1.357; text-transform: uppercase; color: #343558; }
 .title > b, .title strong { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
+.title .icon { display: block; margin: auto; font-size: 68px; margin-bottom: 60px; }
 
 .title_white { color: #FFF; }
 
 .title_mrg0 { margin: 0; }
+
+.title_lrg { margin-bottom: 70px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 45px; letter-spacing: 0.027em; line-height: 1.35; }
+.title_lrg .icon { margin-bottom: 40px; }
 
 .small-text { font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.35; color: #343558; }
 
@@ -151,6 +161,8 @@ b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-w
 
 .divider_mrg60 { margin-top: 60px; margin-bottom: 60px; }
 
+.divider_md { max-width: 830px; }
+
 .clearfix { display: table; width: 100%; clear: both; }
 
 .btn { display: inline-block; position: relative; height: 45px; padding: 0 20px; background: none; box-sizing: border-box; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; letter-spacing: 0.07em; text-align: center; text-transform: uppercase; color: #343558; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
@@ -182,8 +194,11 @@ a.btn_lrg { line-height: 60px; }
 .social-btn > span { display: inline-block; vertical-align: middle; }
 .social-btn:hover { color: #F8CF5E; }
 
-.header { height: 100px; line-height: 100px; box-sizing: border-box; padding: 0 50px 0 60px; color: #FFF; }
+.header { height: 100px; line-height: 100px; margin-bottom: 70px; box-sizing: border-box; padding: 0 50px 0 60px; color: #FFF; background: #343558; }
 .header:after { content: " "; display: table; clear: both; }
+
+.header_transparent { background: none; position: relative; z-index: 1; margin-bottom: 0; }
+.header_transparent .nav__link:hover { color: #343558; }
 
 .header__left { float: left; }
 
@@ -203,7 +218,7 @@ a.btn_lrg { line-height: 60px; }
 
 .nav__link { display: inline-block; vertical-align: middle; position: relative; top: 1px; font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 13px; line-height: 1.5; color: inherit; text-transform: uppercase; text-decoration: none; }
 .nav__link > b, .nav__link strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
-.nav__link:hover { color: #343558; }
+.nav__link:hover { color: #93C4D2; }
 .nav__link:active, .nav__link.is-active { color: #F8CF5E; }
 
 .footer { margin-top: 240px; padding-bottom: 110px; }
@@ -279,6 +294,9 @@ a.btn_lrg { line-height: 60px; }
 .skew-box_two-color:after { left: 50%; background: #343558; }
 
 .skew-box_stats .skew-box__inner { padding: 110px 0; }
+
+.gray-wrapper { margin: 60px 0; padding: 60px 0 120px; position: relative; background: #F5F5F7; }
+.gray-wrapper > .divider:first-child { position: absolute; top: 0; left: 0; right: 0; }
 
 .interface { margin: 40px -20px 0; }
 .interface:after { content: " "; display: table; clear: both; }
@@ -359,6 +377,27 @@ a.btn_lrg { line-height: 60px; }
 .expert__info { display: table-cell; vertical-align: middle; padding-left: 7.56757%; font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; }
 
 .expert__contact { display: inline-block; margin-top: 1.38em; }
+
+.member { display: table; width: 100%; table-layout: fixed; }
+
+.member__pic { display: table-cell; vertical-align: top; width: 220px; overflow: hidden; }
+.member__pic img { display: block; width: 100%; max-width: 100%; }
+
+.member__info { display: table-cell; vertical-align: middle; padding-left: 10.15625%; }
+
+.member__quote { min-height: 260px; position: relative; font-size: 35px; line-height: 1.22; text-transform: uppercase; box-sizing: border-box; padding-bottom: 35px; }
+.member__quote b, .member__quote strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+.member__quote .member__cite { position: absolute; bottom: 0; left: 0; }
+
+.member__cite { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; font-style: normal; display: block; text-transform: none; }
+
+.member_mrg { margin-top: 60px; margin-bottom: 60px; }
+
+.text { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.7; }
+.text p, .text ul, .text ol { margin: 1.4em 0; }
+.text p:first-child, .text ul:first-child, .text ol:first-child { margin-top: 0; }
+.text p:last-child, .text ul:last-child, .text ol:last-child { margin-bottom: 0; }
+.text blockquote { display: block; width: 60%; margin: 80px 0 80px -50px; text-transform: uppercase; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; line-height: 1.35; color: #93C4D2; }
 
 
 
