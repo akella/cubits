@@ -41,6 +41,7 @@
   z-index: 1
   padding: 25px 0 40px
   max-width: 404px
+  clear: both
   .bold-title
     margin-bottom: 3px
   .list-circle
@@ -160,6 +161,24 @@
       height: 152px
       background-image: linear-gradient(-180deg, rgba(147,196,210,0.00) 0%, #93C4D2 100%)
       pointer-events: none
+
+.skew-box_two-color
+  position: relative
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+  &:before
+    right: 50%
+    background: $yellow
+  &:after
+    left: 50%
+    background: $darkblue
 
 .skew-box_stats
   .skew-box__inner
@@ -302,6 +321,7 @@
 .press-slider__slide
   +f(i, 18)
   color: #000
+  text-align: center
 
 .press-slider__nav
   margin-bottom: 30px
@@ -318,6 +338,7 @@
   background: none
   text-align: center
   position: relative
+  user-select: none
   &:before
     content: ""
     position: absolute
@@ -349,4 +370,60 @@
   transition: left 0.3s ease
 
 
+.security
+  display: table
+  width: 100%
+  table-layout: fixed
+  border-collapse: collapse
+  .title
+    margin-bottom: 6px
 
+.security__column
+  display: table-cell
+  width: 50%
+  +f(m, 20)
+  line-height: 1.35
+  text-align: left
+  &:first-child
+    padding-right: percentage(105/960)
+    text-align: right
+    .title
+      text-align: right
+  &:last-child
+    padding-left: percentage(105/960)
+    color: $yellow
+    .title
+      color: $yellow
+      text-align: left
+
+.security__figure
+  font-size: 0
+  img
+    max-width: 100%
+
+
+.expert
+  display: table
+  table-layout: fixed
+  width: 100%
+  max-width: 370px
+  margin: 0 auto 140px
+
+.expert__pic
+  display: table-cell
+  vertical-align: top
+  width: 120px
+  img
+    display: block
+    max-width: 100%
+    width: 100%
+
+.expert__info
+  display: table-cell
+  vertical-align: middle
+  padding-left: percentage(28/370)
+  +f(m, 18)
+
+.expert__contact
+  display: inline-block
+  margin-top: 1.38em

@@ -1,0 +1,28 @@
+.footer
+  margin-top: 240px
+  padding-bottom: 110px
+  .divider
+    margin: 20px 0 25px
+
+.footer__links
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +f(m, 14)
+  line-height: 1.36
+  text-transform: uppercase
+  li
+    display: inline-block
+  a
+    text-decoration: none
+    transition: color 0.15s linear
+    &:hover
+      color: $yellow
+
+.footer__links_small
+  text-transform: none
+  justify-content: space-around
+
+.footer__social
+  margin-top: 90px
+  text-align: center

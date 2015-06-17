@@ -1,7 +1,7 @@
 extends _layout
 
 block title
-  title Index
+  title Home Page
 
 block header
   //BEGIN toparea
@@ -274,7 +274,7 @@ block content
             span.person__about Trading Art between  <br> France and China
 
     .l-center-narrow
-      hr.divider.divider_mrg80
+      hr.divider.divider_mrg60
 
       h2.title
         b Good news
@@ -315,13 +315,50 @@ block content
               to help them carry out bitcoin transactions.«
   //END testimonials
 
-
   //BEGIN security
-  section.skew-box.skew-box__two-color
+  section.skew-box.skew-box_two-color
     .skew-box__inner
       .l-center
-        .l-columns
-          .l-column
-            figure.security-item
-          .l-column
+        .security
+          .security__column
+            .security__figure
+              img(src="img/gif/cubits_security_cold_storage_01.gif", alt="")
+            strong.title
+              b Cold storage
+            p 100% of user funds are safely stored offline
+
+          .security__column
+            .security__figure
+              img(src="img/gif/cubits_animation_security_02.gif", alt="")
+            strong.title
+              b Multi signature
+            p The physical presence of two people is required to access funds
   //END security
+
+  //BEGIN ask
+  section.l-center-narrow
+    h2.title
+      | <b>Ask Andreas</b> <br> if you have questions on security
+
+    .expert
+      .expert__pic
+        img(src="img/security-expert.jpg", alt="")
+      .expert__info
+        p.expert__name
+          | Andreas Lehrbaum
+          br
+          | CTO
+        a.expert__contact(href="mailto:security@cubits.com")
+          | security@cubits.com
+
+    hr.divider.divider_mrg60
+  //END ask
+
+  //BEGIN promo
+  section.l-center-narrow
+    h2.title
+      b Give Cubits a risk-free try.
+
+    button.btn.btn_lrg.btn_yellow.btn_center(type="button")
+      | Create your free account
+  //END promo

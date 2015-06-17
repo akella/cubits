@@ -9,6 +9,9 @@
   font-style: normal;
 }
 
+$icon-fb: "\e606";
+$icon-gplus: "\e607";
+$icon-tw: "\e608";
 $icon-slider-arr: "\e605";
 $icon-okpay: "\e600";
 $icon-sepa: "\e601";
@@ -31,6 +34,15 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-fb:before {
+  content: "\e606";
+}
+.icon-gplus:before {
+  content: "\e607";
+}
+.icon-tw:before {
+  content: "\e608";
+}
 .icon-slider-arr:before {
   content: "\e605";
 }

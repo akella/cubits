@@ -3,7 +3,6 @@ $darkblue  : #343558
 $yellow    : #F8CF5E
 
 
-
 +font("AvenirNext-Bold", AvenirNext-Bold)
 +font("AvenirNext-BoldItalic", AvenirNext-BoldItalic)
 +font("AvenirNext-DemiBold", AvenirNext-DemiBold)
@@ -58,10 +57,13 @@ body
   +smoothfont
 
 .out
-  padding-bottom: 100px
+  overflow: hidden
 
 a
   color: inherit
+  transition: color 0.15s linear
+  &:hover
+    color: $yellow
 
 b, strong
   +f(b)

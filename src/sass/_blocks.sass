@@ -50,6 +50,8 @@
   a
     color: inherit
 
+.custom-list
+  padding: 0 30px
 
 .custom-list__item
   padding-left: 100px
@@ -138,7 +140,7 @@
   border: 2px solid $darkblue
   border-radius: 2px
   box-sizing: border-box
-  +f(r, 14)
+  +f(m, 14)
   line-height: 1.42
   color: $darkblue
   text-transform: uppercase
@@ -166,6 +168,10 @@
   margin-top: 80px
   margin-bottom: 80px
 
+.divider_mrg60
+  margin-top: 60px
+  margin-bottom: 60px
+
 
 .clearfix
   display: table
@@ -185,6 +191,7 @@
   text-align: center
   text-transform: uppercase
   color: $darkblue
+  transition: color 0.15s linear
   &:before
     content: ""
     position: absolute
@@ -194,19 +201,63 @@
     right: 0
     bottom: 0
     background: #FFF
+    transition: background 0.15s linear
     +skew
   .title + &
     margin-top: 6px
+  &:hover
+    color: $darkblue
+    &:before
+      background: $yellow
 
 a.btn
   text-decoration: none
   line-height: 45px
 
+.btn_yellow
+  &:before
+    background: $yellow
+  &:hover
+    &:before
+      background: $lightblue
+
 .btn_center
   display: block
   margin: auto
+
+.btn_lrg
+  height: 60px
+  padding-left: 40px
+  padding-right: 40px
+a.btn_lrg
+  line-height: 60px
 
 .btn_w200
   width: 200px
 
 
+.social-btn
+  text-decoration: none
+  display: inline-block
+  vertical-align: middle
+  background: none
+  +f(m, 14)
+  margin-right: 40px
+  &:last-child
+    margin-right: 0
+  .icon
+    display: inline-block
+    vertical-align: middle
+    + *
+      margin-left: 5px
+  .icon-tw
+    font-size: 16px
+  .icon-fb
+    font-size: 20px
+  .icon-gplus
+    font-size: 19px
+  > span
+    display: inline-block
+    vertical-align: middle
+  &:hover
+    color: $yellow

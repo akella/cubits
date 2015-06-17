@@ -84,7 +84,7 @@ Slider.prototype.init = function() {
         accessibility: false,
         autoplay: true,
         // fade: true,
-        speed: 300,
+        // speed: 300,
         arrows: false,
         dots: false,
         autoplaySpeed: 10000,
