@@ -9,11 +9,13 @@
   font-style: normal;
 }
 
+$icon-slider-arr: "\e605";
 $icon-okpay: "\e600";
 $icon-sepa: "\e601";
 $icon-skrill: "\e602";
 $icon-sofort: "\e603";
 $icon-swift: "\e604";
+
 
 .icon {
   font-family: 'icons';
@@ -29,6 +31,9 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-slider-arr:before {
+  content: "\e605";
+}
 .icon-okpay:before {
   content: "\e600";
 }

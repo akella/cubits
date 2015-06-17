@@ -4,13 +4,24 @@ module.exports = function() {
         sass         = require('gulp-ruby-sass'),
         sourcemaps   = require('gulp-sourcemaps'),
         postcss      = require('gulp-postcss'),
+        assets       = require('postcss-assets'),
         autoprefixer = require('autoprefixer-core'),
         config       = require('./../config');
 
     // gulp.task('sass', function() {
 
         var processors = [
-            autoprefixer({browsers: ['last 4 versions'], cascade: false})
+            autoprefixer({
+                browsers: ['last 4 versions'],
+                cascade: false
+            }),
+            assets({
+                basePath: './site',
+                baseUrl: '/',
+                cachebuster: false,
+                loadPaths: ['img/'],
+                relativeTo: false
+            })
         ];
 
         return sass(config.src.sass, {

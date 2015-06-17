@@ -9,44 +9,43 @@ block header
     .toparea__bg
     
     include _header
-    
-    .toparea__content
-      h1.bold-title
-        | Europes number one  bitcoin service
 
-      ul.list-circle
-        li As easy to use as online banking
-        li Super Secure: <a href="#">Read it all here…</a>
-        li Risk-Free: sell your Bitcoins anytime
+    .l-center
+      .toparea__content
+        h1.bold-title
+          | Europe’s gateway <br> to Bitcoin
 
-      form.form.form_white-bounds
-        h3.form__title
-          | <b>Signup</b> for a <b>wallet</b>
+        ul.list-circle
+          li As easy to use as online­-banking
+          li Protected by our high security standards
+          li Buy and Sell your Bitcoin anytime
 
-        .field
-          input.input(type="text", placeholder="First name")
-        .field
-          input.input(type="text", placeholder="Last name")
-        p.form__text
-          | Please enter your real name to perform financial operations
-        
-        .field
-          input.input(type="email", placeholder="Email")
-        .field
-          input.input(type="password", placeholder="Desired password")
+        form.form.form_white-bounds
+          h3.form__title
+            | <b>Signup</b> for a <b>wallet</b>
+
+          .field
+            input.input(type="text", placeholder="First name")
+          .field
+            input.input(type="text", placeholder="Last name")
+          p.form__text
+            | Please enter your real name to perform financial operations
           
-        button.btn(type="submit")
-          | Create account
+          .field
+            input.input(type="email", placeholder="Email")
+          .field
+            input.input(type="password", placeholder="Desired password")
+            
+          button.btn(type="submit")
+            | Create account
   //END toparea
 
 block content
-  //BEGIN principle
+  //BEGIN approach
   section.section
     .l-center
-      h2.title
-        b The Cubits principle:
-        br
-        | we make bitcoin simple
+      h2.title 
+        | <b>The Cubits approach:</b> <br> we make bitcoin simple
 
       .l-columns.three
         .l-column.step
@@ -63,7 +62,7 @@ block content
           strong.step__title
             | 2. Verification
           p.step__text
-            | We’ve built the easiest identity verification ever. Just one SMS.
+            | You’re just an SMS away from verifying your account.
       
         .l-column.step
           .step__icon
@@ -71,26 +70,22 @@ block content
           strong.step__title
             | 3. Buy bitcoin
           p.step__text
-            | Instantly buy Bitcoins from your bankaccount. It couldn’t be simpler.
+            | Instantly buy Bitcoin using your bank account - it couldn’t be simpler.
 
       hr.divider.divider_mrg80
 
       .usage-map
         h2.title
-          b Cubits usage 
-          br
-          | worldwide
+          | <b>Cubits usage </b> <br> worldwide
 
         img(src="img/cubits-map.png", alt="")
 
         p.small-text
-          Buy Bitcoin from all over the world  <br> (except from U.S.A.)
+          | Buy Bitcoin from all over the world  <br> (except from U.S.A.)
 
       .currencies
         h2.title
-          b Buy and sell bitcoins 
-          br
-          | to 17 currencies
+          | <b>buy and sell Bitcoin</b> <br> across multiple currencies
 
         .currencies__left
           table.small-table
@@ -132,11 +127,201 @@ block content
               td: i.icon.icon-okpay
 
           table.small-table.small-table_mod
-            caption Banking standards
+            caption Transfer methods
             tr
               td: i.icon.icon-swift
               td: i.icon.icon-sepa
               td
 
       .clearfix
-  //END principle
+  //END approach
+
+  //BEGIN interface
+  section.skew-box.skew-box_shadow
+    .skew-box__inner
+      .l-center
+        h2.title.title_white.title_mrg0
+          b The simplest interface
+          br
+          span We make Bitcoin as easy as sending an email
+        
+        a.btn.btn_center.btn_w200(href="#")
+          | Buy bitcoin now
+
+        ul.interface
+          li.interface__item
+            p.interface__text 1. <br> Select amount <br> and currency
+            .interface__pic.first
+          
+          li.interface__item
+            p.interface__text 2.  <br> Choose one of our trusted <br> payment providers
+            .interface__pic.second
+          
+          li.interface__item
+            p.interface__text 3. <br> Recieve the Bitcoins  <br> in your account
+            .interface__pic.third
+  //END interface
+
+
+  //BEGIN facts
+  section.l-center-narrow
+    h2.title
+      b 5 facts you should know
+      br
+      | about Cubits
+
+    ul.custom-list
+      li.custom-list__item
+        span.custom-list__marker 1
+        p.custom-list__text.
+          Cubits is a Bitcoin service based in the U.K. utilising 
+          the power and efficiency of <strong>German engineering</strong>.
+      li.custom-list__item
+        span.custom-list__marker 2
+        p.custom-list__text.
+          It is as easy as traditional online banking 
+          and the fastest way to access your money.
+      li.custom-list__item
+        span.custom-list__marker 3
+        p.custom-list__text.
+          Transfer cash from your bank account into Bitcoin and back anytime.
+      li.custom-list__item
+        span.custom-list__marker 4
+        p.custom-list__text.
+          Bitcoin has users all over the world. 
+          Cubits is a fast and easy way to enable global payments.
+      li.custom-list__item
+        span.custom-list__marker 5
+        p.custom-list__text.
+          Bitcoin is as fast as email and will enable instant financial 
+          communication between you and anyone, anywhere in the world.
+      li.custom-list__item
+        span.custom-list__marker 6
+        p.custom-list__text.
+          Cubits provides maximum security for your stored Bitcoin.
+          Read more about our security standards <a href="#">here</a>.
+  //END facts
+
+  //BEGIN stats
+  section.skew-box.skew-box_stats
+    .skew-box__inner
+      .l-center
+        h2.title.title_white
+          b We are europe’s #1 Bitcoin service
+          br
+          span Cubits in numbers
+
+        ul.numbers-list
+          li.numbers-list__item
+            .number
+              | New wallet <br> accounts
+              strong.number__value + 1000
+              | per week
+          li.numbers-list__item
+            .number
+              | Transaction <br> volume
+              strong.number__value + 200.000 EUR
+              | per month
+          li.numbers-list__item
+            .number
+              | Number of <br> transaction increases
+              strong.number__value + 100%
+              | per month
+  //END stats
+
+  //BEGIN testimonials
+  section.l-center
+    h2.title
+      b Real people are using bitcoin
+      br
+      span So can you
+    
+    .testimonials
+      .testimonial
+        .testimonial__pic
+          img(src="img/testimonial1.jpg", alt="")
+        blockquote.testimonial__text
+          p.
+            Bitcoin is real. We host people from all over the world. 
+            In our cafe they pay with bitcoin and it all works.
+          cite.person
+            strong.person__name Martina
+            span.person__location Berlin
+            span.person__about Running a café that  <br> accepts Bitcoins
+
+      .testimonial
+        .testimonial__pic
+          img(src="img/testimonial2.jpg", alt="")
+        blockquote.testimonial__text
+          p.
+            We run an international online business and Bitcoin 
+            free us from currency converting and all the hassles.
+          cite.person
+            strong.person__name Raoul and Simone
+            span.person__location London
+            span.person__about Founders and Member <br> of  Bitcoin Community
+
+      .testimonial
+        .testimonial__pic
+          img(src="img/testimonial3.jpg", alt="")
+        blockquote.testimonial__text
+          p.
+            I invested in Bitcoins 12 months ago. And made a profit of 7%? 
+            Do you know any bank that can match that?
+          cite.person
+            strong.person__name Jean-Paul
+            span.person__location Paris
+            span.person__about Trading Art between  <br> France and China
+
+    .l-center-narrow
+      hr.divider.divider_mrg80
+
+      h2.title
+        b Good news
+        br
+        span Cubits in the press
+
+      .press-slider
+        .press-slider__nav
+          button.press-slider__btn(type="button")
+            img(src="img/press/wired.png", alt="Wires")
+          button.press-slider__btn(type="button")
+            img(src="img/press/techcrunch.png", alt="TechCrunch")
+          button.press-slider__btn(type="button")
+            img(src="img/press/theverge.png", alt="TheVerge")
+          button.press-slider__btn(type="button")
+            img(src="img/press/ct.png", alt="CT")
+          .press-slider__arrow.icon.icon-slider-arr
+        .press-slider__slides
+          .press-slider__slide
+            p.
+              »Cubits, headquartered in Berlin, has become one of the most prominent businesses, 
+              allowing people to buy and store bitcoins and developing deals with merchants 
+              to help them carry out bitcoin transactions.«
+          .press-slider__slide
+            p.
+              »Cubits, headquartered in Berlin, has become one of the most prominent businesses, 
+              allowing people to buy and store bitcoins and developing deals with merchants 
+              to help them carry out bitcoin transactions.«
+          .press-slider__slide
+            p.
+              »Cubits, headquartered in Berlin, has become one of the most prominent businesses, 
+              allowing people to buy and store bitcoins and developing deals with merchants 
+              to help them carry out bitcoin transactions.«
+          .press-slider__slide
+            p.
+              »Cubits, headquartered in Berlin, has become one of the most prominent businesses, 
+              allowing people to buy and store bitcoins and developing deals with merchants 
+              to help them carry out bitcoin transactions.«
+  //END testimonials
+
+
+  //BEGIN security
+  section.skew-box.skew-box__two-color
+    .skew-box__inner
+      .l-center
+        .l-columns
+          .l-column
+            figure.security-item
+          .l-column
+  //END security
