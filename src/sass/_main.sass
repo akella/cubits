@@ -162,7 +162,7 @@
       background-image: linear-gradient(-180deg, rgba(147,196,210,0.00) 0%, #93C4D2 100%)
       pointer-events: none
 
-.skew-box_two-color
+.skew-box_two-colors
   position: relative
   &:before,
   &:after
@@ -194,9 +194,9 @@
   margin-top: 0
 
 
-.gray-wrapper
+.color-wrapper
   margin: 60px 0
-  padding: 60px 0 120px
+  padding: 60px 0 100px
   position: relative
   background: $gray
   > .divider:first-child
@@ -204,6 +204,9 @@
     top: 0
     left: 0
     right: 0
+
+.color-wrapper_lightblue
+  background: $lightblue
 
 
 .interface
@@ -264,6 +267,13 @@
   left: em(-28,32)
   color: #FFF
   letter-spacing: -0.03em
+
+.number_mod
+  .number__value
+    +f(b, 45)
+    line-height: 1.2
+    color: $lightblue
+    left: 0
 
 
 .testimonials
@@ -506,7 +516,7 @@
   +f(m, 18)
   line-height: 1.7
   p, ul, ol
-    margin: 1.4em 0
+    margin: 1em 0
     &:first-child
       margin-top: 0
     &:last-child
@@ -519,6 +529,9 @@
     +f(r, 28)
     line-height: 1.35
     color: $lightblue
+
+.text_center
+  text-align: center
 
 
 .advantage
@@ -544,3 +557,134 @@
   display: table-cell
   vertical-align: middle
   padding: 0 20px
+
+
+.inner-nav
+  font-size: 0
+  text-align: center
+  margin-bottom: 100px
+
+.inner-nav__link
+  position: relative
+  display: inline-block
+  width: 160px
+  text-decoration: none
+  +f(b, 14, 0.02)
+  line-height: 60px
+  white-space: nowrap
+  text-transform: uppercase
+  &:after
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 0
+    border-top: 6px solid
+  &:hover
+    color: $lightblue
+  &:active,
+  &.is-active
+    color: $yellow
+
+
+.overview
+  +clr
+  .title
+    text-align: left
+  .number:not(:last-child)
+    margin-bottom: 25px
+
+.overview__text
+  float: left
+  width: percentage(640/960)
+
+.overview__numbers
+  float: right
+  width: percentage(200/960)
+
+
+.statement
+  .title_lrg
+    margin-bottom: 50px
+  &:not(:first-child)
+    margin-top: 140px
+  &:not(:last-child)
+    margin-bottom: 140px
+
+.statement__list
+  > li:not(:first-child)
+    margin-top: 230px
+
+
+.roadmap
+  position: relative
+  width: 100%
+  height: 550px
+  max-width: 800px
+  margin: auto
+  .title
+    position: absolute
+    top: 0
+    left: 0
+
+.roadmap__list
+  position: absolute
+  left: 50%
+  top: 50%
+  width: 110%
+  height: 6px
+  background: $darkblue
+  font-size: 0
+  transform: translate(-50%,-50%) rotate(-37deg)
+
+.roadmap__point
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  width: 0
+  height: 0
+  transform: rotate(37deg)
+  &:not(:first-child)
+    margin-left: 14.27%
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 25px
+    height: 25px
+    border: 3px solid $darkblue
+    background: $yellow
+    box-sizing: border-box
+    margin: -11px 0 0 -11px
+    border-radius: 50%
+  &:nth-child(2n)
+    .roadmap__text
+      bottom: auto
+      right: auto
+      top: 0
+      left: 0
+      margin: 30px 0 0
+
+.roadmap__text
+  position: absolute
+  bottom: 0
+  left: 0
+  margin: 0 0 40px -50px
+  width: 100px
+  +f(b, 14)
+
+.roadmap__date
+  display: block
+  text-transform: uppercase
+  margin-bottom: 5px
+
+
+.hiring
+  color: $yellow
+  .text,
+  .title
+    max-width: 240px
+    margin-left: auto
+    margin-right: auto

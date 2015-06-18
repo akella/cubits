@@ -101,6 +101,9 @@ b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-w
 .l-columns:after { content: " "; display: table; clear: both; }
 .l-columns.three .l-column { width: 33.333%; }
 
+.l-columns_wide { margin: 0; }
+.l-columns_wide .l-column { padding-left: 4.86111%; padding-right: 4.86111%; }
+
 .bold-title { display: block; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; letter-spacing: 0.03em; text-transform: uppercase; color: inherit; text-align: center; line-height: 1.375; }
 
 .title { display: block; margin-bottom: 40px; text-align: center; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; line-height: 1.357; text-transform: uppercase; color: inherit; }
@@ -109,6 +112,8 @@ b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-w
 .title .icon-heart-bitcoin { margin-bottom: 27px; }
 
 .title_white { color: #FFF; }
+
+.title_left { text-align: left; }
 
 .title_mrg0 { margin: 0; }
 
@@ -198,12 +203,17 @@ a.btn_lrg { line-height: 60px; }
 .header { height: 100px; line-height: 100px; margin-bottom: 70px; box-sizing: border-box; padding: 0 50px 0 60px; color: #FFF; background: #343558; }
 .header:after { content: " "; display: table; clear: both; }
 
-.header_transparent { background: none; position: relative; z-index: 1; margin-bottom: 0; }
-.header_transparent .nav__link:hover { color: #343558; }
-
 .header__left { float: left; }
 
 .header__right { float: right; }
+
+.header_transparent { background: none; position: relative; z-index: 1; margin-bottom: 0; }
+.header_transparent .nav__link:hover { color: #343558; }
+
+.header-wrap { position: relative; height: 514px; background: #3d3f68; }
+.header-wrap:before { content: ""; position: absolute; z-index: 0; top: 100px; left: 0; right: 0; bottom: 0; background: url('/img/header-bg.jpg') no-repeat center center; }
+@media only screen and (min-width: 1400px) { .header-wrap:before { background-size: cover; } }
+.header-wrap .header { position: relative; z-index: 1; }
 
 .logo { display: inline-block; vertical-align: middle; position: relative; top: -1px; line-height: 1; font: 0/0 a; text-shadow: none; color: transparent; background: url("../img/svg/logo.svg") no-repeat center center; width: 143px; height: 40px; }
 
@@ -293,10 +303,10 @@ a.btn_lrg { line-height: 60px; }
 .skew-box_shadow .skew-box__inner { padding-bottom: 0; }
 .skew-box_shadow .skew-box__inner:after { content: ""; position: absolute; bottom: -82px; left: 0; right: 0; height: 152px; background-image: -webkit-linear-gradient(270deg, rgba(147, 196, 210, 0) 0%, #93C4D2 100%); background-image: linear-gradient(-180deg, rgba(147, 196, 210, 0) 0%, #93C4D2 100%); pointer-events: none; }
 
-.skew-box_two-color { position: relative; }
-.skew-box_two-color:before, .skew-box_two-color:after { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; }
-.skew-box_two-color:before { right: 50%; background: #F8CF5E; }
-.skew-box_two-color:after { left: 50%; background: #343558; }
+.skew-box_two-colors { position: relative; }
+.skew-box_two-colors:before, .skew-box_two-colors:after { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; }
+.skew-box_two-colors:before { right: 50%; background: #F8CF5E; }
+.skew-box_two-colors:after { left: 50%; background: #343558; }
 
 .skew-box_stats .skew-box__inner { padding: 110px 0; }
 
@@ -304,8 +314,10 @@ a.btn_lrg { line-height: 60px; }
 
 .skew-box_blue { background: #343558; color: #F8CF5E; margin-top: 0; }
 
-.gray-wrapper { margin: 60px 0; padding: 60px 0 120px; position: relative; background: #F5F5F7; }
-.gray-wrapper > .divider:first-child { position: absolute; top: 0; left: 0; right: 0; }
+.color-wrapper { margin: 60px 0; padding: 60px 0 100px; position: relative; background: #F5F5F7; }
+.color-wrapper > .divider:first-child { position: absolute; top: 0; left: 0; right: 0; }
+
+.color-wrapper_lightblue { background: #93C4D2; }
 
 .interface { margin: 40px -20px 0; }
 .interface:after { content: " "; display: table; clear: both; }
@@ -331,6 +343,8 @@ a.btn_lrg { line-height: 60px; }
 .number { display: inline-block; font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.333; text-align: left; }
 
 .number__value { display: block; font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; position: relative; left: -0.875em; color: #FFF; letter-spacing: -0.03em; }
+
+.number_mod .number__value { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 45px; line-height: 1.2; color: #93C4D2; left: 0; }
 
 .testimonials:after { content: " "; display: table; clear: both; }
 
@@ -406,10 +420,12 @@ a.btn_lrg { line-height: 60px; }
 .member_mrg { margin-top: 60px; margin-bottom: 60px; }
 
 .text { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.7; }
-.text p, .text ul, .text ol { margin: 1.4em 0; }
+.text p, .text ul, .text ol { margin: 1em 0; }
 .text p:first-child, .text ul:first-child, .text ol:first-child { margin-top: 0; }
 .text p:last-child, .text ul:last-child, .text ol:last-child { margin-bottom: 0; }
 .text blockquote { display: block; width: 60%; margin: 80px 0 80px -50px; text-transform: uppercase; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; line-height: 1.35; color: #93C4D2; }
+
+.text_center { text-align: center; }
 
 .advantage { table-layout: fixed; display: table; max-width: 1200px; width: 100%; margin: 15px auto 50px; }
 .advantage .title { text-align: left; margin-bottom: 70px; }
@@ -418,6 +434,44 @@ a.btn_lrg { line-height: 60px; }
 .advantage__pic img { display: block; max-width: 100%; }
 
 .advantage__text { display: table-cell; vertical-align: middle; padding: 0 20px; }
+
+.inner-nav { font-size: 0; text-align: center; margin-bottom: 100px; }
+
+.inner-nav__link { position: relative; display: inline-block; width: 160px; text-decoration: none; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; letter-spacing: 0.02em; line-height: 60px; white-space: nowrap; text-transform: uppercase; }
+.inner-nav__link:after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 0; border-top: 6px solid; }
+.inner-nav__link:hover { color: #93C4D2; }
+.inner-nav__link:active, .inner-nav__link.is-active { color: #F8CF5E; }
+
+.overview:after { content: " "; display: table; clear: both; }
+.overview .title { text-align: left; }
+.overview .number:not(:last-child) { margin-bottom: 25px; }
+
+.overview__text { float: left; width: 66.66667%; }
+
+.overview__numbers { float: right; width: 20.83333%; }
+
+.statement .title_lrg { margin-bottom: 50px; }
+.statement:not(:first-child) { margin-top: 140px; }
+.statement:not(:last-child) { margin-bottom: 140px; }
+
+.statement__list > li:not(:first-child) { margin-top: 230px; }
+
+.roadmap { position: relative; width: 100%; height: 550px; max-width: 800px; margin: auto; }
+.roadmap .title { position: absolute; top: 0; left: 0; }
+
+.roadmap__list { position: absolute; left: 50%; top: 50%; width: 110%; height: 6px; background: #343558; font-size: 0; -webkit-transform: translate(-50%, -50%) rotate(-37deg); -ms-transform: translate(-50%, -50%) rotate(-37deg); transform: translate(-50%, -50%) rotate(-37deg); }
+
+.roadmap__point { display: inline-block; vertical-align: middle; position: relative; width: 0; height: 0; -webkit-transform: rotate(37deg); -ms-transform: rotate(37deg); transform: rotate(37deg); }
+.roadmap__point:not(:first-child) { margin-left: 14.27%; }
+.roadmap__point:before { content: ""; position: absolute; top: 50%; left: 50%; width: 25px; height: 25px; border: 3px solid #343558; background: #F8CF5E; box-sizing: border-box; margin: -11px 0 0 -11px; border-radius: 50%; }
+.roadmap__point:nth-child(2n) .roadmap__text { bottom: auto; right: auto; top: 0; left: 0; margin: 30px 0 0; }
+
+.roadmap__text { position: absolute; bottom: 0; left: 0; margin: 0 0 40px -50px; width: 100px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; }
+
+.roadmap__date { display: block; text-transform: uppercase; margin-bottom: 5px; }
+
+.hiring { color: #F8CF5E; }
+.hiring .text, .hiring .title { max-width: 240px; margin-left: auto; margin-right: auto; }
 
 
 

@@ -8,6 +8,12 @@
   background: $darkblue
   +clr
 
+.header__left
+  float: left
+
+.header__right
+  float: right
+
 .header_transparent
   background: none
   position: relative
@@ -17,11 +23,25 @@
     &:hover
       color: $darkblue
 
-.header__left
-  float: left
 
-.header__right
-  float: right
+.header-wrap
+  position: relative
+  height: 514px
+  background: lighten($darkblue, 5%)
+  &:before
+    content: ""
+    position: absolute
+    z-index: 0
+    top: 100px
+    left: 0
+    right: 0
+    bottom: 0
+    background: resolve('header-bg.jpg') no-repeat center center
+    +rmin(1400)
+      background-size: cover
+  .header
+    position: relative
+    z-index: 1
 
 
 .logo

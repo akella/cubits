@@ -1,0 +1,159 @@
+extends _layout
+
+block title
+  title About Us
+
+block header
+  include _header-large
+
+block content
+  //BEGIN inner-nav
+  nav.inner-nav
+    a.inner-nav__link.is-active(href="#") 
+      | About
+    a.inner-nav__link(href="#")
+      | Team
+    a.inner-nav__link(href="#")
+      | Careers
+    a.inner-nav__link(href="#")
+      | Press
+  //END inner-nav
+
+  //BEGIN overview
+  .l-center
+    h1.title.title_lrg
+      | About Cubits
+    
+    .overview
+      .overview__text
+        h3.title
+          b Short overview
+        .text
+          p.
+            Sed molestie augue sit amet leo consequat posuere. 
+            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
+            posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et 
+            magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. 
+            In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. 
+            Nulla fringilla, orci ac euismod.
+          p.
+            Sed molestie augue sit amet leo consequat posuere. 
+            Vestibulum ante ipsum primis in faucibus orci luctus et 
+            ultrices posuere cubilia Curae; Proin vel ante a orci tempus 
+            eleifend ut et magna.
+      
+      .overview__numbers
+        h3.title
+          b Numbers
+
+        dl.number.number_mod
+          dt.number__value 15000
+          dd Wallets
+
+        dl.number.number_mod
+          dt.number__value 150
+          dd Merchants
+
+        dl.number.number_mod
+          dt.number__value +34%
+          dd Monthly volume growth
+  //END overview
+
+  //BEGIN mission
+  .color-wrapper.color-wrapper_lightblue
+    .statement.l-center-narrow
+      h2.title.title_lrg.title_white
+        | Mission statement
+
+      h3.title
+        b One world, one currency
+
+      .text.text_center
+        p.
+          We are building the future of finance. 
+          By combining the power of Bitcoin and the blockchain with 
+          traditional financial tools, we can introduce a new era of 
+          finance, where payments are faster, cheaper and more secure.
+  //END mission
+
+  //BEGIN vision statement
+  .statement.l-center-narrow
+    h2.title.title_lrg
+      | Vision statement
+
+    ul.statement__list
+      li.text
+        h2.title.title_left
+          b 1. Make Bitcoin easy to use
+        p.
+          The Bitcoin network does not store or require any of your personal data, 
+          and keeps all of your transaction processes safe and secure with 
+          NSA-designed cryptographic SHA-256 protocol. The network also 
+          relies on decentralised consensus, which means that there is no 
+          single point of failure or weak link that can compromise network. 
+          Additionally, a team of programmers is always working on refining 
+          and improving the code, and all modifications are publicly submitted 
+          for a consensus agreement.
+      li.text
+        h2.title.title_left
+          b 2. Be the trusted brand in the space
+        p.
+          A Bitcoin wallet is an application that interfaces with th Bitcoin network 
+          and allows you to make transactions with Bitcoins. Different wallets offer 
+          different features depending on users' needs, but their purposes are all 
+          the same: they enable you to receive, store and send Bitcoin. For instance, 
+          the Cubits Wallet has buy and sell features built-in, 
+          making it convenient for your to convert your Bit
+  //END vision statement
+
+  //BEGIN what
+  .skew-box.skew-box_two-colors
+    .skew-box__inner
+      .l-columns.l-columns_wide
+        .l-column
+          .roadmap
+            h3.title.title_left
+              b Roadmap
+            ul.roadmap__list
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date JAN 2014
+                  | Initial idea
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date MAR 2014
+                  | Assemble initial team
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date MAY 2014
+                  | Start development
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date NOV 2014 
+                  | Finalize name and branding
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date DEC 2014
+                  | Launch closed beta
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date JAN 2015
+                  | Public launch
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date MAY 2015
+                  | Launch mobile version
+              li.roadmap__point
+                .roadmap__text
+                  span.roadmap__date JUL 2015
+                  | Re-launch with new design
+        
+        .l-column
+          .hiring
+            h3.title.title_left
+              b We are hiring!
+            p.text
+              | Bitcoin is changing the way we think about money. 
+              | We are here to introduce an new idea of financial freedom!
+  //END what
