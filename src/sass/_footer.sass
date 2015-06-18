@@ -26,3 +26,20 @@
 .footer__social
   margin-top: 90px
   text-align: center
+
+.footer_bg
+  background: $gray
+  position: relative
+  z-index: 0
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    height: 39px
+    background: #FFF
+  .l-center-narrow
+    position: relative
+    z-index: 1

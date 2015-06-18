@@ -184,6 +184,15 @@
   .skew-box__inner
     padding: 110px 0
 
+.skew-box_yellow
+  background: $yellow
+  margin-bottom: 0
+
+.skew-box_blue
+  background: $darkblue
+  color: $yellow
+  margin-top: 0
+
 
 .gray-wrapper
   margin: 60px 0
@@ -419,7 +428,7 @@
   table-layout: fixed
   width: 100%
   max-width: 370px
-  margin: 0 auto 140px
+  margin: auto
 
 .expert__pic
   display: table-cell
@@ -439,6 +448,12 @@
 .expert__contact
   display: inline-block
   margin-top: 1.38em
+
+
+.promo
+  margin-top: 150px
+  > .divider:first-child
+    margin-top: 0
 
 
 .member
@@ -504,3 +519,28 @@
     +f(r, 28)
     line-height: 1.35
     color: $lightblue
+
+
+.advantage
+  table-layout: fixed
+  display: table
+  max-width: 1200px
+  width: 100%
+  margin: 15px auto 50px
+  .title
+    text-align: left
+    margin-bottom: 70px
+
+.advantage__pic
+  display: table-cell
+  vertical-align: bottom
+  width: 40%
+  padding: 0 20px
+  img
+    display: block
+    max-width: 100%
+
+.advantage__text
+  display: table-cell
+  vertical-align: middle
+  padding: 0 20px

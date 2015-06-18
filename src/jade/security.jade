@@ -34,7 +34,7 @@ block content
         br
         span Berlin in-house Bitcoin development
 
-      p.text.
+      p.text
         Cubits is German Engineering at its best. 
         We combine uncompromised security and cutting 
         edge technologies with ease of use to bring our 
@@ -70,5 +70,112 @@ block content
       p.
         Above all, we want to create an unbeatable service 
         for our customers because we value quality and usability.
-
   //END about team
+
+  //BEGIN advantages
+  section
+    .skew-box.skew-box_yellow
+      .skew-box__inner
+        .advantage
+          .advantage__pic
+            img(src="img/gif/cubits_security_cold_storage_01.gif", alt="")
+            //- img(src="img/gif/cubits_animation_security_02.gif", alt="")
+          .advantage__text
+            h3.title
+              | <b>100% cold storage</b> <br> of user funds
+
+            .text
+              p.
+                We refuse to make compromises when it comes to security, 
+                which is why we enforce the gold standard of Bitcoin security 
+                and use multi-signature cold storage. Every satoshi deposited 
+                to Cubits is placed into offline cold storage, and all funds 
+                within the hot wallet are Cubits’ own company funds. Additionally, 
+                we ensure that physical access to the computing facility and all 
+                cold storage hardware is highly restricted. All seeds and data 
+                are stored with additional encryption to ensure that in the 
+                near-impossible event of stolen hardware, all stored Bitcoin 
+                would remain safe and inaccessible.
+
+    .skew-box.skew-box_blue
+      .skew-box__inner
+        .advantage
+          .advantage__pic
+            img(src="img/gif/cubits_animation_security_02.gif", alt="")
+          .advantage__text
+            h3.title
+              | <b>Access to cold storage</b> <br> protected by multi-signature technology
+
+            .text
+              p.
+                Our Bitcoin storage and handling setup has no single point of failure. 
+                This means that all your funds are protected with Bitcoin multi-signature technology. 
+                Each transfer from cold storage to the hot wallet requires the presence of at 
+                least two management team members, who personally and individually 
+                decrypt their seeds on secure hardware and sign the transaction.
+              p.
+                We’ve carefully designed a system that makes side channel attacks on 
+                our hard and software close to impossible, giving our cold wallet funds maximum security.
+  //END advantages
+
+  //BEGIN about wallet
+  section.l-center-narrow
+    h2.title
+      i.icon
+        img(src="img/svg/logo-simple.svg", alt="")
+      b Hot wallet 
+      br
+      span We keep only our own Bitcoin in it
+
+    .text
+      p.
+        Our hot wallet is used for real-time outgoing Bitcoin operations 
+        like buying or withdrawing Bitcoin. Although the wallet is online 
+        at all times, the sensitive material is distributed among independent
+        hosting locations which are individually secured and monitored. 
+        Just as with the cold wallet, we also employ Bitcoin multi-signature 
+        addresses to ensure there is no single point of 
+        failure that could expose these Bitcoin.
+
+      p.
+        Even though we put great care into designing and maintaining 
+        this infrastructure, we are fully aware that by the very nature 
+        of a hot wallet, we cannot achieve the same level of security 
+        as with our cold wallet. So, we’re going to go one step further: 
+        we guarantee that the hot wallet will always contain only our own 
+        company funds, making your Bitcoin balances perfectly safe even 
+        in the event that all of  our servers are simultaneously compromised! 
+        To ensure this, all our deposit addresses are directly issued from 
+        the cold wallet so that we are always in complete control 
+        of the hot wallet balance.
+  //END about wallet
+
+  //BEGIN ask
+  section.gray-wrapper
+    hr.divider.divider_md
+    h2.title
+      | <b>Ask Andreas</b> <br> if you have questions on security
+
+    .expert
+      .expert__pic
+        img(src="img/security-expert.jpg", alt="")
+      .expert__info
+        p.expert__name
+          | Andreas Lehrbaum
+          br
+          | CTO
+        a.expert__contact(href="mailto:security@cubits.com")
+          | security@cubits.com
+  //END ask
+
+  //BEGIN promo
+  section.promo.l-center-narrow
+    h2.title
+      | It doesn't get more secure than this.  <br> <b>Give Cubits a free try.</b>
+
+    button.btn.btn_lrg.btn_yellow.btn_center(type="button")
+      | Create your free account
+  //END promo
+
+block footer
+  include _footer-gray
