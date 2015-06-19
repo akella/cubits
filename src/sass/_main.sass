@@ -145,12 +145,13 @@
   margin: 140px 0 100px
 
 .skew-box__inner
-  padding: 80px 0
+  padding: 100px 0
   position: relative
   transform: skewY(4.85deg)
 
 .skew-box_shadow
   .skew-box__inner
+    padding-top: 80px
     padding-bottom: 0
     &:after
       content: ""
@@ -184,6 +185,10 @@
   .skew-box__inner
     padding: 110px 0
 
+.skew-box_roadmap
+  .skew-box__inner
+    padding: 100px 0 50px
+
 .skew-box_yellow
   background: $yellow
   margin-bottom: 0
@@ -207,6 +212,9 @@
 
 .color-wrapper_lightblue
   background: $lightblue
+
+.color-wrapper_pd110
+  padding: 110px 0
 
 
 .interface
@@ -277,30 +285,20 @@
 
 
 .testimonials
-  +clr
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  align-content: space-between
+  flex-wrap: nowrap
+  justify-content: space-between
+  &:after
+    display: none
 
 .testimonial
-  float: left
-  width: 33.333%
-  padding: 0 20px
-  box-sizing: border-box
-
-.flexbox
-  .testimonials
-    display: flex
-    flex-direction: row
-    align-items: flex-start
-    align-content: space-between
-    flex-wrap: nowrap
-    justify-content: space-between
-    &:after
-      display: none
-
-  .testimonial
-    max-width: 220px
-    float: none
-    width: auto
-    padding: 0
+  max-width: 230px
+  float: none
+  width: auto
+  padding: 0
 
 .testimonial__pic
   width: 200px
@@ -319,11 +317,11 @@
 .testimonial__text
   +f(m, 18)
   line-height: 1.4
-  .person
+  .cite
     margin-top: 18px
 
 
-.person
+.cite
   display: block
   +f(demi-b, 14)
   line-height: 1.57
@@ -336,12 +334,12 @@
     border: 1px solid
     margin-bottom: 12px
 
-.person__name
+.cite__name
   display: block
   +f(demi-b, 14)
   color: $darkblue
 
-.person__location
+.cite__location
   display: block
   text-transform: uppercase
 
@@ -694,3 +692,50 @@
   text-align: center
   .btn:not(:last-child)
     margin: 0 40px 20px 0
+
+
+.press
+  border: solid
+  border-width: 6px 0
+  padding: 70px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+.press__item
+  display: inline-block
+  margin: 10px 0
+  a
+    text-decoration: none
+  img
+    display: block
+
+
+.benefits
+  font-size: 0
+  text-align: center
+  margin: -40px percentage(-40/960) 30px
+
+.benefits__item
+  display: inline-block
+  vertical-align: top
+  box-sizing: border-box
+  width: 33.3333%
+  padding: 0 percentage(40/960)
+  text-align: center
+  font-size: 18px
+  line-height: 1.7
+  margin-top: 40px
+
+
+.head-border
+  border: solid
+  border-width: 6px 0
+  padding: 50px 0
+  margin: 80px 0
+
+
+.btn-wrapper
+  text-align: center
+  margin-top: 85px

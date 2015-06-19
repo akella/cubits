@@ -15,6 +15,8 @@
   box-sizing: border-box
   width: 50%
   padding: 0 20px
+  .skew-box_two-colors &:nth-child(2)
+    color: $yellow
 
 .l-columns
   margin: 0 -20px
@@ -28,4 +30,16 @@
   .l-column
     padding-left: percentage(70/1440)
     padding-right: percentage(70/1440)
+
+.l-columns-text
+  +clr
+  .l-column
+    padding-left: percentage(70/1440)
+    padding-right: percentage(70/1440)
+    &:first-child
+      padding-left: percentage(140/1440)
+      padding-right: percentage(70/1440)
+    &:last-child
+      padding-left: percentage(70/1440)
+      padding-right: percentage(140/1440)
 
