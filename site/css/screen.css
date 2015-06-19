@@ -101,8 +101,8 @@ b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-w
 .l-columns:after { content: " "; display: table; clear: both; }
 .l-columns.three .l-column { width: 33.333%; }
 
-.l-columns_wide { margin: 0; }
-.l-columns_wide .l-column { padding-left: 4.86111%; padding-right: 4.86111%; }
+.l-columns-wide:after { content: " "; display: table; clear: both; }
+.l-columns-wide .l-column { padding-left: 4.86111%; padding-right: 4.86111%; }
 
 .bold-title { display: block; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; letter-spacing: 0.03em; text-transform: uppercase; color: inherit; text-align: center; line-height: 1.375; }
 
@@ -171,7 +171,7 @@ b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-w
 
 .clearfix { display: table; width: 100%; clear: both; }
 
-.btn { display: inline-block; position: relative; height: 45px; padding: 0 20px; background: none; box-sizing: border-box; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; letter-spacing: 0.07em; text-align: center; text-transform: uppercase; color: #343558; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
+.btn { display: inline-block; vertical-align: top; position: relative; height: 45px; padding: 0 20px; background: none; box-sizing: border-box; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; letter-spacing: 0.07em; text-align: center; text-transform: uppercase; color: #343558; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; white-space: nowrap; }
 .btn:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: #FFF; -webkit-transition: background 0.15s linear; transition: background 0.15s linear; -webkit-transform: skewX(-16.6deg); -ms-transform: skewX(-16.6deg); transform: skewX(-16.6deg); }
 .title + .btn { margin-top: 6px; }
 .btn:hover { color: #343558; }
@@ -184,11 +184,11 @@ a.btn { text-decoration: none; line-height: 45px; }
 
 .btn_center { display: block; margin: auto; }
 
-.btn_lrg { height: 60px; padding-left: 40px; padding-right: 40px; }
+.btn_lrg { height: 58px; padding-left: 40px; padding-right: 40px; }
 
-a.btn_lrg { line-height: 60px; }
+a.btn_lrg { line-height: 58px; }
 
-.btn_w200 { width: 200px; }
+.btn_w220 { width: 220px; padding-left: 20px; padding-right: 20px; }
 
 .social-btn { text-decoration: none; display: inline-block; vertical-align: middle; background: none; font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; margin-right: 40px; }
 .social-btn:last-child { margin-right: 0; }
@@ -456,7 +456,7 @@ a.btn_lrg { line-height: 60px; }
 
 .statement__list > li:not(:first-child) { margin-top: 230px; }
 
-.roadmap { position: relative; width: 100%; height: 550px; max-width: 800px; margin: auto; }
+.roadmap { position: relative; width: 100%; height: 450px; max-width: 575px; margin: auto; }
 .roadmap .title { position: absolute; top: 0; left: 0; }
 
 .roadmap__list { position: absolute; left: 50%; top: 50%; width: 110%; height: 6px; background: #343558; font-size: 0; -webkit-transform: translate(-50%, -50%) rotate(-37deg); -ms-transform: translate(-50%, -50%) rotate(-37deg); transform: translate(-50%, -50%) rotate(-37deg); }
@@ -472,6 +472,9 @@ a.btn_lrg { line-height: 60px; }
 
 .hiring { color: #F8CF5E; }
 .hiring .text, .hiring .title { max-width: 240px; margin-left: auto; margin-right: auto; }
+
+.hiring__btns { margin-top: 60px; text-align: center; }
+.hiring__btns .btn:not(:last-child) { margin: 0 40px 20px 0; }
 
 
 

@@ -7,17 +7,7 @@ block header
   include _header-large
 
 block content
-  //BEGIN inner-nav
-  nav.inner-nav
-    a.inner-nav__link.is-active(href="#") 
-      | About
-    a.inner-nav__link(href="#")
-      | Team
-    a.inner-nav__link(href="#")
-      | Careers
-    a.inner-nav__link(href="#")
-      | Press
-  //END inner-nav
+  include _nav-inner
 
   //BEGIN overview
   .l-center
@@ -107,10 +97,10 @@ block content
           making it convenient for your to convert your Bit
   //END vision statement
 
-  //BEGIN what
+  //BEGIN roadmap and hiring
   .skew-box.skew-box_two-colors
     .skew-box__inner
-      .l-columns.l-columns_wide
+      .l-columns-wide
         .l-column
           .roadmap
             h3.title.title_left
@@ -156,4 +146,9 @@ block content
             p.text
               | Bitcoin is changing the way we think about money. 
               | We are here to introduce an new idea of financial freedom!
-  //END what
+            .hiring__btns
+              a.btn.btn_yellow.btn_lrg.btn_w220(href="#")
+                | Open positions
+              a.btn.btn_yellow.btn_lrg.btn_w220(href="#")
+                | Our team
+  //END roadmap and hiring
