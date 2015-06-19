@@ -320,6 +320,18 @@
   .cite
     margin-top: 18px
 
+.testimonial_mod
+  width: 200px
+  .testimonial__text
+    margin-top: 22px
+    +f(demi-b)
+    &:after
+      content: ""
+      display: block
+      width: 60px
+      border: 1px solid $lightblue
+      margin-top: 10px
+
 
 .cite
   display: block
@@ -468,11 +480,13 @@
   display: table
   width: 100%
   table-layout: fixed
+  & + &
+    margin-top: 80px
 
 .member__pic
   display: table-cell
   vertical-align: top
-  width: 220px
+  width: 160px
   overflow: hidden
   img
     display: block
@@ -482,7 +496,16 @@
 .member__info
   display: table-cell
   vertical-align: middle
-  padding-left: percentage(65/640)
+  padding-left: percentage(80/680)
+
+.member__name
+  display: block
+  margin: em(-7,28) 0 35px
+  +f(r, 28)
+  line-height: 1.35
+  text-transform: uppercase
+  b, strong, dt
+    +f(demi-b)
 
 .member__quote
   min-height: 260px
@@ -505,9 +528,53 @@
   display: block
   text-transform: none
 
-.member_mrg
+.member_large
   margin-top: 60px
   margin-bottom: 60px
+  .member__pic
+    width: 220px
+  .member__info
+    padding-left: percentage(65/640)
+
+.member_tile
+  display: block
+  width: 155px
+  height: 208px
+  overflow: hidden
+  position: relative
+  margin: 0
+  padding: 0
+  .member__pic
+    display: block
+    width: 100%
+    height: 100%
+    transition: opacity 0.2s linear
+  .member__overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(white, 0.5)
+    text-align: center
+    +f(demi-b, 14)
+    line-height: 1.7
+    opacity: 0
+    visibility: hidden
+    transition: all 0.2s linear
+  .member__overlay-text
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 10px
+    cursor: default
+  &:hover
+    .member__overlay
+      opacity: 1
+      visibility: visible
+    .member__pic
+      opacity: 0.8
 
 
 .text
@@ -603,7 +670,7 @@
 
 
 .statement
-  .title_lrg
+  .title_large
     margin-bottom: 50px
   &:not(:first-child)
     margin-top: 140px
@@ -739,3 +806,44 @@
 .btn-wrapper
   text-align: center
   margin-top: 85px
+
+
+.board
+  margin: -6px -6px 0 0
+  +clr
+
+.board__tile
+  float: left
+  width: 155px
+  height: 208px
+  margin: 6px 6px 0 0
+
+// .tab
+  // box-shadow: 0 0 6px 0 rgba(#050505, 0.11) inset
+
+.tab__btn
+  display: block
+  width: 100%
+  box-sizing: border-box
+  padding: 0 10px 0 percentage(50/240)
+  background: none
+  height: 52px
+  +text-overflow
+  +f(b, 14)
+  text-transform: uppercase
+  color: inherit
+  text-align: left
+  transition: background 0.15s linear
+  box-shadow: 6px 0 6px -6px rgba(#050505, 0.11) inset, -6px 0 6px -6px rgba(#050505, 0.11) inset
+  &:first-child
+    box-shadow: 6px 0 6px -6px rgba(#050505, 0.11) inset, -6px 0 6px -6px rgba(#050505, 0.11) inset, 0 6px 6px -6px rgba(#050505, 0.11) inset
+  &:last-child
+    box-shadow: 6px 0 6px -6px rgba(#050505, 0.11) inset, -6px 0 6px -6px rgba(#050505, 0.11) inset, 0 -6px 6px -6px rgba(#050505, 0.11) inset
+
+  &:hover
+    background: $yellow
+  &:active
+    background: $lightblue
+  &.is-active
+    background: #F2F6F8
+    cursor: default

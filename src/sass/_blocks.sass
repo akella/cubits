@@ -37,7 +37,7 @@
 .title_mrgtop
   margin-top: 70px
 
-.title_lrg
+.title_large
   margin-bottom: 70px
   +f(b, 45)
   letter-spacing: 0.027em
@@ -196,6 +196,9 @@
 .divider_md
   max-width: 830px
 
+.divider_sm
+  max-width: 640px
+
 
 .clearfix
   display: table
@@ -246,6 +249,14 @@ a.btn
   &:hover
     &:before
       background: $lightblue
+
+.btn_darkblue
+  color: #FFF
+  &:before
+    background: $darkblue
+  &:hover
+    &:before
+      background: $yellow
 
 .btn_center
   display: block

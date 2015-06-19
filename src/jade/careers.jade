@@ -1,0 +1,55 @@
+extends _layout
+
+block title
+  title Careers
+
+block header
+  include _header-large-careers
+
+block content
+  include _nav-inner
+  //BEGIN inntro
+  .l-center
+    h1.title.title_large
+      b We are hiring
+
+    .testimonials
+      .testimonial.testimonial_mod
+        .testimonial__pic
+          img(src="img/hiring1.jpg", alt="")
+        p.testimonial__text
+          | Help us change the way currency works
+
+      .testimonial.testimonial_mod
+        .testimonial__pic
+          img(src="img/hiring2.jpg", alt="")
+         p.testimonial__text
+          | Join the world’s fastest growing currency
+
+      .testimonial.testimonial_mod
+        .testimonial__pic
+          img(src="img/hiring3.jpg", alt="")
+         p.testimonial__text
+          | Join a passionate team of professionals
+
+    .l-center-narrow
+      h3.title.title_mrgtop
+        b Jobs
+
+      p.
+        At Cubits, we are bringing money to a new level. 
+        Our offices are located in Berlin, London and Luxemburg. 
+        We have a very diverse, international, fun, user-focused 
+        and ambitious team. Sound like you? Check out our openings.
+  //END inntro
+
+  //BEGIN offices
+  .color-wrapper
+    hr.divider.divider_sm
+      .l-center
+        ul.offices
+          li.offices__item
+            a.office(href="#")
+              strong.office__name All offices
+              span.office__jobs 33 open
+  //END offices

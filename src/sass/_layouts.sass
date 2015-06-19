@@ -1,5 +1,5 @@
-.l-center
-  width: 100%
+.l-center,
+.l-aside
   max-width: 960px
   margin: auto
   padding: 0 20px
@@ -42,4 +42,14 @@
     &:last-child
       padding-left: percentage(70/1440)
       padding-right: percentage(140/1440)
+
+.l-aside
+  +clr
+  .l-column
+    padding: 0
+    &:first-child
+      width: percentage(680/960)
+    &:last-child
+      float: right
+      width: percentage(240/960)
 
