@@ -11,7 +11,7 @@
   display: block
   margin-bottom: 40px
   text-align: center
-  +f(r, 28)
+  +f(r, 28, 0.025)
   line-height: 1.357
   text-transform: uppercase
   color: inherit
@@ -44,8 +44,7 @@ strong.title
 
 .title_large
   margin-bottom: 70px
-  +f(b, 45)
-  letter-spacing: 0.027em
+  +f(b, 45, 0.075)
   line-height: 1.35
   .icon
     margin-bottom: 40px
@@ -124,7 +123,7 @@ strong.title
 
 
 .form
-  .btn
+  > .btn
     display: block
     margin: 27px auto 0
 
@@ -145,12 +144,57 @@ strong.title
   &:not(:last-child)
     margin-bottom: 12px
 
+.form__body
+  position: relative
+
+.form__footer
+  margin-top: 9px
+  +clr
+  .btn
+    float: right
+    margin-right: 8px
 
 .form_white-bounds
   padding: 22px 40px 30px
   background: none
   border: 6px solid #FFF
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.11)
+
+.form-message
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  +vertical
+  white-space: nowrap
+  background: #FFF
+  border: 2px solid
+
+.form-message__close
+  position: absolute
+  top: 6px
+  right: 6px
+  background: none
+  width: 30px
+  height: 30px
+  transition: color 0.15s linear
+  &:hover
+    color: $yellow
+
+.form-message__inner
+  display: inline-block
+  vertical-align: middle
+  white-space: normal
+  font-size: 18px
+
+.form-message__title
+  display: block
+  margin-bottom: 16px
+  +f(b, 14)
+  text-transform: uppercase
+
 
 
 .field
@@ -164,14 +208,13 @@ strong.title
   height: 44px
   padding: 10px 14px
   border: 2px solid $darkblue
-  border-radius: 2px
+  // border-radius: 2px
   box-sizing: border-box
   +f(m, 14)
   line-height: 1.42
   color: $darkblue
   text-transform: uppercase
   background: none
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), inset 0 -3px 15px rgba(255, 255, 255, 0.38)
   +placeholder
     +f(r, 14)
     line-height: 1.42
@@ -180,6 +223,16 @@ strong.title
   &:focus
     +placeholder
       opacity: 0
+
+.input_shadow
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), inset 0 -3px 15px rgba(255, 255, 255, 0.38)
+
+.input_w320
+  max-width: 320px
+
+textarea.input
+  resize: none
+  height: 166px
 
 
 .divider
@@ -333,3 +386,44 @@ a.btn_share
     line-height: 2.14
   &:not(:first-child)
     margin-top: 40px
+
+
+.checkbox
+  display: inline-block
+  +f(r, 14)
+  line-height: 2
+  position: relative
+  > input
+    position: absolute
+    top: 50%
+    left: 0
+    opacity: 0
+    margin-top: -5px
+  > span
+    display: inline-block
+    vertical-align: middle
+    padding-left: 30px
+    position: relative
+    line-height: 1.4
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      left: 0
+      top: 1px
+      box-sizing: border-box
+    &:before
+      width: 16px
+      height: 16px
+      border: 2px solid
+    &:after
+      display: none
+      top: 5px
+      left: 4px
+      width: 0px
+      height: 0px
+      border: 4px solid
+      border-radius: 50%
+  input:checked ~ span:after
+    display: block
+

@@ -867,8 +867,15 @@ a.tab__btn
 
 .offices
   font-size: 0
+  text-align: center
+  // display: flex
+  // justify-content: space-around
+  // align-items: flex-end
   .office
     display: inline-block
+
+.offices_mrg
+  margin: 50px 0
 
 .offices__item
   display: inline-block
@@ -876,7 +883,6 @@ a.tab__btn
   width: 25%
   box-sizing: border-box
   padding: 0 20px
-  text-align: center
 
 .office
   display: block
@@ -887,6 +893,7 @@ a.tab__btn
   text-transform: uppercase
   transition: color 0.15s linear
   color: $darkblue
+  background: none
   .icon
     font-size: 120px
     margin-bottom: 18px
@@ -896,7 +903,7 @@ a.tab__btn
     font-size: 136px
   .icon-london
     font-size: 169px
-  .icon-luxemburg
+  .icon-luxembourg
     font-size: 128px
   &:hover
     color: $yellow
@@ -912,6 +919,13 @@ a.tab__btn
   display: inline-block
   border-bottom: 3px solid
   line-height: 2.1
+
+.office_contact
+  &:hover
+    color: $lightblue
+  &:active,
+  &.is-active
+    color: $yellow
 
 
 .jobs-tiles
@@ -976,3 +990,26 @@ a.tab__btn
     margin: 0
   .btn:not(:last-child)
     margin-right: 60px
+
+.share-btns__text
+  +f(b, 14)
+  text-transform: uppercase
+  display: block
+  margin: 0 0 30px -8px
+  text-align: left
+  letter-spacing: 0.075em
+
+.share-btns_small
+  margin-top: 50px
+  padding-left: 8px
+  font-size: 14px
+  text-align: left
+  text-transform: uppercase
+  .btn:not(:last-child)
+    margin-right: 22px
+
+
+.tab-content
+  display: none
+  &.is-active
+    display: block

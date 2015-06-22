@@ -1,0 +1,113 @@
+extends _layout
+
+block title
+  title Contacts
+
+block content
+  //BEGIN contacts
+  .l-center.js-contacts
+    h1.title.title_large
+      | Contact
+
+    ul.offices.offices_mrg
+      li.offices__item
+        button.office.office_contact(type="button")
+          .icon.icon-berlin
+          strong.office__name Berlin
+      li.offices__item
+        button.office.office_contact.is-active(type="button")
+          .icon.icon-london
+          strong.office__name London
+      li.offices__item
+        button.office.office_contact(type="button")
+          .icon.icon-luxembourg
+          strong.office__name Luxembourg
+
+    .tab-content
+      .l-contacts
+        .l-column
+          .map
+            img(src="img/map.jpg", alt="", style="display:block;max-width:100%")
+        aside.l-column
+          .text
+            b.demi.
+              Berlin <br>
+              Dooga Limited, <br>
+              Barking, IG11 8fg <br>
+              BEC 101, 50 Cambridge Road
+
+          .share-btns.share-btns_small
+            strong.share-btns__text Find us on social media
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-fb
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-tw
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-in
+    .tab-content.is-active
+      .l-contacts
+        .l-column
+          .map
+            img(src="img/map.jpg", alt="", style="display:block;max-width:100%")
+        aside.l-column
+          .text
+            b.demi.
+              Dooga Limited, <br>
+              Barking, IG11 8fg <br>
+              BEC 101, 50 Cambridge Road
+
+          .share-btns.share-btns_small
+            strong.share-btns__text Find us on social media
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-fb
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-tw
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-in
+    .tab-content
+      .l-contacts
+        .l-column
+          .map
+            img(src="img/map.jpg", alt="", style="display:block;max-width:100%")
+
+        aside.l-column
+          .text
+            b.demi.
+              Luxembourg <br>
+              Dooga Limited, <br>
+              Barking, IG11 8fg <br>
+              BEC 101, 50 Cambridge Road
+
+          .share-btns.share-btns_small
+            strong.share-btns__text Find us on social media
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-fb
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-tw
+            a.btn.btn_share.btn_darkblue(href="#")
+              i.icon.icon-in
+
+  .l-contacts
+    .l-column
+      h2.title.title_left.title_mrgtop
+        b Get in touch with us
+
+      form.form
+        .field
+          input.input.input_w320(type="email", name="email" placeholder="Email")
+        .form__body
+          .form-message
+            button.form-message__close.icon.icon-close(type="button")
+            .form-message__inner
+              strong.form-message__title thank you for your message
+              p We will reply to you within fev hours in business time
+          .field
+            textarea.input(name="message", placeholder="Enter your message here")
+          .form__footer
+            button.btn.btn_darkblue.btn_w220(type="submit")
+              | Send message
+            label.checkbox(for="recaptcha")
+              input(type="checkbox", id="recaptcha", name="recaptcha")
+              span I’m not a robot
+    .l-column
+  //END contacts

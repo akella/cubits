@@ -2,7 +2,7 @@ require('jquery');
 require('slick-carousel');
 
 function Slider(selector) {
-    this.wrapper           = $(selector);
+    this.wrapper           = selector instanceof jQuery ? selector : $(selector);
     this.slider            = this.wrapper.find('.press-slider__slides');
     this.arrow             = this.wrapper.find('.press-slider__arrow');
     this.navButton         = this.wrapper.find('.press-slider__btn');

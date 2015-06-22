@@ -14139,22 +14139,37 @@ return jQuery;
 global.$ = global.jQuery = require('jquery');
 require("./../../bower_components/modernizr/modernizr.js");
 var Slider = require('./modules/press-slider.js');
+var Tabs   = require('./modules/tabs.js');
 
 $(document).ready(function() {
 
-    var slider = new Slider('.press-slider');
+    var slider = $('.press-slider'),
+        contactTabs = $('.js-contacts');
+        tabs   = $('.js-tabs');
 
+    if ( slider.length ) slider = new Slider(slider);
+
+    if ( tabs.length ) {
+        tabs.each(function(index, el) {
+            new Tabs(el, '.tab__btn', '.tab-content');
+        });
+    }
+    if ( contactTabs.length ) {
+        contactTabs = new Tabs(contactTabs, '.office', '.tab-content');
+    }
+
+    // remove on production
     $('a[href="' + window.location.pathname.slice(1) + '"]').addClass('is-active');
 
 });
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"./../../bower_components/modernizr/modernizr.js":1,"./modules/press-slider.js":5,"jquery":2}],5:[function(require,module,exports){
+},{"./../../bower_components/modernizr/modernizr.js":1,"./modules/press-slider.js":5,"./modules/tabs.js":6,"jquery":2}],5:[function(require,module,exports){
 require('jquery');
 require('slick-carousel');
 
 function Slider(selector) {
-    this.wrapper           = $(selector);
+    this.wrapper           = selector instanceof jQuery ? selector : $(selector);
     this.slider            = this.wrapper.find('.press-slider__slides');
     this.arrow             = this.wrapper.find('.press-slider__arrow');
     this.navButton         = this.wrapper.find('.press-slider__btn');
@@ -14245,7 +14260,55 @@ Slider.prototype.init = function() {
 };
 
 module.exports = Slider;
-},{"jquery":2,"slick-carousel":3}]},{},[4])
+},{"jquery":2,"slick-carousel":3}],6:[function(require,module,exports){
+var $ = require('jquery');
+
+function Tabs(wrapper, tab, content) {
+    this.tabs = $(wrapper).find(tab || '.js-tab');
+    this.content = $(wrapper).find(content || '.js-tab-content');
+    this.activeClass = 'is-active';
+    this.activeTabIndex = 0;
+
+    this._init();
+}
+
+Tabs.prototype._initEvents = function() {
+    var _ = this;
+
+    _.tabs.each(function(index, el) {
+        $(this).on('click', function(e) {
+            e.preventDefault();
+            _.changeContent(index);
+        });
+    });
+};
+
+Tabs.prototype._init = function() {
+    var _ = this;
+
+    _.tabs.each(function(index, el) {
+        if ( $(el).hasClass(_.activeClass) ) _.activeTabIndex = index;
+    });
+    _._initEvents();
+};
+
+Tabs.prototype.changeContent = function(index) {
+    var _ = this;
+
+    $( _.tabs.eq(_.activeTabIndex) ).removeClass(_.activeClass);
+    $( _.tabs.eq(index) ).addClass(_.activeClass);
+    $( _.content.eq(_.activeTabIndex) )
+        .removeClass(_.activeClass);
+        // .hide();
+    $( _.content.eq(index) )
+        // .show()
+        .addClass(_.activeClass);
+
+    _.activeTabIndex = index;
+};
+
+module.exports = Tabs;
+},{"jquery":2}]},{},[4])
 
 
 //# sourceMappingURL=main.js.map

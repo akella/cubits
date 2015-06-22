@@ -13,149 +13,151 @@ block content
     | Our team
 
   //BEGIN board
-  .l-aside
+  .l-aside.js-tabs
     .l-column
-      ul.board
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/tim.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/oskar.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/julian.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/dirk.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/vasilije.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/sergey.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/omar.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/nick.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/tim.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/oskar.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/julian.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/dirk.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/vasilije.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/sergey.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/omar.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
-        li.board__tile
-          .member.member_tile
-            .member__pic
-              img(src="img/team/nick.jpg", alt="")
-            .member__overlay
-              span.member__overlay-text Tim Rehder <br> CEO and co-founder
+      .tab-content.is-active
+        .member
+          .member__pic
+            img(src="img/team/tim.jpg", alt="")
+          .member__info
+            dl.member__name
+              dt Tim Rehder
+              dd CEO and co-founder
+            p.text.
+              Sed molestie augue sit amet leo consequat posuere. 
+              Vestibulum ante ipsum primis in faucibus orci luctus et 
+              ultrices posuere cubilia Curae; Proin vel ante a orci 
+              tempus eleifend ut et magna. 
 
-      .member
-        .member__pic
-          img(src="img/team/tim.jpg", alt="")
-        .member__info
-          dl.member__name
-            dt Tim Rehder
-            dd CEO and co-founder
-          p.text.
-            Sed molestie augue sit amet leo consequat posuere. 
-            Vestibulum ante ipsum primis in faucibus orci luctus et 
-            ultrices posuere cubilia Curae; Proin vel ante a orci 
-            tempus eleifend ut et magna. 
+        .member
+          .member__pic
+            img(src="img/team/julian.jpg", alt="")
+          .member__info
+            dl.member__name
+              dt Julian Mautner
+              dd Co-founder
+            p.text.
+              Sed molestie augue sit amet leo consequat posuere. 
+              Vestibulum ante ipsum primis in faucibus orci luctus et 
+              ultrices posuere cubilia Curae; Proin vel ante a orci 
+              tempus eleifend ut et magna. 
 
-      .member
-        .member__pic
-          img(src="img/team/julian.jpg", alt="")
-        .member__info
-          dl.member__name
-            dt Julian Mautner
-            dd Co-founder
-          p.text.
-            Sed molestie augue sit amet leo consequat posuere. 
-            Vestibulum ante ipsum primis in faucibus orci luctus et 
-            ultrices posuere cubilia Curae; Proin vel ante a orci 
-            tempus eleifend ut et magna. 
-
-      .member
-        .member__pic
-          img(src="img/team/oskar.jpg", alt="")
-        .member__info
-          dl.member__name
-            dt Oskar Paolini
-            dd Head of Risk Management
-          p.text.
-            Sed molestie augue sit amet leo consequat posuere. 
-            Vestibulum ante ipsum primis in faucibus orci luctus et 
-            ultrices posuere cubilia Curae; Proin vel ante a orci 
-            tempus eleifend ut et magna. 
+        .member
+          .member__pic
+            img(src="img/team/oskar.jpg", alt="")
+          .member__info
+            dl.member__name
+              dt Oskar Paolini
+              dd Head of Risk Management
+            p.text.
+              Sed molestie augue sit amet leo consequat posuere. 
+              Vestibulum ante ipsum primis in faucibus orci luctus et 
+              ultrices posuere cubilia Curae; Proin vel ante a orci 
+              tempus eleifend ut et magna. 
+      
+      .tab-content
+        ul.board
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/tim.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/oskar.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/julian.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/dirk.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/vasilije.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/sergey.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/omar.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/nick.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/tim.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/oskar.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/julian.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/dirk.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/vasilije.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/sergey.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/omar.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
+          li.board__tile
+            .member.member_tile
+              .member__pic
+                img(src="img/team/nick.jpg", alt="")
+              .member__overlay
+                span.member__overlay-text Tim Rehder <br> CEO and co-founder
 
     .l-column
       .tab
-        button.tab__btn(type="button") Board
-        button.tab__btn.is-active(type="button") Members
+        button.tab__btn.is-active(type="button") Board
+        button.tab__btn(type="button") Members
   //END board
 
   .btn-wrapper
