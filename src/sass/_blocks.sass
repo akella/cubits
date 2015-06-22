@@ -25,6 +25,11 @@
   .icon-heart-bitcoin
     margin-bottom: 27px
 
+b.title,
+strong.title
+  +f(demi-b)
+
+
 .title_white
   color: #FFF
 
@@ -262,11 +267,26 @@ a.btn
   display: block
   margin: auto
 
-.btn_lrg
+.btn_large
   height: 58px
   padding-left: 40px
   padding-right: 40px
-a.btn_lrg
+a.btn_large
+  line-height: 58px
+
+.btn_share
+  height: 58px
+  width: 58px
+  padding: 0
+  .icon
+    vertical-align: middle
+  .icon-fb
+    font-size: 33px
+  .icon-tw
+    font-size: 26px
+  .icon-in
+    font-size: 32px
+a.btn_share
   line-height: 58px
 
 .btn_w220
@@ -300,3 +320,16 @@ a.btn_lrg
     vertical-align: middle
   &:hover
     color: $yellow
+
+
+.mail-to
+  display: block
+  text-transform: uppercase
+  color: $lightblue
+  +f(b, 14)
+  a
+    text-decoration: none
+    border-bottom: 2px solid
+    line-height: 2.14
+  &:not(:first-child)
+    margin-top: 40px

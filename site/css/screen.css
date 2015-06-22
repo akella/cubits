@@ -23,6 +23,16 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: 'icons'; src: url("../fonts/icons.eot?dmsddr"); src: url("../fonts/icons.eot?#iefixdmsddr") format("embedded-opentype"), url("../fonts/icons.ttf?dmsddr") format("truetype"), url("../fonts/icons.woff?dmsddr") format("woff"), url("../fonts/icons.svg?dmsddr#icons") format("svg"); font-weight: normal; font-style: normal; }
 .icon { font-family: 'icons'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
+.icon-in:before { content: "\e60c"; }
+
+.icon-berlin:before { content: "\e60d"; }
+
+.icon-earth:before { content: "\e60e"; }
+
+.icon-london:before { content: "\e60f"; }
+
+.icon-luxemburg:before { content: "\e610"; }
+
 .icon-gears:before { content: "\e60a"; }
 
 .icon-heart-bitcoin:before { content: "\e609"; }
@@ -88,6 +98,7 @@ a { color: inherit; -webkit-transition: color 0.15s linear; transition: color 0.
 a:hover { color: #F8CF5E; }
 
 b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+b.demi, strong.demi { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
 .l-center, .l-aside { max-width: 960px; margin: auto; padding: 0 20px; }
 
@@ -113,12 +124,19 @@ b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-w
 .l-aside .l-column:first-child { width: 70.83333%; }
 .l-aside .l-column:last-child { float: right; width: 25%; }
 
+.l-job:after { content: " "; display: table; clear: both; }
+.l-job .l-column { padding: 0; }
+.l-job .l-column:first-child { width: 62.5%; }
+.l-job .l-column:last-child { float: right; width: 31.25%; }
+
 .bold-title { display: block; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; letter-spacing: 0.03em; text-transform: uppercase; color: inherit; text-align: center; line-height: 1.375; }
 
 .title { display: block; margin-bottom: 40px; text-align: center; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; line-height: 1.357; text-transform: uppercase; color: inherit; }
 .title > b, .title strong { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
 .title .icon { display: block; margin: auto; font-size: 68px; margin-bottom: 60px; }
 .title .icon-heart-bitcoin { margin-bottom: 27px; }
+
+b.title, strong.title { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
 .title_white { color: #FFF; }
 
@@ -201,9 +219,17 @@ a.btn { text-decoration: none; line-height: 45px; }
 
 .btn_center { display: block; margin: auto; }
 
-.btn_lrg { height: 58px; padding-left: 40px; padding-right: 40px; }
+.btn_large { height: 58px; padding-left: 40px; padding-right: 40px; }
 
-a.btn_lrg { line-height: 58px; }
+a.btn_large { line-height: 58px; }
+
+.btn_share { height: 58px; width: 58px; padding: 0; }
+.btn_share .icon { vertical-align: middle; }
+.btn_share .icon-fb { font-size: 33px; }
+.btn_share .icon-tw { font-size: 26px; }
+.btn_share .icon-in { font-size: 32px; }
+
+a.btn_share { line-height: 58px; }
 
 .btn_w220 { width: 220px; padding-left: 20px; padding-right: 20px; }
 
@@ -216,6 +242,10 @@ a.btn_lrg { line-height: 58px; }
 .social-btn .icon-gplus { font-size: 19px; }
 .social-btn > span { display: inline-block; vertical-align: middle; }
 .social-btn:hover { color: #F8CF5E; }
+
+.mail-to { display: block; text-transform: uppercase; color: #93C4D2; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; }
+.mail-to a { text-decoration: none; border-bottom: 2px solid; line-height: 2.14; }
+.mail-to:not(:first-child) { margin-top: 40px; }
 
 .header { height: 100px; line-height: 100px; margin-bottom: 70px; box-sizing: border-box; padding: 0 50px 0 60px; color: #FFF; background: #343558; }
 .header:after { content: " "; display: table; clear: both; }
@@ -343,6 +373,8 @@ a.btn_lrg { line-height: 58px; }
 .color-wrapper_lightblue { background: #93C4D2; }
 
 .color-wrapper_pd110 { padding: 110px 0; }
+
+.color-wrapper_offices { padding: 55px 0 74px; }
 
 .interface { margin: 40px -20px 0; }
 .interface:after { content: " "; display: table; clear: both; }
@@ -534,12 +566,57 @@ a.btn_lrg { line-height: 58px; }
 
 .board__tile { float: left; width: 155px; height: 208px; margin: 6px 6px 0 0; }
 
-.tab__btn { display: block; width: 100%; box-sizing: border-box; padding: 0 10px 0 20.83333%; background: none; height: 52px; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; color: inherit; text-align: left; -webkit-transition: background 0.15s linear; transition: background 0.15s linear; box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset; }
+.tab:not(:first-child) { margin-top: 25px; }
+
+.tab__btn { display: block; width: 100%; box-sizing: border-box; padding: 0 10px 0 20.83333%; background: none; height: 52px; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; color: #343558; text-align: left; -webkit-transition: background 0.15s linear; transition: background 0.15s linear; box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset; }
+.tab__btn > span { display: inline-block; vertical-align: middle; line-height: 1.4; white-space: normal; }
 .tab__btn:first-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
 .tab__btn:last-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 -6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
-.tab__btn:hover { background: #F8CF5E; }
+.tab__btn:only-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 6px 6px -6px rgba(5, 5, 5, 0.11) inset, 0 -6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
+.tab__btn:hover { background: #F8CF5E; color: #343558; }
 .tab__btn:active { background: #93C4D2; }
 .tab__btn.is-active { background: #F2F6F8; cursor: default; }
+
+a.tab__btn { line-height: 52px; text-decoration: none; }
+
+.offices { font-size: 0; }
+.offices .office { display: inline-block; }
+
+.offices__item { display: inline-block; vertical-align: bottom; width: 25%; box-sizing: border-box; padding: 0 20px; text-align: center; }
+
+.office { display: block; text-decoration: none; text-align: center; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; letter-spacing: 0.02em; text-transform: uppercase; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; color: #343558; }
+.office .icon { font-size: 120px; margin-bottom: 18px; }
+.office .icon-earth { font-size: 120px; }
+.office .icon-berlin { font-size: 136px; }
+.office .icon-london { font-size: 169px; }
+.office .icon-luxemburg { font-size: 128px; }
+.office:hover { color: #F8CF5E; }
+.office:hover .office__jobs { color: #F8CF5E; }
+
+.office__name { display: block; }
+
+.office__jobs { color: #93C4D2; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; display: inline-block; border-bottom: 3px solid; line-height: 2.1; }
+
+.jobs-tiles { margin: 0 -20px -8.4%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+@media only screen and (max-width: 849px) { .jobs-tiles { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; } }
+
+.jobs-tiles__item { padding: 0 20px; margin-bottom: 8.4%; }
+
+.tile { display: block; width: 238px; height: 238px; box-sizing: border-box; text-decoration: none; border: 5px solid #93C4D2; -webkit-transition: all 0.15s linear; transition: all 0.15s linear; text-align: center; font-size: 0; white-space: nowrap; }
+.tile:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.tile:hover { background: #F8CF5E; border-color: #F8CF5E; }
+.tile:hover .tile__location { color: #FFF; }
+
+.tile__inner { display: inline-block; vertical-align: middle; padding: 5px 10px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; white-space: normal; }
+
+.tile__title { display: block; color: #343558; }
+.tile__title:after { content: ""; display: block; width: 60px; height: 0; margin: 11px auto 0; border-bottom: 3px solid; }
+
+.tile__location { display: block; margin-top: 15px; color: #93C4D2; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
+
+.share-btns { text-align: center; margin-top: 100px; }
+.share-btns .btn { margin: 0; }
+.share-btns .btn:not(:last-child) { margin-right: 60px; }
 
 
 

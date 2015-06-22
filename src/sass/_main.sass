@@ -216,6 +216,9 @@
 .color-wrapper_pd110
   padding: 110px 0
 
+.color-wrapper_offices
+  padding: 55px 0 74px
+
 
 .interface
   margin: 40px -20px 0
@@ -818,8 +821,10 @@
   height: 208px
   margin: 6px 6px 0 0
 
-// .tab
-  // box-shadow: 0 0 6px 0 rgba(#050505, 0.11) inset
+
+.tab
+  &:not(:first-child)
+    margin-top: 25px
 
 .tab__btn
   display: block
@@ -831,19 +836,143 @@
   +text-overflow
   +f(b, 14)
   text-transform: uppercase
-  color: inherit
+  color: $darkblue
   text-align: left
   transition: background 0.15s linear
   box-shadow: 6px 0 6px -6px rgba(#050505, 0.11) inset, -6px 0 6px -6px rgba(#050505, 0.11) inset
+  > span
+    display: inline-block
+    vertical-align: middle
+    line-height: 1.4
+    white-space: normal
   &:first-child
     box-shadow: 6px 0 6px -6px rgba(#050505, 0.11) inset, -6px 0 6px -6px rgba(#050505, 0.11) inset, 0 6px 6px -6px rgba(#050505, 0.11) inset
   &:last-child
     box-shadow: 6px 0 6px -6px rgba(#050505, 0.11) inset, -6px 0 6px -6px rgba(#050505, 0.11) inset, 0 -6px 6px -6px rgba(#050505, 0.11) inset
-
+  &:only-child
+    box-shadow: 6px 0 6px -6px rgba(#050505, 0.11) inset, -6px 0 6px -6px rgba(#050505, 0.11) inset, 0 6px 6px -6px rgba(#050505, 0.11) inset, 0 -6px 6px -6px rgba(#050505, 0.11) inset
   &:hover
     background: $yellow
+    color: $darkblue
   &:active
     background: $lightblue
   &.is-active
     background: #F2F6F8
     cursor: default
+
+a.tab__btn
+  line-height: 52px
+  text-decoration: none
+
+
+.offices
+  font-size: 0
+  .office
+    display: inline-block
+
+.offices__item
+  display: inline-block
+  vertical-align: bottom
+  width: 25%
+  box-sizing: border-box
+  padding: 0 20px
+  text-align: center
+
+.office
+  display: block
+  text-decoration: none
+  text-align: center
+  +f(b,14)
+  letter-spacing: 0.02em
+  text-transform: uppercase
+  transition: color 0.15s linear
+  color: $darkblue
+  .icon
+    font-size: 120px
+    margin-bottom: 18px
+  .icon-earth
+    font-size: 120px
+  .icon-berlin
+    font-size: 136px
+  .icon-london
+    font-size: 169px
+  .icon-luxemburg
+    font-size: 128px
+  &:hover
+    color: $yellow
+    .office__jobs
+      color: $yellow
+
+.office__name
+  display: block
+
+.office__jobs
+  color: $lightblue
+  transition: color 0.15s linear
+  display: inline-block
+  border-bottom: 3px solid
+  line-height: 2.1
+
+
+.jobs-tiles
+  margin: 0 -20px percentage(-84/1000)
+  display: flex
+  justify-content: space-between
+  align-content: space-between
+  flex-wrap: wrap
+  +r(849)
+    justify-content: center
+
+.jobs-tiles__item
+  padding: 0 20px
+  margin-bottom: percentage(84/1000)
+
+.tile
+  display: block
+  width: 238px
+  height: 238px
+  box-sizing: border-box
+  text-decoration: none
+  border: 5px solid $lightblue
+  transition: all 0.15s linear
+  +vertical
+  white-space: nowrap
+  &:hover
+    background: $yellow
+    border-color: $yellow
+    .tile__location
+      color: #FFF
+
+.tile__inner
+  display: inline-block
+  vertical-align: middle
+  padding: 5px 10px
+  +f(b, 14)
+  text-transform: uppercase
+  white-space: normal
+
+.tile__title
+  display: block
+  color: $darkblue
+  &:after
+    content: ""
+    display: block
+    width: 60px
+    height: 0
+    margin: 11px auto 0
+    border-bottom: 3px solid
+
+.tile__location
+  display: block
+  margin-top: 15px
+  color: $lightblue
+  transition: color 0.15s linear
+
+
+.share-btns
+  text-align: center
+  margin-top: 100px
+  .btn
+    margin: 0
+  .btn:not(:last-child)
+    margin-right: 60px

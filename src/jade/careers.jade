@@ -8,48 +8,130 @@ block header
 
 block content
   include _nav-inner
-  //BEGIN inntro
-  .l-center
-    h1.title.title_large
-      b We are hiring
+  block careers-content
+    //BEGIN inntro
+    .l-center
+      h1.title.title_large
+        b We are hiring
 
-    .testimonials
-      .testimonial.testimonial_mod
-        .testimonial__pic
-          img(src="img/hiring1.jpg", alt="")
-        p.testimonial__text
-          | Help us change the way currency works
+      .testimonials
+        .testimonial.testimonial_mod
+          .testimonial__pic
+            img(src="img/hiring1.jpg", alt="")
+          p.testimonial__text
+            | Help us change the way currency works
 
-      .testimonial.testimonial_mod
-        .testimonial__pic
-          img(src="img/hiring2.jpg", alt="")
-         p.testimonial__text
-          | Join the world’s fastest growing currency
+        .testimonial.testimonial_mod
+          .testimonial__pic
+            img(src="img/hiring2.jpg", alt="")
+           p.testimonial__text
+            | Join the world’s fastest growing currency
 
-      .testimonial.testimonial_mod
-        .testimonial__pic
-          img(src="img/hiring3.jpg", alt="")
-         p.testimonial__text
-          | Join a passionate team of professionals
+        .testimonial.testimonial_mod
+          .testimonial__pic
+            img(src="img/hiring3.jpg", alt="")
+           p.testimonial__text
+            | Join a passionate team of professionals
 
-    .l-center-narrow
-      h3.title.title_mrgtop
-        b Jobs
+      .l-center-narrow
+        h3.title.title_mrgtop
+          b Jobs
 
-      p.
-        At Cubits, we are bringing money to a new level. 
-        Our offices are located in Berlin, London and Luxemburg. 
-        We have a very diverse, international, fun, user-focused 
-        and ambitious team. Sound like you? Check out our openings.
-  //END inntro
+        p.text
+          strong.demi.
+            At Cubits, we are bringing money to a new level. 
+            Our offices are located in Berlin, London and Luxemburg. 
+            We have a very diverse, international, fun, user-focused 
+            and ambitious team. Sound like you? Check out our openings.
+    //END inntro
 
-  //BEGIN offices
-  .color-wrapper
-    hr.divider.divider_sm
+    //BEGIN offices
+    .color-wrapper.color-wrapper_offices
+      hr.divider.divider_sm
       .l-center
         ul.offices
           li.offices__item
-            a.office(href="#")
+            a.office(href="careers-job.html")
+              .icon.icon-earth
               strong.office__name All offices
               span.office__jobs 33 open
-  //END offices
+          li.offices__item
+            a.office(href="careers-job.html")
+              .icon.icon-berlin
+              strong.office__name Berlin
+              span.office__jobs 33 open
+          li.offices__item
+            a.office(href="careers-job.html")
+              .icon.icon-london
+              strong.office__name London
+              span.office__jobs 10 open
+          li.offices__item
+            a.office(href="careers-job.html")
+              .icon.icon-luxemburg
+              strong.office__name Luxembourg
+              span.office__jobs 5 open
+    //END offices
+
+    //BEGIN jobs-tiles
+    .l-center
+      ul.jobs-tiles
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Ruby on Rals dev
+              span.tile__location Berlin
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Finance maneger
+              span.tile__location Luxembourg
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Complance maneger
+              span.tile__location London
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Ruby on Rals dev
+              span.tile__location Berlin
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Finance maneger
+              span.tile__location Luxembourg
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Complance maneger
+              span.tile__location London
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Ruby on Rals dev
+              span.tile__location Berlin
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Finance maneger
+              span.tile__location Luxembourg
+        li.jobs-tiles__item
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Complance maneger
+              span.tile__location London
+    //END jobs-tiles
+
+  //BEGIN share buttons
+  .l-center
+    .share-btns
+      h3.title
+        | <b>Know somebody who can be interested?</b> <br> Share this listing!
+
+      a.btn.btn_share.btn_darkblue(href="#")
+        i.icon.icon-fb
+      a.btn.btn_share.btn_darkblue(href="#")
+        i.icon.icon-tw
+      a.btn.btn_share.btn_darkblue(href="#")
+        i.icon.icon-in
+  //END share buttons

@@ -9,6 +9,11 @@
   font-style: normal;
 }
 
+$icon-in: "\e60c";
+$icon-berlin: "\e60d";
+$icon-earth: "\e60e";
+$icon-london: "\e60f";
+$icon-luxemburg: "\e610";
 $icon-gears: "\e60a";
 $icon-heart-bitcoin: "\e609";
 $icon-safe: "\e60b";
@@ -37,6 +42,21 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-in:before {
+  content: "\e60c";
+}
+.icon-berlin:before {
+  content: "\e60d";
+}
+.icon-earth:before {
+  content: "\e60e";
+}
+.icon-london:before {
+  content: "\e60f";
+}
+.icon-luxemburg:before {
+  content: "\e610";
+}
 .icon-gears:before {
   content: "\e60a";
 }
