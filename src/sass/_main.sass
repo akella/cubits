@@ -593,13 +593,13 @@
 .text
   +f(m, 18)
   line-height: 1.7
-  p, ul, ol
+  > p, ul, ol
     margin: 1em 0
     &:first-child
       margin-top: 0
     &:last-child
       margin-bottom: 0
-  blockquote
+  > blockquote
     display: block
     width: 60%
     margin: 80px 0 80px -50px
@@ -607,9 +607,23 @@
     +f(r, 28)
     line-height: 1.35
     color: $lightblue
+  > ul
+    > li
+      &:before
+        content: "•"
+
 
 .text_center
   text-align: center
+
+.text_privacy
+  > p, ul, ol
+    margin: 0
+  > ul
+    > li
+      &:before
+        content: "•"
+        display: inline
 
 
 .advantage

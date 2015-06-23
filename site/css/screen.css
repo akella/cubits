@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
 body, html { height: 100%; }
@@ -148,6 +149,8 @@ b.demi, strong.demi { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans
 .l-contacts .l-column:last-child { float: right; width: 27.08333%; }
 
 .bold-title { display: block; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 32px; letter-spacing: 0.03em; text-transform: uppercase; color: inherit; text-align: center; line-height: 1.375; }
+
+.bold-title_mrg { margin-bottom: 70px; }
 
 .title { display: block; margin-bottom: 40px; text-align: center; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; letter-spacing: 0.025em; line-height: 1.357; text-transform: uppercase; color: inherit; }
 .title > b, .title strong { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
@@ -547,12 +550,16 @@ a.btn_share { line-height: 58px; }
 .member_tile:hover .member__pic { opacity: 0.8; }
 
 .text { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.7; }
-.text p, .text ul, .text ol { margin: 1em 0; }
-.text p:first-child, .text ul:first-child, .text ol:first-child { margin-top: 0; }
-.text p:last-child, .text ul:last-child, .text ol:last-child { margin-bottom: 0; }
-.text blockquote { display: block; width: 60%; margin: 80px 0 80px -50px; text-transform: uppercase; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; line-height: 1.35; color: #93C4D2; }
+.text > p, .text ul, .text ol { margin: 1em 0; }
+.text > p:first-child, .text ul:first-child, .text ol:first-child { margin-top: 0; }
+.text > p:last-child, .text ul:last-child, .text ol:last-child { margin-bottom: 0; }
+.text > blockquote { display: block; width: 60%; margin: 80px 0 80px -50px; text-transform: uppercase; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; line-height: 1.35; color: #93C4D2; }
+.text > ul > li:before { content: "•"; }
 
 .text_center { text-align: center; }
+
+.text_privacy > p, .text_privacy ul, .text_privacy ol { margin: 0; }
+.text_privacy > ul > li:before { content: "•"; display: inline; }
 
 .advantage { table-layout: fixed; display: table; max-width: 1200px; width: 100%; margin: 15px auto 50px; }
 .advantage .title { text-align: left; margin-bottom: 70px; }
