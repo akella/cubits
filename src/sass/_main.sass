@@ -6,6 +6,17 @@
   color: #FFF
   +clr
 
+.toparea_b2b
+  &:before
+    content: ""
+    position: absolute
+    top: 100px
+    left: 0
+    right: 0
+    bottom: 0
+    background: resolve('toparea-merchant.jpg') no-repeat center center
+    background-size: cover
+
 .toparea__bg
   position: absolute
   z-index: 0
@@ -21,7 +32,7 @@
     left: 0
     height: 100%
     width: percentage(900/1440)
-    background: #C1A988 img-url('toparea-iphone.jpg') no-repeat center center
+    background: #C1A988 resolve('toparea-iphone.jpg') no-repeat center center
     background-size: cover
   &:after
     content: ""
@@ -49,6 +60,13 @@
   .form
     margin-top: 50px
 
+.toparea__text
+  position: relative
+  margin: 15px 50px 0 0
+  float: right
+  clear: both
+  max-width: 585px
+  box-sizing: border-box
 
 .step
   text-align: center
@@ -1164,3 +1182,26 @@ a.tab__btn
     text-decoration: none
     &:hover
       color: $yellow
+
+
+.b2b-promo
+  color: $darkblue
+  +f(demi-b, 18)
+  line-height: 1.7
+  .bold-title
+    text-align: left
+    margin-bottom: 9px
+  .title
+    margin-bottom: 34px
+  .btn
+    margin: 0 0 0 9px
+  > p
+    margin-top: 40px
+    margin-bottom: 40px
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+.b2b-promo__api
+  margin-left: -75px

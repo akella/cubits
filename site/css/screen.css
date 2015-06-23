@@ -247,7 +247,7 @@ textarea.input { resize: none; height: 166px; }
 
 .clearfix { display: table; width: 100%; clear: both; }
 
-.btn { display: inline-block; vertical-align: top; position: relative; height: 45px; padding: 0 20px; background: none; box-sizing: border-box; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; letter-spacing: 0.07em; text-align: center; text-transform: uppercase; color: #343558; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; white-space: nowrap; }
+.btn { display: inline-block; vertical-align: top; position: relative; z-index: 0; height: 45px; padding: 0 20px; background: none; box-sizing: border-box; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; letter-spacing: 0.07em; text-align: center; text-transform: uppercase; color: #343558; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; white-space: nowrap; }
 .btn:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: #FFF; -webkit-transition: background 0.15s linear; transition: background 0.15s linear; -webkit-transform: skewX(-16.6deg); -ms-transform: skewX(-16.6deg); transform: skewX(-16.6deg); }
 .title + .btn { margin-top: 6px; }
 .btn:hover { color: #343558; }
@@ -277,6 +277,8 @@ a.btn_large { line-height: 58px; }
 a.btn_share { line-height: 58px; }
 
 .btn_w220 { width: 220px; padding-left: 20px; padding-right: 20px; }
+
+.btn_w365 { min-width: 365px; }
 
 .social-btn { text-decoration: none; display: inline-block; vertical-align: middle; background: none; font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; margin-right: 40px; }
 .social-btn:last-child { margin-right: 0; }
@@ -357,14 +359,18 @@ a.btn_share { line-height: 58px; }
 .toparea { position: relative; margin-bottom: 118px; z-index: 0; min-height: 100vh; color: #FFF; }
 .toparea:after { content: " "; display: table; clear: both; }
 
+.toparea_b2b:before { content: ""; position: absolute; top: 100px; left: 0; right: 0; bottom: 0; background: url('/img/toparea-merchant.jpg') no-repeat center center; background-size: cover; }
+
 .toparea__bg { position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; background: #93C4D2; }
-.toparea__bg:before { content: ""; position: absolute; left: 0; height: 100%; width: 62.5%; background: #C1A988 url("../img/toparea-iphone.jpg") no-repeat center center; background-size: cover; }
+.toparea__bg:before { content: ""; position: absolute; left: 0; height: 100%; width: 62.5%; background: #C1A988 url('/img/toparea-iphone.jpg') no-repeat center center; background-size: cover; }
 .toparea__bg:after { content: ""; position: absolute; z-index: 1; top: 0; right: -140px; bottom: 0; width: 62.5%; min-width: 840px; background: #93C4D2; -webkit-transform: skewX(-16.6deg); -ms-transform: skewX(-16.6deg); transform: skewX(-16.6deg); }
 
 .toparea__content { float: right; position: relative; z-index: 1; padding: 25px 0 40px; max-width: 404px; clear: both; }
 .toparea__content .bold-title { margin-bottom: 3px; }
 .toparea__content .list-circle { margin-left: 45px; }
 .toparea__content .form { margin-top: 50px; }
+
+.toparea__text { position: relative; margin: 15px 50px 0 0; float: right; clear: both; max-width: 585px; box-sizing: border-box; }
 
 .step { text-align: center; font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.333; color: #343558; }
 .step a { color: inherit; }
@@ -739,6 +745,16 @@ a.tab__btn { line-height: 52px; text-decoration: none; }
 .logotypes__footer { float: left; width: 100%; margin-top: 75px; clear: both; text-align: center; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; }
 .logotypes__footer a { color: #93C4D2; text-decoration: none; }
 .logotypes__footer a:hover { color: #F8CF5E; }
+
+.b2b-promo { color: #343558; font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.7; }
+.b2b-promo .bold-title { text-align: left; margin-bottom: 9px; }
+.b2b-promo .title { margin-bottom: 34px; }
+.b2b-promo .btn { margin: 0 0 0 9px; }
+.b2b-promo > p { margin-top: 40px; margin-bottom: 40px; }
+.b2b-promo > p:first-child { margin-top: 0; }
+.b2b-promo > p:last-child { margin-bottom: 0; }
+
+.b2b-promo__api { margin-left: -75px; }
 
 
 

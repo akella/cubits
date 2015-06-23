@@ -1,0 +1,35 @@
+extends _layout
+
+block title
+  title Merchans
+
+block header
+  //BEGIN toparea
+  .toparea.toparea_b2b
+    include _header
+    .toparea__text
+      .b2b-promo
+        h1.bold-title
+          | Accept Bitcoin Payments
+        h2.title.title_left
+          b Risk­free with Cubits instant <br> payment processing
+
+        p.
+          Accept Bitcoin and get paid straight into your bank account.
+          <br>
+          Cubits instantly converts your Bitcoin into the currency of your choice.
+          <br>
+          You also can choose to keep a portion of your earnings in Bitcoin.
+
+        button.btn.btn_yellow.btn_large.btn_w365(type="button")
+          | Start accepting BTC
+
+        p.b2b-promo__api.
+          We offer fast and seamless integration. Check out our API documentation <a href="#">here</a>.
+  //END toparea
+
+  //BEGIN how it works
+  .l-center
+    h3.title
+      b How it works?
+  //END how it works
