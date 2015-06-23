@@ -219,6 +219,9 @@
 .color-wrapper_offices
   padding: 55px 0 74px
 
+.color-wrapper_for-media
+  padding: 40px 0 55px
+
 
 .interface
   margin: 40px -20px 0
@@ -942,6 +945,7 @@ a.tab__btn
   margin-bottom: percentage(84/1000)
 
 .tile
+  position: relative
   display: block
   width: 238px
   height: 238px
@@ -962,12 +966,12 @@ a.tab__btn
   vertical-align: middle
   padding: 5px 10px
   +f(b, 14)
-  text-transform: uppercase
   white-space: normal
 
 .tile__title
   display: block
   color: $darkblue
+  text-transform: uppercase
   &:after
     content: ""
     display: block
@@ -981,6 +985,53 @@ a.tab__btn
   margin-top: 15px
   color: $lightblue
   transition: color 0.15s linear
+  text-transform: uppercase
+
+.tile__quote
+  +f(m, 18)
+  line-height: 1.6
+
+.tile__logo
+  display: block
+  margin-top: 40px
+  +f(b, 14)
+  text-transform: uppercase
+  img
+    max-width: 100%
+    display: block
+  &:before
+    content: ""
+    display: block
+    margin-bottom: 14px
+    width: 60px
+    height: 0
+    border-top: 2px solid
+
+.tile__read-more
+  position: absolute
+  bottom: 37px
+  left: 35px
+  +f(b,14)
+  text-transform: uppercase
+  color: $lightblue
+  text-decoration: none
+  transition: color 0.15s linear
+
+.tile_large
+  width: 320px
+  height: 320px
+  padding: 40px 35px 55px 30px
+  text-align: left
+  white-space: normal
+  font-size: 18px
+  &:hover
+    color: $darkblue
+    .tile__read-more
+      color: #FFF
+  &:before
+    display: none
+  .tile__inner
+    padding: 0
 
 
 .share-btns
@@ -1015,3 +1066,60 @@ a.tab__btn
     margin-top: 0
   &.is-active
     display: block
+
+
+.press-tiles
+  margin: percentage(-80/1140) -20px 80px
+  display: flex
+  justify-content: space-between
+  align-content: space-between
+  flex-wrap: wrap
+  +r(1100)
+    justify-content: center
+  .press-tiles__item
+    margin-top: percentage(80/1140)
+    padding: 0 20px
+
+
+.logotypes
+  text-align: center
+  max-width: 860px
+  margin: auto
+  +clr
+
+.logotypes__column
+  float: left
+  width: 50%
+  box-sizing: border-box
+  padding: 0 35px
+
+.logotypes__download
+  margin: 12px 0
+  > li
+    display: inline-block
+    vertical-align: middle
+    +f(demi-b, 18)
+    color: $lightblue
+    &:not(:last-child)
+      margin-right: 20px
+  a
+    text-decoration: none
+
+.logotypes__pic
+  margin-top: 28px
+  font-size: 0
+  text-align: center
+
+.logotypes__footer
+  float: left
+  width: 100%
+  margin-top: 75px
+  clear: both
+  text-align: center
+  +f(b, 14)
+  text-transform: uppercase
+  a
+    color: $lightblue
+    text-decoration: none
+    &:hover
+      color: $yellow

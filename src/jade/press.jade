@@ -1,0 +1,104 @@
+extends _layout
+
+block title
+  title Press
+
+block header
+  //BEGIN header
+  header.header-wrap.header-wrap_press
+    .header
+      include _header-inner
+  //END header
+
+block content
+  include _nav-inner
+
+  //BEGIN press tiles
+  .l-center-wide
+    h1.title.title_large
+      | Press and media
+
+    ul.press-tiles
+      li.press-tiles__item
+        a.tile.tile_large(href="#")
+          blockquote.tile__quote.
+            “Bitcoin is a remarkable cryp- tographic achievement 
+            and the ability to create some- thing that is not duplicable..”
+          .tile__logo
+            img(src="img/press/nyt.png", alt="")
+          span.tile__read-more
+            | Read more
+
+      li.press-tiles__item
+        a.tile.tile_large(href="#")
+          blockquote.tile__quote.
+            “Bitcoin is a technological tour de force.”
+          .tile__logo
+            img(src="img/press/forbes.png", alt="")
+          span.tile__read-more
+            | Read more
+
+      li.press-tiles__item
+        a.tile.tile_large(href="#")
+          blockquote.tile__quote.
+            “Bitcoin is a technological tour de force.”
+          .tile__logo
+            img(src="img/press/bloomberg.png", alt="")
+          span.tile__read-more
+            | Read more
+
+      li.press-tiles__item
+        a.tile.tile_large(href="#")
+          blockquote.tile__quote.
+            “Bitcoin is a technological tour de force.”
+          .tile__logo
+            img(src="img/press/ct.png", alt="")
+          span.tile__read-more
+            | Read more
+
+      li.press-tiles__item
+        a.tile.tile_large(href="#")
+          blockquote.tile__quote.
+            “Bitcoin is a technological tour de force.”
+          .tile__logo
+            | NYC Times
+          span.tile__read-more
+            | Read more
+
+      li.press-tiles__item
+        a.tile.tile_large(href="#")
+          blockquote.tile__quote.
+            “Bitcoin is a technological tour de force.”
+          .tile__logo
+            img(src="img/press/business-week.png", alt="")
+          span.tile__read-more
+            | Read more
+  //END press tiles
+
+  //BEGIN for media
+  section.color-wrapper.color-wrapper_for-media
+    .l-center
+      h2.title
+        b For media
+
+      .logotypes
+        .logotypes__column
+          strong.title.title_small.title_mrg0
+            | Logo for dark background
+          ul.logotypes__download
+            li: a(href="#") PNG
+            li: a(href="#") AI
+          .logotypes__pic
+            img(src="img/media/cubits-logotype-light.jpg", alt="")
+        .logotypes__column
+          strong.title.title_small.title_mrg0
+            | Logo for light background
+          ul.logotypes__download
+            li: a(href="#") PNG
+            li: a(href="#") AI
+          .logotypes__pic
+            img(src="img/media/cubits-logotype-dark.jpg", alt="")
+
+        .logotypes__footer
+          | For more information pleas contact <a href="mailto:press@cubits.com">press@cubits.com</a>
+  //END for media

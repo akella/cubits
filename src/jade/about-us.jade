@@ -4,7 +4,11 @@ block title
   title About Us
 
 block header
-  include _header-large
+  //BEGIN header
+  header.header-wrap
+    .header
+      include _header-inner
+  //END header
 
 block content
   include _nav-inner

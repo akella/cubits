@@ -106,7 +106,9 @@ b.demi, strong.demi { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans
 
 .l-center .l-columns-aside, .l-center .l-columns-job, .l-center .l-contacts { padding: 0; }
 
-.l-center-narrow { width: 100%; max-width: 640px; margin: auto; padding: 0 20px; }
+.l-center-wide { max-width: 1140px; margin: auto; padding: 0 20px; }
+
+.l-center-narrow { max-width: 640px; margin: auto; padding: 0 20px; }
 
 .l-column { float: left; box-sizing: border-box; width: 50%; padding: 0 20px; }
 .skew-box_two-colors .l-column:nth-child(2) { color: #F8CF5E; }
@@ -152,6 +154,11 @@ b.demi, strong.demi { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans
 
 b.title, strong.title { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
+.title_large { margin-bottom: 70px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 45px; letter-spacing: 0.075em; line-height: 1.35; }
+.title_large .icon { margin-bottom: 40px; }
+
+.title_small { font-size: 18px; margin-bottom: 12px; }
+
 .title_white { color: #FFF; }
 
 .title_left { text-align: left; }
@@ -159,9 +166,6 @@ b.title, strong.title { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sa
 .title_mrg0 { margin: 0; }
 
 .title_mrgtop { margin-top: 70px; }
-
-.title_large { margin-bottom: 70px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 45px; letter-spacing: 0.075em; line-height: 1.35; }
-.title_large .icon { margin-bottom: 40px; }
 
 .small-text { font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.35; color: #343558; }
 
@@ -312,6 +316,8 @@ a.btn_share { line-height: 58px; }
 
 .header-wrap_careers:before { background-image: url('/img/header-bg-careers.jpg'); }
 
+.header-wrap_press:before { background-image: url('/img/header-bg-press.jpg'); }
+
 .logo { display: inline-block; vertical-align: middle; position: relative; top: -1px; line-height: 1; font: 0/0 a; text-shadow: none; color: transparent; background: url("../img/svg/logo.svg") no-repeat center center; width: 143px; height: 40px; }
 
 .nav { font-size: 0; }
@@ -421,6 +427,8 @@ a.btn_share { line-height: 58px; }
 .color-wrapper_pd110 { padding: 110px 0; }
 
 .color-wrapper_offices { padding: 55px 0 74px; }
+
+.color-wrapper_for-media { padding: 40px 0 55px; }
 
 .interface { margin: 40px -20px 0; }
 .interface:after { content: " "; display: table; clear: both; }
@@ -653,17 +661,31 @@ a.tab__btn { line-height: 52px; text-decoration: none; }
 
 .jobs-tiles__item { padding: 0 20px; margin-bottom: 8.4%; }
 
-.tile { display: block; width: 238px; height: 238px; box-sizing: border-box; text-decoration: none; border: 5px solid #93C4D2; -webkit-transition: all 0.15s linear; transition: all 0.15s linear; text-align: center; font-size: 0; white-space: nowrap; }
+.tile { position: relative; display: block; width: 238px; height: 238px; box-sizing: border-box; text-decoration: none; border: 5px solid #93C4D2; -webkit-transition: all 0.15s linear; transition: all 0.15s linear; text-align: center; font-size: 0; white-space: nowrap; }
 .tile:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .tile:hover { background: #F8CF5E; border-color: #F8CF5E; }
 .tile:hover .tile__location { color: #FFF; }
 
-.tile__inner { display: inline-block; vertical-align: middle; padding: 5px 10px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; white-space: normal; }
+.tile__inner { display: inline-block; vertical-align: middle; padding: 5px 10px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; white-space: normal; }
 
-.tile__title { display: block; color: #343558; }
+.tile__title { display: block; color: #343558; text-transform: uppercase; }
 .tile__title:after { content: ""; display: block; width: 60px; height: 0; margin: 11px auto 0; border-bottom: 3px solid; }
 
-.tile__location { display: block; margin-top: 15px; color: #93C4D2; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
+.tile__location { display: block; margin-top: 15px; color: #93C4D2; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; text-transform: uppercase; }
+
+.tile__quote { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.6; }
+
+.tile__logo { display: block; margin-top: 40px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; }
+.tile__logo img { max-width: 100%; display: block; }
+.tile__logo:before { content: ""; display: block; margin-bottom: 14px; width: 60px; height: 0; border-top: 2px solid; }
+
+.tile__read-more { position: absolute; bottom: 37px; left: 35px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; color: #93C4D2; text-decoration: none; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
+
+.tile_large { width: 320px; height: 320px; padding: 40px 35px 55px 30px; text-align: left; white-space: normal; font-size: 18px; }
+.tile_large:hover { color: #343558; }
+.tile_large:hover .tile__read-more { color: #FFF; }
+.tile_large:before { display: none; }
+.tile_large .tile__inner { padding: 0; }
 
 .share-btns { text-align: center; margin-top: 100px; }
 .share-btns .btn { margin: 0; }
@@ -677,6 +699,26 @@ a.tab__btn { line-height: 52px; text-decoration: none; }
 .tab-content { display: none; }
 .tab-content > .title:first-child { margin-top: 0; }
 .tab-content.is-active { display: block; }
+
+.press-tiles { margin: -7.01754% -20px 80px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+@media only screen and (max-width: 1100px) { .press-tiles { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; } }
+.press-tiles .press-tiles__item { margin-top: 7.01754%; padding: 0 20px; }
+
+.logotypes { text-align: center; max-width: 860px; margin: auto; }
+.logotypes:after { content: " "; display: table; clear: both; }
+
+.logotypes__column { float: left; width: 50%; box-sizing: border-box; padding: 0 35px; }
+
+.logotypes__download { margin: 12px 0; }
+.logotypes__download > li { display: inline-block; vertical-align: middle; font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; color: #93C4D2; }
+.logotypes__download > li:not(:last-child) { margin-right: 20px; }
+.logotypes__download a { text-decoration: none; }
+
+.logotypes__pic { margin-top: 28px; font-size: 0; text-align: center; }
+
+.logotypes__footer { float: left; width: 100%; margin-top: 75px; clear: both; text-align: center; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; }
+.logotypes__footer a { color: #93C4D2; text-decoration: none; }
+.logotypes__footer a:hover { color: #F8CF5E; }
 
 
 
