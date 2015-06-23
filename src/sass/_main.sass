@@ -141,8 +141,8 @@
 .skew-box
   transform: skewY(-4.85deg)
   background: $lightblue
-  overflow: hidden
   margin: 140px 0 100px
+  box-shadow: 0 0 1px 0 $lightblue
 
 .skew-box__inner
   padding: 100px 0
@@ -150,6 +150,7 @@
   transform: skewY(4.85deg)
 
 .skew-box_shadow
+  overflow: hidden
   .skew-box__inner
     padding-top: 80px
     padding-bottom: 0
@@ -165,6 +166,7 @@
 
 .skew-box_two-colors
   position: relative
+  box-shadow: none
   &:before,
   &:after
     content: ""
@@ -177,9 +179,11 @@
   &:before
     right: 50%
     background: $yellow
+    box-shadow: -1px 0 1px 0 $yellow
   &:after
     left: 50%
     background: $darkblue
+    box-shadow: 1px 0 1px 0 $darkblue
 
 .skew-box_stats
   .skew-box__inner
@@ -192,11 +196,13 @@
 .skew-box_yellow
   background: $yellow
   margin-bottom: 0
+  box-shadow: 0 0 1px 0 $yellow
 
 .skew-box_blue
   background: $darkblue
   color: $yellow
   margin-top: 0
+  box-shadow: 0 0 1px 0 $darkblue
 
 
 .color-wrapper
@@ -283,6 +289,7 @@
   letter-spacing: -0.03em
 
 .number_mod
+  display: block
   .number__value
     +f(b, 45)
     line-height: 1.2
@@ -672,7 +679,7 @@
 
 .overview__numbers
   float: right
-  width: percentage(200/960)
+  width: percentage(240/960)
 
 
 .statement
@@ -690,81 +697,101 @@
 
 .roadmap
   position: relative
-  width: 100%
-  height: 450px
-  max-width: 575px
+  max-width: 1300px
+  // height: 400px
+  box-sizing: border-box
   margin: auto
-  .title
-    position: absolute
-    top: 0
-    left: 0
+  &:before
+    content: ""
+    display: block
+    width: 100%
+    padding-bottom: percentage(400/1300)
 
 .roadmap__list
   position: absolute
-  left: 50%
-  top: 50%
-  width: 110%
+  top: 46%
+  left: 25px
+  right: 140px
   height: 6px
+  margin-top: -3px
   background: $darkblue
   font-size: 0
-  transform: translate(-50%,-50%) rotate(-37deg)
 
 .roadmap__point
+  $width: 14.27%
   display: inline-block
   vertical-align: middle
-  position: relative
-  width: 0
-  height: 0
-  transform: rotate(37deg)
-  &:not(:first-child)
-    margin-left: 14.27%
+  position: absolute
+  top: 50%
+  left: 0
+  width: $width
+  box-sizing: border-box
+  @for $i from 0 through 8
+    &:nth-child(#{$i+1})
+      left: $width * $i
   &:before
     content: ""
     position: absolute
     top: 50%
-    left: 50%
-    width: 25px
-    height: 25px
-    border: 3px solid $darkblue
+    left: 0
+    width: 20px
+    height: 20px
+    border: 6px solid $darkblue
     background: $yellow
     box-sizing: border-box
-    margin: -11px 0 0 -11px
+    margin: -10px 0 0 -10px
     border-radius: 50%
-  &:nth-child(2n)
-    .roadmap__text
-      bottom: auto
-      right: auto
-      top: 0
-      left: 0
-      margin: 30px 0 0
 
 .roadmap__text
   position: absolute
-  bottom: 0
+  top: 50%
   left: 0
-  margin: 0 0 40px -50px
-  width: 100px
-  +f(b, 14)
+  margin: -63px 0 0
+  width: 100%
+  box-sizing: border-box
+  padding-right: percentage(20/160)
+  +f(m, 18)
 
 .roadmap__date
   display: block
   text-transform: uppercase
-  margin-bottom: 5px
+  margin-bottom: 76px
+  height: 25px
 
 
 .hiring
+  margin-bottom: 85px
+  padding: 0 percentage(50/640)
   color: $yellow
-  .text,
-  .title
-    max-width: 240px
-    margin-left: auto
-    margin-right: auto
+
+.hiring__figure
+  position: relative
+  margin: 50px 0 65px
+  padding-left: 170px
+  min-height: 138px
+  font-size: 0
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    min-height: 138px
+    height: 100%
+    width: 0
+  > .icon
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 138px
+  > .text
+    display: inline-block
+    vertical-align: middle
+
 
 .hiring__btns
   margin-top: 60px
   text-align: center
   .btn:not(:last-child)
-    margin: 0 40px 20px 0
+    margin: 0 70px 20px 0
 
 
 .press

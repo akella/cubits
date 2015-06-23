@@ -9,6 +9,7 @@
   font-style: normal;
 }
 
+$icon-btc-galaxy: "\e612";
 $icon-close: "\e611";
 $icon-in: "\e60c";
 $icon-berlin: "\e60d";
@@ -43,6 +44,9 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-btc-galaxy:before {
+  content: "\e612";
+}
 .icon-close:before {
   content: "\e611";
 }
