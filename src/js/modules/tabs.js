@@ -32,12 +32,12 @@ Tabs.prototype._init = function() {
 Tabs.prototype.changeContent = function(index) {
     var _ = this;
 
-    $( _.tabs.eq(_.activeTabIndex) ).removeClass(_.activeClass);
-    $( _.tabs.eq(index) ).addClass(_.activeClass);
-    $( _.content.eq(_.activeTabIndex) )
+    $( _.tabs[_.activeTabIndex] ).removeClass(_.activeClass);
+    $( _.tabs[index] ).addClass(_.activeClass);
+    $( _.content[_.activeTabIndex] )
         .removeClass(_.activeClass);
         // .hide();
-    $( _.content.eq(index) )
+    $( _.content[index] )
         // .show()
         .addClass(_.activeClass);
 

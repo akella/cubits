@@ -1,14 +1,15 @@
 .l-center,
-.l-aside,
-.l-job,
+.l-columns-aside,
+.l-columns-team,
+.l-columns-job,
 .l-contacts
   max-width: 960px
   margin: auto
   padding: 0 20px
 
 .l-center
-  .l-aside,
-  .l-job,
+  .l-columns-aside,
+  .l-columns-job,
   .l-contacts
     padding: 0
 
@@ -51,7 +52,7 @@
       padding-left: percentage(70/1440)
       padding-right: percentage(140/1440)
 
-.l-aside
+.l-columns-team
   +clr
   .l-column
     padding: 0
@@ -61,7 +62,17 @@
       float: right
       width: percentage(240/960)
 
-.l-job
+.l-columns-aside
+  +clr
+  .l-column
+    padding: 0
+    &:first-child
+      width: percentage(640/960)
+    &:last-child
+      float: right
+      width: percentage(260/960)
+
+.l-columns-job
   +clr
   .l-column
     padding: 0
