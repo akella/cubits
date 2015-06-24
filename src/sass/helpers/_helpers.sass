@@ -14,12 +14,19 @@
 =skew
   transform: skewX(-16.6deg)
 
-=image($image-name, $type: 'png', $retina: null)
-  background-image: resolve('#{$image-name}.#{$type}')
-  width: width('#{$image-name}.#{$type}')
-  height: height('#{$image-name}.#{$type}')
+=image($image-name, $type: 'png', $width: null, $height: null, $retina: null)
+  background-image: img-url('#{$image-name}.#{$type}')
+  width: $width + px
+  height: $height + px
   @if $retina == 'retina'
     +retina
-      background-image: resolve('#{$image-name}-2x.#{$type}')
-      background-size: size('#{$image-name}-2x.#{$type}', 2)
+      background-image: img-url('#{$image-name}-2x.#{$type}')
+      background-size: $width + px $height + px
+  // background-image: resolve('#{$image-name}.#{$type}')
+  // width: width('#{$image-name}.#{$type}')
+  // height: height('#{$image-name}.#{$type}')
+  // @if $retina == 'retina'
+  //   +retina
+  //     background-image: resolve('#{$image-name}-2x.#{$type}')
+  //     background-size: size('#{$image-name}-2x.#{$type}', 2)
 

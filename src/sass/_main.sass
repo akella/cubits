@@ -14,7 +14,7 @@
     left: 0
     right: 0
     bottom: 0
-    background: resolve('toparea-merchant.jpg') no-repeat center center
+    background: img-url('toparea-merchant.jpg') no-repeat center center
     background-size: cover
 
 .toparea__bg
@@ -32,7 +32,7 @@
     left: 0
     height: 100%
     width: percentage(900/1440)
-    background: #C1A988 resolve('toparea-iphone.jpg') no-repeat center center
+    background: #C1A988 img-url('toparea-iphone.jpg') no-repeat center center
     background-size: cover
   &:after
     content: ""
@@ -161,6 +161,7 @@
   background: $lightblue
   margin: 140px 0 100px
   box-shadow: 0 0 1px 0 $lightblue
+  overflow: hidden
 
 .skew-box__inner
   padding: 100px 0
@@ -185,6 +186,7 @@
 .skew-box_two-colors
   position: relative
   box-shadow: none
+  overflow: visible
   &:before,
   &:after
     content: ""
@@ -206,6 +208,10 @@
 .skew-box_stats
   .skew-box__inner
     padding: 110px 0
+
+.skew-box_expand
+  .skew-box__inner
+    padding: 100px 0 40px
 
 .skew-box_roadmap
   .skew-box__inner
@@ -263,12 +269,16 @@
 .interface__pic
   margin: auto
   margin-bottom: -260px
-  &.first
-    +image('interface/interface-1', png, retina)
-  &.second
-    +image('interface/interface-2', png, retina)
-  &.third
-    +image('interface/interface-3', png, retina)
+
+
+.interface-1
+  +image('interface/interface-1', png, 279, 569, retina)
+.interface-2
+  +image('interface/interface-2', png, 277, 564, retina)
+.interface-3
+  +image('interface/interface-3', png, 277, 564, retina)
+.interface-4
+  +image('interface/interface-4', png, 273, 556, retina)
 
 
 .numbers-list
@@ -1205,3 +1215,67 @@ a.tab__btn
 
 .b2b-promo__api
   margin-left: -75px
+
+
+.how-it-works
+  margin-top: 105px
+  padding: 0 60px
+
+.how-it-works__pic
+  background: img-url('svg/infographics.svg') no-repeat center center
+  background-size: contain
+  &:before
+    content: ""
+    display: block
+    width: 100%
+    padding-bottom: percentage(141/960)
+
+.how-it-works__text
+  margin: 25px -60px 0
+  display: flex
+  justify-content: space-between
+  +f(demi-b, 18)
+  line-height: 1.7
+  text-align: center
+  > li
+    width: 33.3333%
+    max-width: 245px
+    box-sizing: border-box
+
+
+.expand
+  font-size: 0
+  margin: -85px auto 0
+  color: #FFF
+  +f(m)
+
+.expand__item
+  display: inline-block
+  vertical-align: top
+  margin-top: 100px
+  width: 33.333%
+  box-sizing: border-box
+  text-align: center
+  font-size: 18px
+  .interface-4
+    margin: 0 auto -350px
+
+.expand__icon
+  margin-bottom: 45px
+  line-height: 90px
+  color: #FFF
+  .icon
+    vertical-align: middle
+  .icon-gamepad
+    font-size: 65px
+  .icon-cart
+    font-size: 82px
+  .icon-crowdfunding
+    font-size: 80px
+  .icon-graph
+    font-size: 70px
+  .icon-plane
+    font-size: 70px
+
+.expand__logo
+  line-height: 40px

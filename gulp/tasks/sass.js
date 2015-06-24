@@ -15,13 +15,13 @@ module.exports = function() {
                 browsers: ['last 4 versions'],
                 cascade: false
             }),
-            assets({
-                basePath: './site',
-                baseUrl: '/',
-                cachebuster: false,
-                loadPaths: ['img/'],
-                relativeTo: false
-            })
+            // assets({
+            //     basePath: './site',
+            //     baseUrl: '/',
+            //     cachebuster: false,
+            //     loadPaths: ['img/'],
+            //     relativeTo: false
+            // })
         ];
 
         return sass(config.src.sass, {

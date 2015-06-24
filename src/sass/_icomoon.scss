@@ -9,6 +9,11 @@
   font-style: normal;
 }
 
+$icon-cart: "\e613";
+$icon-crowdfunding: "\e614";
+$icon-gamepad: "\e615";
+$icon-graph: "\e616";
+$icon-plane: "\e617";
 $icon-btc-galaxy: "\e612";
 $icon-close: "\e611";
 $icon-in: "\e60c";
@@ -44,6 +49,21 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cart:before {
+  content: "\e613";
+}
+.icon-crowdfunding:before {
+  content: "\e614";
+}
+.icon-gamepad:before {
+  content: "\e615";
+}
+.icon-graph:before {
+  content: "\e616";
+}
+.icon-plane:before {
+  content: "\e617";
+}
 .icon-btc-galaxy:before {
   content: "\e612";
 }
