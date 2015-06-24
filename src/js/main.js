@@ -1,5 +1,5 @@
 global.$ = global.jQuery = require('jquery');
-require('modernizr');
+// require('modernizr');
 var Slider = require('./modules/press-slider.js');
 var Tabs   = require('./modules/tabs.js');
 
@@ -19,8 +19,4 @@ $(document).ready(function() {
     if ( contactTabs.length ) {
         contactTabs = new Tabs(contactTabs, '.office', '.tab-content');
     }
-
-    // remove on production
-    $('a[href="' + window.location.pathname.slice(1) + '"]').addClass('is-active');
-
 });
