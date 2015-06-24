@@ -1,0 +1,26 @@
+extends _layout
+
+block title
+  title 2FA
+
+block content
+  .l-center
+    h1.title
+      b Enter the 2FA code
+      br
+      span from your mobile device
+
+    form.form.form_narrow
+      .field
+        input.input(type="text", placeholder="Code")
+        p.error-msg
+          | Sorry, the code you’ve entered is incorrect. Please try again.
+
+      a.form__link(href="#")
+        | I don’t have access to my phone
+
+      button.btn.btn_yellow.btn_center.btn_w220(type="submit")
+        | Log in
+
+
+

@@ -1,0 +1,32 @@
+extends _layout
+
+block title
+  title Login
+
+block content
+  .l-center
+    h1.title
+      b Log in to cubits
+
+    form.form.form_narrow
+      .field
+        input.input(type="email", placeholder="Email")
+        //- p.error-msg
+        //-   | Sorry, the code you’ve entered is incorrect. Please try again.
+      .field
+        input.input(type="password", placeholder="Password")
+        //- p.error-msg
+        //-   | Sorry, the code you’ve entered is incorrect. Please try again.
+
+      .form__links
+        a.form__link(href="#")
+          | Sign Up
+
+        a.form__link(href="#")
+          | Looks like I forgot my password
+
+      button.btn.btn_yellow.btn_center.btn_w220(type="submit")
+        | Log in
+
+
+

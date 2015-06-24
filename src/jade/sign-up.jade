@@ -1,0 +1,60 @@
+extends _layout
+
+block title
+  title Sign Up
+
+block content
+  .l-center-narrow
+    h1.title
+      b Create your Cubits bitcoin wallet
+
+    form.form.form_sign-in
+      .form__column
+        .form__group
+          .field
+            input.input(type="text", placeholder="First name")
+            span.error-msg
+              | Field is required
+          .field
+            input.input(type="text", placeholder="Last name")
+            span.error-msg
+              | Field is required
+          p.form__text
+            | Please enter your real name to perform financial operations
+
+        .form__group
+          .field
+            input.input(type="email", placeholder="Email")
+            span.error-msg
+              | Looks like you’ve entered the wrong email address
+          .field
+            input.input(type="password", placeholder="Password*")
+            span.error-msg
+              | Sorry, your password does not meet our requirements
+          p.form__text
+            | *At least 8 symbols including special character
+
+        label.checkbox
+          input(type="checkbox")
+          span I have read and agree to Terms and Privacy policy
+        p.error-msg.
+          You must accept our Terms of Agreement and<br>
+          Privacy Policy to proceed
+
+        button.btn.btn_yellow.btn_w220(type="submit")
+          | Sign up
+
+      .form__aside
+        .text
+          span.title.title_smaller
+            | Start using Bitcoin in 3 easy steps:
+
+          ul
+            li Complete this form
+            li Verifiy with SMS
+            li Make a deposit
+
+          strong.title.title_smaller
+            | Trusted by thousands of users all over Europe
+
+      .clearfix

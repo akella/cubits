@@ -43,6 +43,15 @@ strong.title
   font-size: 18px
   margin-bottom: 12px
 
+.title_smaller
+  font-size: 14px
+  text-align: left
+  margin: 15px 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
 .title_white
   color: #FFF
 
@@ -129,9 +138,22 @@ strong.title
 
 
 .form
-  > .btn
+  .btn:last-child
     display: block
     margin: 27px auto 0
+
+.form__column
+  float: left
+  width: percentage(420/640)
+
+.form__aside
+  font-size: 14px
+  float: right
+  width: percentage(165/640)
+  .title
+    font-size: 14px
+  .text
+    font-size: 14px
 
 .form__title
   display: block
@@ -153,6 +175,22 @@ strong.title
 .form__body
   position: relative
 
+.form__group
+  margin-bottom: 30px
+  + .checkbox
+    margin-top: 25px
+
+.form__links
+  margin-top: 11px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+
+.form__link
+  +f(demi-b, 14)
+  color: $lightblue
+
 .form__footer
   margin-top: 9px
   +clr
@@ -165,6 +203,14 @@ strong.title
   background: none
   border: 6px solid #FFF
   box-shadow: 0 0 11px rgba(0, 0, 0, 0.11)
+
+.form_narrow
+  max-width: 320px
+  margin-left: auto
+  margin-right: auto
+
+// .form_sign-in
+
 
 .form-message
   position: absolute
@@ -202,10 +248,24 @@ strong.title
   text-transform: uppercase
 
 
+.error-msg
+  display: block
+  margin-top: 5px
+  color: $error
+  +f(r, 14)
+  line-height: 1.43
+  .checkbox + &
+    margin-top: 0
+
+
 
 .field
   position: relative
   margin: 5px 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
 
 
 .input
@@ -355,8 +415,11 @@ a.btn_share
   padding-left: 20px
   padding-right: 20px
 
+.btn_w300
+  width: 300px
+
 .btn_w365
-  min-width: 365px
+  width: 365px
 
 
 .social-btn

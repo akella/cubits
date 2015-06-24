@@ -638,7 +638,7 @@
   > ul
     > li
       &:before
-        content: "•"
+        content: "• "
 
 
 .text_center
@@ -647,11 +647,11 @@
 .text_privacy
   > p, ul, ol
     margin: 0
-  > ul
-    > li
-      &:before
-        content: "•"
-        display: inline
+  // > ul
+  //   > li
+  //     &:before
+  //       content: "• "
+  //       display: inline
 
 
 .advantage
@@ -1244,15 +1244,15 @@ a.tab__btn
 
 
 .expand
+  margin: -95px auto 0
   font-size: 0
-  margin: -85px auto 0
   color: #FFF
   +f(m)
 
 .expand__item
   display: inline-block
   vertical-align: top
-  margin-top: 100px
+  margin-top: 110px
   width: 33.333%
   box-sizing: border-box
   text-align: center
@@ -1278,4 +1278,11 @@ a.tab__btn
     font-size: 70px
 
 .expand__logo
+  margin-top: 10px
   line-height: 40px
+  font-size: 0
+  img
+    vertical-align: bottom
+
+.lightblue
+  color: $lightblue
