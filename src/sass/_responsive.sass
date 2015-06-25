@@ -4,3 +4,113 @@
     .header
       padding-left: 20px
       padding-right: 20px
+
+    .toparea__bg
+      &:after
+        min-width: 0
+        width: 77%
+
+  +r(767)
+    .header
+      padding-left: 10px
+      padding-right: 10px
+      line-height: 60px
+      height: 60px
+
+    .nav__menu
+      display: none
+    .nav__login
+      &:before
+        display: none
+
+    .toparea
+      min-height: 0
+      margin-bottom: 33px
+
+    .toparea__bg
+      &:before
+        top: 0
+        right: 0
+        left: 0
+        height: 270px
+        width: 100%
+      &:after
+        top: 250px
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        transform: skewY(6.7deg)
+
+    .toparea__content
+      padding: 240px 0 25px
+      .list-circle
+        margin: 0
+        font-size: 14px
+        +f(m)
+      .bold-title
+        font-size: 20px
+        text-align: left
+        margin-bottom: 8px
+      .form_white-bounds
+        margin-top: 30px
+        border: none
+        box-shadow: none
+        padding: 0
+
+    .title
+      font-size: 16px
+      margin-bottom: 20px
+
+    .small-text
+      font-size: 10px
+
+    .l-columns
+      margin: 0
+      &.three
+        .l-column
+          float: none
+          width: auto
+          padding: 0
+
+    .step
+      text-align: left
+      margin-top: 10px
+      +clr
+    .step__icon
+      float: left
+      width: percentage(70/260)
+      margin: 0
+    .step__text
+      max-width: none
+      margin: 0 0 0 percentage(90/260)
+      font-size: 14px
+    .step__title
+      margin: 0 0 0 percentage(90/260)
+      font-size: 14px
+      +f(b, 14)
+
+    .divider
+      display: none
+
+    .usage-map
+      float: none
+      width: auto
+      margin: 60px 0 40px
+      .small-text
+        margin-left: 0
+        text-align: center
+
+    .currencies
+      float: none
+      width: auto
+    .currencies__left
+      float: none
+      width: auto
+    .currencies__right
+      float: none
+      width: auto
+      .small-table
+        margin: 20px 0 0
+
+
