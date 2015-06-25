@@ -40,7 +40,7 @@
         right: 0
         bottom: 0
         width: 100%
-        transform: skewY(6.7deg)
+        transform: skewY(4.85deg)
 
     .toparea__content
       padding: 240px 0 25px
@@ -64,6 +64,32 @@
 
     .small-text
       font-size: 10px
+
+    .divider
+      display: none
+
+    .btn
+      height: 34px
+      font-size: 11px
+    a.btn
+      line-height: 34px
+
+    .custom-list
+      padding: 0
+    .custom-list__item
+      padding: 0 0 0 30px
+      &:not(:last-child)
+        margin-bottom: 15px
+    .custom-list__marker
+      font-size: 0
+      padding: 0
+      &:before
+        display: block
+        position: static
+        width: 15px
+        height: 15px
+    .custom-list__text
+      font-size: 14px
 
     .l-columns
       margin: 0
@@ -90,9 +116,6 @@
       font-size: 14px
       +f(b, 14)
 
-    .divider
-      display: none
-
     .usage-map
       float: none
       width: auto
@@ -112,5 +135,15 @@
       width: auto
       .small-table
         margin: 20px 0 0
+
+    .skew-box
+      margin: 50px 0
+    .skew-box__inner
+      padding: 50px 0
+    .skew-box_stats
+      transform: skewY(4.85deg)
+      .skew-box__inner
+        transform: skewY(-4.85deg)
+
 
 
