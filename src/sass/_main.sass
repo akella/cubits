@@ -228,6 +228,9 @@
   margin-top: 0
   box-shadow: 0 0 1px 0 $darkblue
 
+.skew-box_advantages
+  margin: 100px 0 140px
+
 
 .color-wrapper
   margin: 60px 0
@@ -245,6 +248,9 @@
 
 .color-wrapper_pd110
   padding: 110px 0
+
+.color-wrapper_pd90
+  padding: 90px 0
 
 .color-wrapper_offices
   padding: 55px 0 74px
@@ -289,6 +295,7 @@
   position: relative
   float: left
   width: 33.3333%
+  box-sizing: border-box
   text-align: center
   &:not(:last-child)
     &:after
@@ -301,6 +308,12 @@
       background: #FFF
       margin: -66px -3px 0 0
       +skew
+
+.numbers-list_darkblue
+  .numbers-list__item
+    width: 50%
+    &:after
+      background: $darkblue
 
 .number
   display: inline-block
@@ -316,13 +329,25 @@
   color: #FFF
   letter-spacing: -0.03em
 
-.number_mod
+.number__small-text
+  +f(m, 14)
+
+.number_lightblue
   display: block
   .number__value
     +f(b, 45)
     line-height: 1.2
     color: $lightblue
     left: 0
+
+.number_darkblue
+  .number__value
+    text-align: center
+    +f(b, 45)
+    color: $darkblue
+    margin: 17px 0
+    left: 0
+
 
 
 .testimonials
@@ -488,8 +513,10 @@
   display: table
   table-layout: fixed
   width: 100%
-  max-width: 370px
+  max-width: 400px
   margin: auto
+  a[href^="tel"]
+    text-decoration: none
 
 .expert__pic
   display: table-cell
@@ -555,12 +582,12 @@
   line-height: 1.22
   text-transform: uppercase
   box-sizing: border-box
-  padding-bottom: 35px
+  padding-bottom: 40px
   b, strong
     +f(b)
   .member__cite
     position: absolute
-    bottom: 0
+    bottom: -3px
     left: 0
 
 .member__cite
@@ -576,6 +603,20 @@
     width: 220px
   .member__info
     padding-left: percentage(65/640)
+
+.member_wide
+  max-width: 850px
+  margin: 140px auto 110px
+  .member__pic
+    width: 140px
+  .member__info
+    padding-left: percentage(65/850)
+  .member__quote
+    min-height: 140px
+    +f(i, 18)
+    line-height: 1.4
+    text-transform: none
+
 
 .member_tile
   display: block
@@ -647,11 +688,6 @@
 .text_privacy
   > p, ul, ol
     margin: 0
-  // > ul
-  //   > li
-  //     &:before
-  //       content: "• "
-  //       display: inline
 
 
 .advantage
@@ -677,6 +713,34 @@
   display: table-cell
   vertical-align: middle
   padding: 0 20px
+
+.advantage__number
+  margin: 15px 0
+  +f(demi-b, 18)
+  strong
+    +f(b, 45)
+  .icon
+    font-size: 40px
+    margin: 0 5px
+
+.advantage_small
+  max-width: 400px
+  margin: 50px auto
+  .icon-moneybox,
+  .icon-people
+    font-size: 112px
+  .title
+    margin-bottom: 15px
+  .advantage__pic
+    text-align: right
+    width: 125px
+    padding: 88px 30px 0 0
+    vertical-align: middle
+  .advantage__text
+    padding: 0
+
+.advantage_white
+  color: #FFF
 
 
 .inner-nav
@@ -1286,3 +1350,16 @@ a.tab__btn
 
 .lightblue
   color: $lightblue
+
+
+.plugins
+  margin-top: 100px
+.plugins__list
+  padding: 0 30px
+  text-align: center
+  > li
+    display: inline-block
+    vertical-align: middle
+    padding: 5px 10px
+    a
+      display: block

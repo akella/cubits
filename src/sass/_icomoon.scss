@@ -9,6 +9,10 @@
   font-style: normal;
 }
 
+$icon-arrow-down: "\e618";
+$icon-arrow-up: "\e619";
+$icon-moneybox: "\e61a";
+$icon-people: "\e61b";
 $icon-cart: "\e613";
 $icon-crowdfunding: "\e614";
 $icon-gamepad: "\e615";
@@ -35,6 +39,7 @@ $icon-sofort: "\e603";
 $icon-swift: "\e604";
 
 
+
 .icon {
   font-family: 'icons';
   speak: none;
@@ -49,6 +54,18 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-down:before {
+  content: "\e618";
+}
+.icon-arrow-up:before {
+  content: "\e619";
+}
+.icon-moneybox:before {
+  content: "\e61a";
+}
+.icon-people:before {
+  content: "\e61b";
+}
 .icon-cart:before {
   content: "\e613";
 }
