@@ -1,5 +1,4 @@
-require('jquery');
-require('slick-carousel');
+// require('slick-carousel');
 
 function Slider(selector) {
     this.wrapper           = selector instanceof jQuery ? selector : $(selector);

@@ -596,6 +596,21 @@
   display: block
   text-transform: none
 
+.member__post
+  display: block
+  margin-bottom: 5px
+  +f(demi-b, 14)
+  text-transform: uppercase
+
+.member__about
+  display: none
+  +f(r)
+  .member__name
+    +f(demi-b)
+    margin-bottom: 5px
+  .tooltipster-base &
+    display: block
+
 .member_large
   margin-top: 60px
   margin-bottom: 60px
@@ -626,6 +641,7 @@
   position: relative
   margin: 0
   padding: 0
+  cursor: pointer
   .member__pic
     display: block
     width: 100%

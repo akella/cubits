@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "tooltipster": "~3.3.0"
   }
 }

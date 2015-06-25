@@ -21,6 +21,26 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
+@font-face { font-family: "AvenirNext-Bold"; src: url("../fonts/AvenirNext-Bold.eot"); src: url("../fonts/AvenirNext-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Bold.woff") format("woff"), url("../fonts/AvenirNext-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-BoldItalic"; src: url("../fonts/AvenirNext-BoldItalic.eot"); src: url("../fonts/AvenirNext-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-BoldItalic.woff") format("woff"), url("../fonts/AvenirNext-BoldItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-DemiBold"; src: url("../fonts/AvenirNext-DemiBold.eot"); src: url("../fonts/AvenirNext-DemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-DemiBold.woff") format("woff"), url("../fonts/AvenirNext-DemiBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-DemiBoldItalic"; src: url("../fonts/AvenirNext-DemiBoldItalic.eot"); src: url("../fonts/AvenirNext-DemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-DemiBoldItalic.woff") format("woff"), url("../fonts/AvenirNext-DemiBoldItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-Heavy"; src: url("../fonts/AvenirNext-Heavy.eot"); src: url("../fonts/AvenirNext-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Heavy.woff") format("woff"), url("../fonts/AvenirNext-Heavy.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-HeavyItalic"; src: url("../fonts/AvenirNext-HeavyItalic.eot"); src: url("../fonts/AvenirNext-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-HeavyItalic.woff") format("woff"), url("../fonts/AvenirNext-HeavyItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-Italic"; src: url("../fonts/AvenirNext-Italic.eot"); src: url("../fonts/AvenirNext-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Italic.woff") format("woff"), url("../fonts/AvenirNext-Italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-Medium"; src: url("../fonts/AvenirNext-Medium.eot"); src: url("../fonts/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Medium.woff") format("woff"), url("../fonts/AvenirNext-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-MediumItalic"; src: url("../fonts/AvenirNext-MediumItalic.eot"); src: url("../fonts/AvenirNext-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-MediumItalic.woff") format("woff"), url("../fonts/AvenirNext-MediumItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-Regular"; src: url("../fonts/AvenirNext-Regular.eot"); src: url("../fonts/AvenirNext-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Regular.woff") format("woff"), url("../fonts/AvenirNext-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-UltraLight"; src: url("../fonts/AvenirNext-UltraLight.eot"); src: url("../fonts/AvenirNext-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLight.woff") format("woff"), url("../fonts/AvenirNext-UltraLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "AvenirNext-UltraLightItalic"; src: url("../fonts/AvenirNext-UltraLightItalic.eot"); src: url("../fonts/AvenirNext-UltraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLightItalic.woff") format("woff"), url("../fonts/AvenirNext-UltraLightItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.4; color: #343558; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+a { color: inherit; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
+a:hover { color: #F8CF5E; }
+
+b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+b.demi, strong.demi { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
+
 @font-face { font-family: 'icons'; src: url("../fonts/icons.eot?dmsddr"); src: url("../fonts/icons.eot?#iefixdmsddr") format("embedded-opentype"), url("../fonts/icons.ttf?dmsddr") format("truetype"), url("../fonts/icons.woff?dmsddr") format("woff"), url("../fonts/icons.svg?dmsddr#icons") format("svg"); font-weight: normal; font-style: normal; }
 .icon { font-family: 'icons'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; /* Better Font Rendering =========== */ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -103,25 +123,67 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 .slick-loading .slick-slide { visibility: hidden; }
 .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
 
-@font-face { font-family: "AvenirNext-Bold"; src: url("../fonts/AvenirNext-Bold.eot"); src: url("../fonts/AvenirNext-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Bold.woff") format("woff"), url("../fonts/AvenirNext-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-BoldItalic"; src: url("../fonts/AvenirNext-BoldItalic.eot"); src: url("../fonts/AvenirNext-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-BoldItalic.woff") format("woff"), url("../fonts/AvenirNext-BoldItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-DemiBold"; src: url("../fonts/AvenirNext-DemiBold.eot"); src: url("../fonts/AvenirNext-DemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-DemiBold.woff") format("woff"), url("../fonts/AvenirNext-DemiBold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-DemiBoldItalic"; src: url("../fonts/AvenirNext-DemiBoldItalic.eot"); src: url("../fonts/AvenirNext-DemiBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-DemiBoldItalic.woff") format("woff"), url("../fonts/AvenirNext-DemiBoldItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-Heavy"; src: url("../fonts/AvenirNext-Heavy.eot"); src: url("../fonts/AvenirNext-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Heavy.woff") format("woff"), url("../fonts/AvenirNext-Heavy.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-HeavyItalic"; src: url("../fonts/AvenirNext-HeavyItalic.eot"); src: url("../fonts/AvenirNext-HeavyItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-HeavyItalic.woff") format("woff"), url("../fonts/AvenirNext-HeavyItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-Italic"; src: url("../fonts/AvenirNext-Italic.eot"); src: url("../fonts/AvenirNext-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Italic.woff") format("woff"), url("../fonts/AvenirNext-Italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-Medium"; src: url("../fonts/AvenirNext-Medium.eot"); src: url("../fonts/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Medium.woff") format("woff"), url("../fonts/AvenirNext-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-MediumItalic"; src: url("../fonts/AvenirNext-MediumItalic.eot"); src: url("../fonts/AvenirNext-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-MediumItalic.woff") format("woff"), url("../fonts/AvenirNext-MediumItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-Regular"; src: url("../fonts/AvenirNext-Regular.eot"); src: url("../fonts/AvenirNext-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Regular.woff") format("woff"), url("../fonts/AvenirNext-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-UltraLight"; src: url("../fonts/AvenirNext-UltraLight.eot"); src: url("../fonts/AvenirNext-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLight.woff") format("woff"), url("../fonts/AvenirNext-UltraLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "AvenirNext-UltraLightItalic"; src: url("../fonts/AvenirNext-UltraLightItalic.eot"); src: url("../fonts/AvenirNext-UltraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLightItalic.woff") format("woff"), url("../fonts/AvenirNext-UltraLightItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.4; color: #343558; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.tooltipster-default { color: #343558; background: #FFF; border: 1px solid rgba(52, 53, 88, 0.15); }
 
-a { color: inherit; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
-a:hover { color: #F8CF5E; }
+.tooltipster-default .tooltipster-content { padding: 30px 40px; line-height: 1.4; font-size: 18px; }
 
-b, strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
-b.demi, strong.demi { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
+.tooltipster-icon { cursor: help; margin-left: 4px; }
+
+.tooltipster-base { padding: 0; font-size: 0; line-height: 0; position: absolute; left: 0; top: 0; z-index: 9999999; pointer-events: none; width: auto; overflow: visible; }
+
+.tooltipster-base .tooltipster-content { overflow: hidden; }
+
+.tooltipster-arrow { display: block; text-align: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; }
+
+.tooltipster-arrow span, .tooltipster-arrow-border { display: block; width: 0; height: 0; position: absolute; }
+
+.tooltipster-arrow-top span, .tooltipster-arrow-top-right span, .tooltipster-arrow-top-left span { border-left: 28px solid transparent !important; border-right: 28px solid transparent !important; border-top: 28px solid; bottom: -28px; }
+
+.tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-top-left .tooltipster-arrow-border { border-left: 29px solid transparent !important; border-right: 29px solid transparent !important; border-top: 29px solid; bottom: -28px; }
+
+.tooltipster-arrow-bottom span, .tooltipster-arrow-bottom-right span, .tooltipster-arrow-bottom-left span { border-left: 28px solid transparent !important; border-right: 28px solid transparent !important; border-bottom: 28px solid; top: -28px; }
+
+.tooltipster-arrow-bottom .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border { border-left: 29px solid transparent !important; border-right: 29px solid transparent !important; border-bottom: 29px solid; top: -28px; }
+
+.tooltipster-arrow-top span, .tooltipster-arrow-top .tooltipster-arrow-border, .tooltipster-arrow-bottom span, .tooltipster-arrow-bottom .tooltipster-arrow-border { left: 0; right: 0; margin: 0 auto; }
+
+.tooltipster-arrow-top-left span, .tooltipster-arrow-bottom-left span { left: 6px; }
+
+.tooltipster-arrow-top-left .tooltipster-arrow-border, .tooltipster-arrow-bottom-left .tooltipster-arrow-border { left: 5px; }
+
+.tooltipster-arrow-top-right span, .tooltipster-arrow-bottom-right span { right: 6px; }
+
+.tooltipster-arrow-top-right .tooltipster-arrow-border, .tooltipster-arrow-bottom-right .tooltipster-arrow-border { right: 5px; }
+
+.tooltipster-arrow-left span, .tooltipster-arrow-left .tooltipster-arrow-border { border-top: 28px solid transparent !important; border-bottom: 28px solid transparent !important; border-left: 28px solid; top: 50%; margin-top: -28px; right: -28px; }
+
+.tooltipster-arrow-left .tooltipster-arrow-border { border-top: 29px solid transparent !important; border-bottom: 29px solid transparent !important; border-left: 29px solid; margin-top: -8px; }
+
+.tooltipster-arrow-right span, .tooltipster-arrow-right .tooltipster-arrow-border { border-top: 28px solid transparent !important; border-bottom: 28px solid transparent !important; border-right: 28px solid; top: 50%; margin-top: -28px; left: -28px; }
+
+.tooltipster-arrow-right .tooltipster-arrow-border { border-top: 29px solid transparent !important; border-bottom: 29px solid transparent !important; border-right: 29px solid; margin-top: -8px; }
+
+.tooltipster-fade { opacity: 0; -webkit-transition-property: opacity; transition-property: opacity; }
+
+.tooltipster-fade-show { opacity: 1; }
+
+.tooltipster-grow { -webkit-transform: scale(0, 0); -ms-transform: scale(0, 0); transform: scale(0, 0); -webkit-transition-property: -webkit-transform; transition-property: transform; -webkit-backface-visibility: hidden; }
+
+.tooltipster-grow-show { -webkit-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1); -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); }
+
+.tooltipster-swing { opacity: 0; -webkit-transform: rotateZ(4deg); -ms-transform: rotateZ(4deg); transform: rotateZ(4deg); -webkit-transition-property: -webkit-transform, opacity; transition-property: transform; }
+
+.tooltipster-swing-show { opacity: 1; -webkit-transform: rotateZ(0deg); -ms-transform: rotateZ(0deg); transform: rotateZ(0deg); -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 1); -webkit-transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4); transition-timing-function: cubic-bezier(0.23, 0.635, 0.495, 2.4); }
+
+.tooltipster-fall { top: 0; -webkit-transition-property: top; transition-property: top; -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); }
+
+.tooltipster-fall.tooltipster-dying { -webkit-transition-property: all; transition-property: all; top: 0px !important; opacity: 0; }
+
+.tooltipster-slide { left: -40px; -webkit-transition-property: left; transition-property: left; -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.15); }
+
+.tooltipster-slide.tooltipster-dying { -webkit-transition-property: all; transition-property: all; left: 0px !important; opacity: 0; }
+
+.tooltipster-content-changing { opacity: 0.5; -webkit-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1.1); transform: scale(1.1, 1.1); }
 
 .l-center, .l-columns-aside, .l-columns-team, .l-columns-job, .l-contacts { max-width: 960px; margin: auto; padding: 0 20px; }
 
@@ -608,6 +670,12 @@ a.btn_share { line-height: 58px; }
 
 .member__cite { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; font-style: normal; display: block; text-transform: none; }
 
+.member__post { display: block; margin-bottom: 5px; font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; }
+
+.member__about { display: none; font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; }
+.member__about .member__name { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; margin-bottom: 5px; }
+.tooltipster-base .member__about { display: block; }
+
 .member_large { margin-top: 60px; margin-bottom: 60px; }
 .member_large .member__pic { width: 220px; }
 .member_large .member__info { padding-left: 10.15625%; }
@@ -617,7 +685,7 @@ a.btn_share { line-height: 58px; }
 .member_wide .member__info { padding-left: 7.64706%; }
 .member_wide .member__quote { min-height: 140px; font-family: "AvenirNext-Italic", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.4; text-transform: none; }
 
-.member_tile { display: block; width: 155px; height: 208px; overflow: hidden; position: relative; margin: 0; padding: 0; }
+.member_tile { display: block; width: 155px; height: 208px; overflow: hidden; position: relative; margin: 0; padding: 0; cursor: pointer; }
 .member_tile .member__pic { display: block; width: 100%; height: 100%; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
 .member_tile .member__overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.5); text-align: center; font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.7; opacity: 0; visibility: hidden; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .member_tile .member__overlay-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px; cursor: default; }
@@ -867,6 +935,8 @@ a.tab__btn { line-height: 52px; text-decoration: none; }
 .plugins__list { padding: 0 30px; text-align: center; }
 .plugins__list > li { display: inline-block; vertical-align: middle; padding: 5px 10px; }
 .plugins__list > li a { display: block; }
+
+@media only screen and (max-width: 1040px) { .main-page .header { padding-left: 20px; padding-right: 20px; } }
 
 
 

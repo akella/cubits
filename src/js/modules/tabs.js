@@ -1,5 +1,3 @@
-var $ = require('jquery');
-
 function Tabs(wrapper, tab, content) {
     this.tabs = $(wrapper).find(tab || '.js-tab');
     this.content = $(wrapper).find(content || '.js-tab-content');
