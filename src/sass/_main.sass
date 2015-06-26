@@ -2,7 +2,8 @@
   position: relative
   margin-bottom: 118px
   z-index: 0
-  min-height: 100vh
+  height: 100vh
+  max-height: 900px
   color: #FFF
   +clr
 
@@ -1384,3 +1385,88 @@ a.tab__btn
     padding: 5px 10px
     a
       display: block
+
+.interface-slider
+  margin: 27px auto 0
+  text-align: left
+  +clr
+
+.interface-slider__phone
+  margin-bottom: percentage(-175/260)
+  position: relative
+  float: left
+  width: percentage(150/260)
+  background-image: img-url('interface/iphone.png')
+  background-size: contain
+  &:before
+    content: ""
+    display: block
+    width: 100%
+    padding-bottom: 203.6%
+
+.interface-slider__screenshots
+  position: absolute
+  top: 12.4%
+  left: 7%
+  width: 86%
+  +clr
+  .slide
+    float: left
+    width: 100%
+    background-size: contain
+    &:before
+      content: ""
+      display: block
+      width: 100%
+      padding-bottom: 178%
+    &:not(:first-child)
+      display: none
+    &.slick-slide
+      display: block
+
+.screen-1
+  background-image: img-url('interface/screen-1.png')
+.screen-2
+  background-image: img-url('interface/screen-2.png')
+.screen-3
+  background-image: img-url('interface/screen-3.png')
+
+.interface-slider__text
+  +clr
+  +f(m, 14)
+  .slide
+    float: left
+    &:not(:first-child)
+      display: none
+    &.slick-slide
+      display: block
+      transform: translate3d(0,0,0) scale(0.3)
+      transition: all 0.3s ease
+      opacity: 0
+      color: rgba(#FFF, 0)
+    &.slick-active
+      transform: translate3d(0,0,0) scale(1)
+      opacity: 1
+      color: inherit
+
+.interface-slider__right
+  float: right
+  width: percentage(90/260)
+  padding-top: 40px
+
+.interface-slider__nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 17px
+
+.interface-slider__prev,
+.interface-slider__next
+  background: none
+  display: inline-block
+  vertical-align: middle
+  font-size: 24px
+  color: $darkblue
+  transition: color 0.15s linear
+  &:hover
+    color: $yellow

@@ -1,7 +1,10 @@
-extends _layout-index
+extends _layout-index.jade
 
 block title
   title Home Page
+
+block viewport
+  meta(name="viewport" content="width=device-width, initial-scale=1")
 
 block header
   //BEGIN toparea
@@ -72,7 +75,7 @@ block content
           p.step__text
             | Instantly buy Bitcoin using your bank account - it couldn’t be simpler.
 
-      hr.divider.divider_mrg80
+      hr.divider.divider_mrg80.hide-on-mobile
 
       .usage-map
         h2.title
@@ -137,7 +140,7 @@ block content
   //END approach
 
   //BEGIN interface
-  section.skew-box.skew-box_shadow
+  section.skew-box.skew-box_shadow.skew-box_interface
     .skew-box__inner
       .l-center
         h2.title.title_white.title_mrg0
@@ -148,7 +151,7 @@ block content
         a.btn.btn_center.btn_w220(href="#")
           | Buy bitcoin now
 
-        ul.interface
+        ul.interface.hide-on-mobile
           li.interface__item
             p.interface__text 1. <br> Select amount <br> and currency
             .interface__pic.interface-1
@@ -160,6 +163,21 @@ block content
           li.interface__item
             p.interface__text 3. <br> Recieve the Bitcoins  <br> in your account
             .interface__pic.interface-3
+
+        .interface-slider.hide-on-desktop
+          .interface-slider__phone
+            .interface-slider__screenshots
+              div.slide.screen-1
+              div.slide.screen-2
+              div.slide.screen-3
+          .interface-slider__right
+            .interface-slider__text
+              div.slide 1. <br> Select amount <br> and currency
+              div.slide 2.  <br> Choose one of our trusted <br> payment providers
+              div.slide 3. <br> Recieve the Bitcoins  <br> in your account
+            .interface-slider__nav
+              button.interface-slider__prev.icon.icon-prev(type="button")
+              button.interface-slider__next.icon.icon-next(type="button")
   //END interface
 
 
@@ -214,19 +232,19 @@ block content
         ul.numbers-list
           li.numbers-list__item
             .number
-              | New wallet <br> accounts
-              strong.number__value + 1000
-              | per week
+              span.number__row New wallet <br> accounts
+              strong.number__row.number__value + 1000
+              span.number__row per week
           li.numbers-list__item
             .number
-              | Transaction <br> volume
-              strong.number__value + 200.000 EUR
-              | per month
+              span.number__row Transaction <br> volume
+              strong.number__row.number__value + 200.000 EUR
+              span.number__row per month
           li.numbers-list__item
             .number
-              | Number of <br> transaction increases
-              strong.number__value + 100%
-              | per month
+              span.number__row Number of <br> transaction increases
+              strong.number__row.number__value + 100%
+              span.number__row per month
   //END stats
 
   //BEGIN testimonials
@@ -236,7 +254,7 @@ block content
       br
       span So can you
 
-    .testimonials
+    .testimonials.js-testimonials
       .testimonial
         .testimonial__pic
           img(src="img/testimonial1.jpg", alt="")
@@ -273,7 +291,7 @@ block content
             span.cite__location Paris
             span.cite__about Trading Art between  <br> France and China
 
-    .l-center-narrow
+    .l-center-narrow.hide-on-mobile
       hr.divider.divider_mrg60
 
       h2.title
@@ -337,6 +355,7 @@ block content
 
   //BEGIN ask
   section.l-center-narrow
+    hr.divider.divider_mrg30.hide-on-desktop
     h2.title
       | <b>Ask Andreas</b> <br> if you have questions on security
 
@@ -350,11 +369,13 @@ block content
           | CTO
         a.expert__contact(href="mailto:security@cubits.com")
           | security@cubits.com
+
+    hr.divider.divider_mrg30.hide-on-desktop
   //END ask
 
   //BEGIN promo
   section.promo.l-center-narrow
-    hr.divider.divider_mrg60
+    hr.divider.divider_mrg60.hide-on-mobile
     h2.title
       b Give Cubits a risk-free try.
 

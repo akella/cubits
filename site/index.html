@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Home Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
@@ -79,7 +79,7 @@
               <p class="step__text">Instantly buy Bitcoin using your bank account - it couldn’t be simpler.</p>
             </div>
           </div>
-          <hr class="divider divider_mrg80">
+          <hr class="divider divider_mrg80 hide-on-mobile">
           <div class="usage-map">
             <h2 class="title"><b>Cubits usage </b> <br> worldwide</h2><img src="img/cubits-map.png" alt="">
             <p class="small-text">Buy Bitcoin from all over the world  <br> (except from U.S.A.)</p>
@@ -144,11 +144,11 @@
       </section>
       <!--END approach-->
       <!--BEGIN interface-->
-      <section class="skew-box skew-box_shadow">
+      <section class="skew-box skew-box_shadow skew-box_interface">
         <div class="skew-box__inner">
           <div class="l-center">
             <h2 class="title title_white title_mrg0"><b>The simplest interface</b><br><span>We make Bitcoin as easy as sending an email</span></h2><a href="#" class="btn btn_center btn_w220">Buy bitcoin now</a>
-            <ul class="interface">
+            <ul class="interface hide-on-mobile">
               <li class="interface__item">
                 <p class="interface__text">1. <br> Select amount <br> and currency</p>
                 <div class="interface__pic interface-1"></div>
@@ -162,6 +162,26 @@
                 <div class="interface__pic interface-3"></div>
               </li>
             </ul>
+            <div class="interface-slider hide-on-desktop">
+              <div class="interface-slider__phone">
+                <div class="interface-slider__screenshots">
+                  <div class="slide screen-1"></div>
+                  <div class="slide screen-2"></div>
+                  <div class="slide screen-3"></div>
+                </div>
+              </div>
+              <div class="interface-slider__right">
+                <div class="interface-slider__text">
+                  <div class="slide">1. <br> Select amount <br> and currency</div>
+                  <div class="slide">2.  <br> Choose one of our trusted <br> payment providers</div>
+                  <div class="slide">3. <br> Recieve the Bitcoins  <br> in your account</div>
+                </div>
+                <div class="interface-slider__nav">
+                  <button type="button" class="interface-slider__prev icon icon-prev"></button>
+                  <button type="button" class="interface-slider__next icon icon-next"></button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -214,13 +234,13 @@
             <h2 class="title title_white"><b>We are europe’s #1 Bitcoin service</b><br><span>Cubits in numbers</span></h2>
             <ul class="numbers-list">
               <li class="numbers-list__item">
-                <div class="number">New wallet <br> accounts<strong class="number__value">+ 1000</strong>per week</div>
+                <div class="number"><span class="number__row">New wallet <br> accounts</span><strong class="number__row number__value">+ 1000</strong><span class="number__row">per week</span></div>
               </li>
               <li class="numbers-list__item">
-                <div class="number">Transaction <br> volume<strong class="number__value">+ 200.000 EUR</strong>per month</div>
+                <div class="number"><span class="number__row">Transaction <br> volume</span><strong class="number__row number__value">+ 200.000 EUR</strong><span class="number__row">per month</span></div>
               </li>
               <li class="numbers-list__item">
-                <div class="number">Number of <br> transaction increases<strong class="number__value">+ 100%</strong>per month</div>
+                <div class="number"><span class="number__row">Number of <br> transaction increases</span><strong class="number__row number__value">+ 100%</strong><span class="number__row">per month</span></div>
               </li>
             </ul>
           </div>
@@ -230,7 +250,7 @@
       <!--BEGIN testimonials-->
       <section class="l-center">
         <h2 class="title"><b>Real people are using bitcoin</b><br><span>So can you</span></h2>
-        <div class="testimonials">
+        <div class="testimonials js-testimonials">
           <div class="testimonial">
             <div class="testimonial__pic"><img src="img/testimonial1.jpg" alt=""></div>
             <blockquote class="testimonial__text">
@@ -262,7 +282,7 @@
             </blockquote>
           </div>
         </div>
-        <div class="l-center-narrow">
+        <div class="l-center-narrow hide-on-mobile">
           <hr class="divider divider_mrg60">
           <h2 class="title"><b>Good news</b><br><span>Cubits in the press</span></h2>
           <div class="press-slider">
@@ -327,6 +347,7 @@
       <!--END security-->
       <!--BEGIN ask-->
       <section class="l-center-narrow">
+        <hr class="divider divider_mrg30 hide-on-desktop">
         <h2 class="title"><b>Ask Andreas</b> <br> if you have questions on security</h2>
         <div class="expert">
           <div class="expert__pic"><img src="img/security-expert.jpg" alt=""></div>
@@ -334,11 +355,12 @@
             <p class="expert__name">Andreas Lehrbaum<br>CTO</p><a href="mailto:security@cubits.com" class="expert__contact">security@cubits.com</a>
           </div>
         </div>
+        <hr class="divider divider_mrg30 hide-on-desktop">
       </section>
       <!--END ask-->
       <!--BEGIN promo-->
       <section class="promo l-center-narrow">
-        <hr class="divider divider_mrg60">
+        <hr class="divider divider_mrg60 hide-on-mobile">
         <h2 class="title"><b>Give Cubits a risk-free try.</b></h2><a href="#" class="btn btn_large btn_yellow">Create your free account</a>
       </section>
       <!--END promo-->

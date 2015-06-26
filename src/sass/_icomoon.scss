@@ -9,6 +9,8 @@
   font-style: normal;
 }
 
+$icon-next: "\e61c";
+$icon-prev: "\e61d";
 $icon-arrow-down: "\e618";
 $icon-arrow-up: "\e619";
 $icon-moneybox: "\e61a";
@@ -54,6 +56,12 @@ $icon-swift: "\e604";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-next:before {
+  content: "\e61c";
+}
+.icon-prev:before {
+  content: "\e61d";
+}
 .icon-arrow-down:before {
   content: "\e618";
 }

@@ -1,3 +1,11 @@
+.hide-on-desktop
+  +rmin(767)
+    display: none !important
+
+.hide-on-mobile
+  +r(767)
+    display: none !important
+
 .main-page
   +r(1040)
 
@@ -12,10 +20,14 @@
 
   +r(767)
     .header
-      padding-left: 10px
-      padding-right: 10px
-      line-height: 60px
-      height: 60px
+      padding: 10px 10px 0
+      line-height: 30px
+      height: 40px
+      margin-bottom: 240px
+
+    .logo
+      width: 100px
+      height: 30px
 
     .nav__menu
       display: none
@@ -25,6 +37,8 @@
 
     .toparea
       min-height: 0
+      max-height: none
+      height: auto
       margin-bottom: 33px
 
     .toparea__bg
@@ -34,6 +48,7 @@
         left: 0
         height: 270px
         width: 100%
+        background-position: top center
       &:after
         top: 250px
         left: 0
@@ -43,7 +58,9 @@
         transform: skewY(4.85deg)
 
     .toparea__content
-      padding: 240px 0 25px
+      padding: 0 0 25px
+      float: none
+      margin: 240px auto 0
       .list-circle
         margin: 0
         font-size: 14px
@@ -52,11 +69,15 @@
         font-size: 20px
         text-align: left
         margin-bottom: 8px
-      .form_white-bounds
+      .form
         margin-top: 30px
         border: none
         box-shadow: none
         padding: 0
+      .form__text
+        display: none
+        & + .field
+          margin-top: 18px
 
     .title
       font-size: 16px
@@ -65,24 +86,28 @@
     .small-text
       font-size: 10px
 
-    .divider
-      display: none
-
     .btn
       height: 34px
       font-size: 11px
     a.btn
       line-height: 34px
+    .btn_large
+      padding-left: 20px
+      padding-right: 20px
 
     .custom-list
       padding: 0
     .custom-list__item
       padding: 0 0 0 30px
+      line-height: normal
       &:not(:last-child)
         margin-bottom: 15px
     .custom-list__marker
       font-size: 0
       padding: 0
+      width: auto
+      height: auto
+      line-height: normal
       &:before
         display: block
         position: static
@@ -144,6 +169,156 @@
       transform: skewY(4.85deg)
       .skew-box__inner
         transform: skewY(-4.85deg)
+    .skew-box_interface
+      position: relative
+      z-index: 0
+      transform: none
+      overflow: visible
+      margin: 100px 0 0
+      text-align: center
+      &:before,
+      &:after
+        content: ""
+        position: absolute
+        z-index: 0
+        left: 0
+        right: 0
+        height: 100px
+        background: $lightblue
+        transform: skewY(-4.85deg)
+      &:before
+        bottom: 100%
+        margin-bottom: -50px
+      &:after
+        z-index: 2
+        top: 100%
+        margin-top: -50px
+        background: #FFF
+      .skew-box__inner
+        overflow: hidden
+        transform: none
+        padding: 10px 0 80px 0
+      .btn
+        width: auto
+        display: inline-block
+        margin: 0
+      & + *
+        position: relative
+        z-index: 1
+    .skew-box_two-colors
+      transform: skewY(4.85deg)
+      &:before
+        right: 0
+        bottom: 50%
+      &:after
+        left: 0
+        top: 50%
+      .skew-box__inner
+        transform: skewY(-4.85deg)
 
+    .security
+      display: block
+    .security__column
+      display: block
+      width: auto
+      padding: 0
+      text-align: center
+      font-size: 14px
+      &:first-child
+        margin-bottom: percentage(60/260)
+      .title
+        text-align: center
+        margin-bottom: 5px
+      > p
+        max-width: 200px
+        margin: auto
 
+    .numbers-list
+      margin: 0
+    .numbers-list__item
+      float: none
+      width: auto
+      &:after
+        display: none
 
+    .number
+      margin-top: 25px
+      text-align: center
+      flex-direction: column
+      display: flex
+      font-size: 14px
+    .number__row
+      &:first-child
+        order: 2
+        br
+          display: none
+      &:nth-child(2)
+        order: 1
+      &:nth-child(3)
+        order: 3
+    .number__value
+      font-size: 20px
+      left: 0
+
+    .testimonials
+      display: block
+      margin: 0 0 50px 0
+      position: relative
+      +clr
+      .icon
+        position: absolute
+        top: 43px
+        font-size: 24px
+        background: none
+        color: $darkblue
+        transition: color 0.15s linear
+        &:hover
+          color: $yellow
+      .icon-prev
+        left: 0
+      .icon-next
+        right: 0
+    .testimonial
+      max-width: none
+      float: left
+      .cite
+        margin-top: 12px
+    .testimonial__pic
+      width: 110px
+      height: 110px
+      border-width: 3px
+      margin: 0 auto 17px
+    .testimonial__text
+      font-size: 14px
+
+    .press-slider
+      display: none
+
+    .expert
+      display: block
+      margin-bottom: 60px
+    .expert__pic
+      display: block
+      width: auto
+      margin: 0 auto 8px
+      max-width: 110px
+      padding: 0
+    .expert__info
+      display: block
+      width: auto
+      padding: 0
+      text-align: center
+      font-size: 14px
+      > br
+        display: none
+    .expert__contact
+      margin: 0
+
+    .promo
+      margin-top: 34px
+
+    .out
+      padding-bottom: 70px
+
+    .footer
+      display: none
