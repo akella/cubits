@@ -276,14 +276,14 @@ strong.title
   border: 2px solid $darkblue
   border-radius: 0
   box-sizing: border-box
-  +f(m, 14)
+  +f(m, 16)
   line-height: 1.42
   color: $darkblue
-  text-transform: uppercase
+  // text-transform: uppercase
   background: none
   appearance: none
   +placeholder
-    +f(r, 14)
+    +f(r, 16)
     line-height: 1.42
     color: $darkblue
     transition: opacity 0.1s linear
@@ -472,6 +472,7 @@ a.btn_share
   +f(r, 14)
   line-height: 2
   position: relative
+  user-select: none
   > input
     position: absolute
     top: 50%

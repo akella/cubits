@@ -11,12 +11,16 @@ block content
     form.form.form_narrow
       .field
         input.input(type="email", placeholder="Email")
-        //- p.error-msg
-        //-   | Sorry, the code you’ve entered is incorrect. Please try again.
+        p.error-msg
+          | Sorry, the code you’ve entered is incorrect. Please try again.
       .field
         input.input(type="password", placeholder="Password")
-        //- p.error-msg
-        //-   | Sorry, the code you’ve entered is incorrect. Please try again.
+        p.error-msg
+          | Sorry, the code you’ve entered is incorrect. Please try again.
+
+      label.checkbox
+        input(type="checkbox")
+        span Remember me
 
       .form__links
         a.form__link(href="#")
