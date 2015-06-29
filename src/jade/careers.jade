@@ -10,6 +10,9 @@ block header
       include _header-inner
   //END header
 
+block append js-libs
+  script(src='js/lib/jquery.shuffle.modernizr.min.js')
+
 block content
   include _nav-inner
   block careers-content
@@ -43,9 +46,9 @@ block content
 
         p.text
           strong.demi.
-            At Cubits, we are bringing money to a new level. 
-            Our offices are located in Berlin, London and Luxemburg. 
-            We have a very diverse, international, fun, user-focused 
+            At Cubits, we are bringing money to a new level.
+            Our offices are located in Berlin, London and Luxemburg.
+            We have a very diverse, international, fun, user-focused
             and ambitious team. Sound like you? Check out our openings.
     //END inntro
 
@@ -55,22 +58,22 @@ block content
       .l-center
         ul.offices
           li.offices__item
-            a.office(href="careers-job.html")
+            button.office.is-active(type="button", data-group="all")
               .icon.icon-earth
               strong.office__name All offices
               span.office__jobs 33 open
           li.offices__item
-            a.office(href="careers-job.html")
+            button.office(type="button", data-group="berlin")
               .icon.icon-berlin
               strong.office__name Berlin
               span.office__jobs 33 open
           li.offices__item
-            a.office(href="careers-job.html")
+            button.office(type="button", data-group="london")
               .icon.icon-london
               strong.office__name London
               span.office__jobs 10 open
           li.offices__item
-            a.office(href="careers-job.html")
+            button.office(type="button", data-group="luxembourg")
               .icon.icon-luxembourg
               strong.office__name Luxembourg
               span.office__jobs 5 open
@@ -79,47 +82,92 @@ block content
     //BEGIN jobs-tiles
     .l-center
       ul.jobs-tiles
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["berlin"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Ruby on Rals dev
               span.tile__location Berlin
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["luxembourg"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Finance maneger
               span.tile__location Luxembourg
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["london"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Complance maneger
               span.tile__location London
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["berlin"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Ruby on Rals dev
               span.tile__location Berlin
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["luxembourg"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Finance maneger
               span.tile__location Luxembourg
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["london"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Complance maneger
               span.tile__location London
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["berlin"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Ruby on Rals dev
               span.tile__location Berlin
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["luxembourg"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Finance maneger
               span.tile__location Luxembourg
-        li.jobs-tiles__item
+        li.jobs-tiles__item(data-groups='["london"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Complance maneger
+              span.tile__location London
+        li.jobs-tiles__item(data-groups='["berlin"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Ruby on Rals dev
+              span.tile__location Berlin
+        li.jobs-tiles__item(data-groups='["luxembourg"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Finance maneger
+              span.tile__location Luxembourg
+        li.jobs-tiles__item(data-groups='["london"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Complance maneger
+              span.tile__location London
+        li.jobs-tiles__item(data-groups='["berlin"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Ruby on Rals dev
+              span.tile__location Berlin
+        li.jobs-tiles__item(data-groups='["luxembourg"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Finance maneger
+              span.tile__location Luxembourg
+        li.jobs-tiles__item(data-groups='["london"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Complance maneger
+              span.tile__location London
+        li.jobs-tiles__item(data-groups='["berlin"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Ruby on Rals dev
+              span.tile__location Berlin
+        li.jobs-tiles__item(data-groups='["luxembourg"]')
+          a.tile(href="#")
+            .tile__inner
+              strong.tile__title Finance maneger
+              span.tile__location Luxembourg
+        li.jobs-tiles__item(data-groups='["london"]')
           a.tile(href="#")
             .tile__inner
               strong.tile__title Complance maneger

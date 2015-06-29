@@ -3,88 +3,137 @@ var Slider             = require('./modules/press-slider.js');
 var Tabs               = require('./modules/tabs.js');
 var PhoneSlider        = require('./modules/phone-slider.js');
 var TestimonialsSlider = require('./modules/testimonials-slider.js');
+var Filter             = require('./modules/filter.js');
 
 $(document).ready(function() {
 
-    var slider          = $('.press-slider'),
-        contactTabs     = $('.js-contacts'),
-        tabs            = $('.js-tabs'),
-        tooltip         = $('.js-tooltip'),
-        interfaceSlider = $('.interface-slider'),
-        testimonials    = $('.js-testimonials'),
-        breakpoint      = 751,
-        win             = $(window),
-        winWidth        = win.width();
+  var slider          = $('.press-slider');
+  var contactTabs     = $('.js-contacts');
+  var tabs            = $('.js-tabs');
+  var tooltip         = $('.js-tooltip');
+  var interfaceSlider = $('.interface-slider');
+  var testimonials    = $('.js-testimonials');
+  var jobs            = $('.jobs-tiles');
+  var breakpoint      = 751;
+  var win             = $(window);
+  var winWidth        = win.width();
 
+  // press slider on main page
+  if (slider.length) {
+    slider = new Slider(slider);
+  }
 
-    // press slider on main page
-    if ( slider.length ) slider = new Slider(slider);
-
-
-    // tabs
-    if ( tabs.length ) {
-        tabs.each(function(index, el) {
-            new Tabs(el, '.tab__btn', '.tab-content');
-        });
-    }
-    if ( contactTabs.length ) {
-        contactTabs = new Tabs(contactTabs, '.office', '.tab-content');
-    }
-
-
-    // slider in iphone on main page
-    if ( interfaceSlider.length && winWidth <= breakpoint ) {
-        interfaceSlider = new PhoneSlider(interfaceSlider);
-    }
-
-    if ( testimonials.length && winWidth <= breakpoint ) {
-        testimonials = new TestimonialsSlider(testimonials);
-    }
-
-    win.on('resize', function() {
-        winWidth = win.width();
-
-        if ( winWidth <= breakpoint ) {
-
-            if ( interfaceSlider.length && !interfaceSlider.active ) {
-                interfaceSlider = new PhoneSlider(interfaceSlider);
-            }
-
-            if ( testimonials.active === false ) {
-                testimonials.init();
-            } else if ( testimonials.length ) {
-                testimonials = new TestimonialsSlider(testimonials);
-            }
-        }
-        else {
-
-            if ( testimonials.active ) {
-                testimonials.destroy();
-            }
-        }
+  // tabs
+  if (tabs.length) {
+    tabs.each(function(index, el) {
+      new Tabs(el, '.tab__btn', '.tab-content');
     });
+  }
 
+  if (contactTabs.length) {
+    contactTabs = new Tabs(contactTabs, '.office', '.tab-content');
+  }
 
-    // tooltip
-    if ( tooltip ) {
-        tooltip.tooltipster({
-            animation: 'fade',
-            position: 'bottom',
-            speed: 300,
-            delay: 300,
-            offsetX: 0,
-            offsetY: 20,
-            maxWidth: 480,
-            interactive: true,
-            trigger: 'hover',
-            functionInit: function() {
-                var content = this.find('.member__about');
-                return content;
-            }
-        });
+  // filtering jobs
+  if (jobs.length) {
+    jobs = new Filter(jobs, '.office', {
+      itemSelector: '.jobs-tiles__item'
+    });
+  }
+
+  // slider in iphone on main page
+  if (interfaceSlider.length && winWidth <= breakpoint) {
+    interfaceSlider = new PhoneSlider(interfaceSlider);
+  }
+
+  if (testimonials.length && winWidth <= breakpoint) {
+    testimonials = new TestimonialsSlider(testimonials);
+  }
+
+  win.on('resize', function() {
+    winWidth = win.width();
+
+    if (winWidth <= breakpoint) {
+
+      if (interfaceSlider.length && !interfaceSlider.active) {
+        interfaceSlider = new PhoneSlider(interfaceSlider);
+      }
+
+      if (testimonials.active === false) {
+        testimonials.init();
+      } else if (testimonials.length) {
+        testimonials = new TestimonialsSlider(testimonials);
+      }
+    } else {
+
+      if (testimonials.active) {
+        testimonials.destroy();
+      }
     }
+  });
+
+  // tooltip
+  if (tooltip) {
+    tooltip.tooltipster({
+      animation: 'fade',
+      position: 'bottom',
+      speed: 300,
+      delay: 300,
+      offsetX: 0,
+      offsetY: 20,
+      maxWidth: 480,
+      interactive: true,
+      trigger: 'hover',
+      functionInit: function() {
+        var content = this.find('.member__about');
+        return content;
+      }
+    });
+  }
 });
-},{"./modules/phone-slider.js":2,"./modules/press-slider.js":3,"./modules/tabs.js":4,"./modules/testimonials-slider.js":5}],2:[function(require,module,exports){
+
+},{"./modules/filter.js":2,"./modules/phone-slider.js":3,"./modules/press-slider.js":4,"./modules/tabs.js":5,"./modules/testimonials-slider.js":6}],2:[function(require,module,exports){
+function Filter(element, filterBtnSelector, props) {
+  this.wrapper     = element instanceof jQuery ? element : $(element);
+  this.filterBtn   = $(filterBtnSelector);
+  this.activeClass = 'is-active';
+  this.props       = props || {};
+
+  this.init();
+}
+
+Filter.prototype._initEvents = function() {
+  var _ = this;
+
+  _.filterBtn.on('click', function(e) {
+    e.preventDefault();
+    var btn = $(this);
+    var group = btn.data('group');
+    _.wrapper.shuffle('shuffle', group);
+    _.filterBtn.removeClass(_.activeClass);
+    btn.addClass(_.activeClass);
+  });
+};
+
+Filter.prototype.init = function(argument) {
+  var _        = this;
+  var defaults = {
+    speed: 350,
+    easing: 'ease-out',
+    itemSelector: '',
+    gutterWidth: 0,
+    columnWidth: 0
+  };
+
+  $.extend(defaults, _.props);
+
+  _._initEvents();
+  _.wrapper.shuffle(defaults);
+};
+
+module.exports = Filter;
+
+},{}],3:[function(require,module,exports){
 function PhoneSlider(element, breakpoint) {
     this.wrapper    = element instanceof jQuery ? element : $(element);
     this.phone      = this.wrapper.find('.interface-slider__screenshots');
@@ -119,7 +168,7 @@ PhoneSlider.prototype.init = function() {
 };
 
 module.exports = PhoneSlider;
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 // require('slick-carousel');
 
 function Slider(selector) {
@@ -214,53 +263,56 @@ Slider.prototype.init = function() {
 };
 
 module.exports = Slider;
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 function Tabs(wrapper, tab, content) {
-    this.tabs = $(wrapper).find(tab || '.js-tab');
-    this.content = $(wrapper).find(content || '.js-tab-content');
-    this.activeClass = 'is-active';
-    this.activeTabIndex = 0;
+  this.tabs = $(wrapper).find(tab || '.js-tab');
+  this.content = $(wrapper).find(content || '.js-tab-content');
+  this.activeClass = 'is-active';
+  this.activeTabIndex = 0;
 
-    this._init();
+  this._init();
 }
 
 Tabs.prototype._initEvents = function() {
-    var _ = this;
+  var _ = this;
 
-    _.tabs.each(function(index, el) {
-        $(this).on('click', function(e) {
-            e.preventDefault();
-            _.changeContent(index);
-        });
+  _.tabs.each(function(index, el) {
+    $(this).on('click', function(e) {
+      e.preventDefault();
+      _.changeContent(index);
     });
+  });
 };
 
 Tabs.prototype._init = function() {
-    var _ = this;
+  var _ = this;
 
-    _.tabs.each(function(index, el) {
-        if ( $(el).hasClass(_.activeClass) ) _.activeTabIndex = index;
-    });
-    _._initEvents();
+  _.tabs.each(function(index, el) {
+    if ($(el).hasClass(_.activeClass)) _.activeTabIndex = index;
+  });
+  _._initEvents();
 };
 
 Tabs.prototype.changeContent = function(index) {
-    var _ = this;
+  var _ = this;
 
-    $( _.tabs[_.activeTabIndex] ).removeClass(_.activeClass);
-    $( _.tabs[index] ).addClass(_.activeClass);
-    $( _.content[_.activeTabIndex] )
-        .removeClass(_.activeClass);
-        // .hide();
-    $( _.content[index] )
-        // .show()
-        .addClass(_.activeClass);
+  $(_.tabs[_.activeTabIndex]).removeClass(_.activeClass);
+  $(_.tabs[index]).addClass(_.activeClass);
+  $(_.content[_.activeTabIndex])
+      .removeClass(_.activeClass);
 
-    _.activeTabIndex = index;
+  // .hide();
+  $(_.content[index])
+
+      // .show()
+      .addClass(_.activeClass);
+
+  _.activeTabIndex = index;
 };
 
 module.exports = Tabs;
-},{}],5:[function(require,module,exports){
+
+},{}],6:[function(require,module,exports){
 function TestimonialsSlider(element) {
     this.wrapper = element instanceof jQuery ? element : $(element);
     this.active = false;

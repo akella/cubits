@@ -711,6 +711,35 @@
   > p, ul, ol
     margin: 0
 
+.multi-list
+  list-style: none
+  counter-reset: multi-list-level-1
+  ol
+    margin: 0
+  li
+    &:before
+      content: ""
+      display: inline
+  > li
+    counter-increment: multi-list-level-1
+    margin: 15px 0
+    &:before
+      content: counter(multi-list-level-1)". "
+    > ol
+      counter-reset: multi-list-level-2
+      margin-top: 5px
+      > li
+        counter-increment: multi-list-level-2
+        &:before
+          content: counter(multi-list-level-1)"."counter(multi-list-level-2)" "
+        > ol
+          counter-reset: multi-list-level-3
+          > li
+            counter-increment: multi-list-level-3
+            &:before
+              content: counter(multi-list-level-1)"."counter(multi-list-level-2)"."counter(multi-list-level-3)" "
+
+
 
 .advantage
   table-layout: fixed
@@ -1026,9 +1055,6 @@ a.tab__btn
 .offices
   font-size: 0
   text-align: center
-  // display: flex
-  // justify-content: space-around
-  // align-items: flex-end
   .office
     display: inline-block
 
@@ -1043,6 +1069,7 @@ a.tab__btn
   padding: 0 20px
 
 .office
+  position: relative
   display: block
   text-decoration: none
   text-align: center
@@ -1063,10 +1090,20 @@ a.tab__btn
     font-size: 169px
   .icon-luxembourg
     font-size: 128px
-  &:hover
+  > input[type="radio"]
+    position: absolute
+    opacity: 0
+  input:checked
+    ~ *
+      color: $yellow
+  &:hover,
+  &.is-active
     color: $yellow
     .office__jobs
       color: $yellow
+
+label.office
+  cursor: pointer
 
 .office__name
   display: block
@@ -1087,17 +1124,22 @@ a.tab__btn
 
 
 .jobs-tiles
-  margin: 0 -20px percentage(-84/1000)
-  display: flex
-  justify-content: space-between
-  align-content: space-between
-  flex-wrap: wrap
-  +r(849)
-    justify-content: center
+  margin: 0 -61px percentage(-84/1000)
+  +clr
+  +r(1020)
+    margin-left: 0
+    margin-right: 0
 
 .jobs-tiles__item
-  padding: 0 20px
-  margin-bottom: percentage(84/1000)
+  float: left
+  width: 33.3333%
+  text-align: center
+  margin: 0 0 percentage(84/1000) 0
+  +r(820)
+    width: 50%
+  .tile
+    margin: auto
+
 
 .tile
   position: relative
