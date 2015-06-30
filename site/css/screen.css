@@ -714,7 +714,7 @@ a.btn_share { line-height: 58px; }
 .multi-list { list-style: none; counter-reset: multi-list-level-1; }
 .multi-list ol { margin: 0; }
 .multi-list li:before { content: ""; display: inline; }
-.multi-list > li { counter-increment: multi-list-level-1; margin: 15px 0; }
+.multi-list > li { counter-increment: multi-list-level-1; margin: 20px 0; }
 .multi-list > li:before { content: counter(multi-list-level-1) ". "; }
 .multi-list > li > ol { counter-reset: multi-list-level-2; margin-top: 5px; }
 .multi-list > li > ol > li { counter-increment: multi-list-level-2; }
