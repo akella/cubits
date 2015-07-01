@@ -33,7 +33,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "AvenirNext-Regular"; src: url("../fonts/AvenirNext-Regular.eot"); src: url("../fonts/AvenirNext-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-Regular.woff") format("woff"), url("../fonts/AvenirNext-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "AvenirNext-UltraLight"; src: url("../fonts/AvenirNext-UltraLight.eot"); src: url("../fonts/AvenirNext-UltraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLight.woff") format("woff"), url("../fonts/AvenirNext-UltraLight.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "AvenirNext-UltraLightItalic"; src: url("../fonts/AvenirNext-UltraLightItalic.eot"); src: url("../fonts/AvenirNext-UltraLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNext-UltraLightItalic.woff") format("woff"), url("../fonts/AvenirNext-UltraLightItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.4; color: #343558; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: "AvenirNext-Regular", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.4; color: #343558; min-width: 320px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 a { color: inherit; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
 a:hover { color: #F8CF5E; }
@@ -468,7 +468,7 @@ a.btn_share { line-height: 58px; }
 .footer_bg:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; height: 39px; background: #FFF; }
 .footer_bg .l-center-narrow { position: relative; z-index: 1; }
 
-.toparea { position: relative; margin-bottom: 118px; z-index: 0; height: 100vh; max-height: 900px; color: #FFF; }
+.toparea { position: relative; margin-bottom: 118px; z-index: 0; height: 100vh; min-height: 812px; max-height: 1000px; color: #FFF; }
 .toparea:after { content: " "; display: table; clear: both; }
 
 .toparea_b2b:before { content: ""; position: absolute; top: 100px; left: 0; right: 0; bottom: 0; background: url("../img/toparea-merchant.jpg") no-repeat center center; background-size: cover; }

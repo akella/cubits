@@ -1,16 +1,8 @@
-var gulp = require('./gulp')([
-    // connect your tasks here
-    'server',
-    'browserify',
-    'watchify',
-    'jade',
-    'jade-all',
-    'sass',
-    'svg-sprite',
-    'svgo',
-    'sprite',
-    'watch'
-    ]);
+var gulp       = require('gulp');
+var requireDir = require('require-dir');
+
+// Require all tasks in gulp/tasks, including subfolders
+requireDir('./gulp/tasks', {recurse: true});
 
 gulp.task('build', [
     'svg-sprite',
