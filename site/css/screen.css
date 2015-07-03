@@ -1002,6 +1002,12 @@ label.office { cursor: pointer; }
 .media-container { margin: 20px 0; }
 .media-container > img { display: block; margin: auto; max-width: 100%; }
 
+.table { margin: 20px 0; font-size: 16px; }
+.table:first-child { margin-top: 0; }
+.table thead { background: #F5F5F7; text-align: left; }
+.table th { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; }
+.table td, .table th { padding: 5px; border: 1px solid #F5F5F7; }
+
 @media only screen and (min-width: 767px) { .hide-on-desktop { display: none !important; } }
 
 @media only screen and (max-width: 767px) { .hide-on-mobile { display: none !important; } }
