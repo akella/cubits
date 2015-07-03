@@ -1,6 +1,11 @@
 $icons: (
-  codedby: (X: 0px, Y:-15px, W: 47px, H: 5px, TW: 49px, TH: 20px, IMG: '../img/icons.png'),
-  coderiver: (X: 0px, Y:0px, W: 49px, H: 5px, TW: 49px, TH: 20px, IMG: '../img/icons.png'),
+  codedby: (X: 0px, Y:-68px, W: 47px, H: 5px, TW: 119px, TH: 73px, IMG: '../img/icons.png'),
+  coderiver: (X: -70px, Y:-48px, W: 49px, H: 5px, TW: 119px, TH: 73px, IMG: '../img/icons.png'),
+  okpay: (X: 0px, Y:-22px, W: 53px, H: 13px, TW: 119px, TH: 73px, IMG: '../img/icons.png'),
+  sepa: (X: -70px, Y:0px, W: 49px, H: 13px, TW: 119px, TH: 73px, IMG: '../img/icons.png'),
+  skrill: (X: -70px, Y:-23px, W: 37px, H: 15px, TW: 119px, TH: 73px, IMG: '../img/icons.png'),
+  sofort: (X: 0px, Y:0px, W: 60px, H: 12px, TW: 119px, TH: 73px, IMG: '../img/icons.png'),
+  swift: (X: 0px, Y:-45px, W: 51px, H: 13px, TW: 119px, TH: 73px, IMG: '../img/icons.png'),
 );
 
 
@@ -23,13 +28,48 @@ $icons: (
   width: 47px;
   height: 5px;
   background-image: url('../img/icons.png');
-  background-position: 0px -15px;
+  background-position: 0px -68px;
 }
 
 .icon-coderiver {
   width: 49px;
   height: 5px;
   background-image: url('../img/icons.png');
+  background-position: -70px -48px;
+}
+
+.icon-okpay {
+  width: 53px;
+  height: 13px;
+  background-image: url('../img/icons.png');
+  background-position: 0px -22px;
+}
+
+.icon-sepa {
+  width: 49px;
+  height: 13px;
+  background-image: url('../img/icons.png');
+  background-position: -70px 0px;
+}
+
+.icon-skrill {
+  width: 37px;
+  height: 15px;
+  background-image: url('../img/icons.png');
+  background-position: -70px -23px;
+}
+
+.icon-sofort {
+  width: 60px;
+  height: 12px;
+  background-image: url('../img/icons.png');
   background-position: 0px 0px;
+}
+
+.icon-swift {
+  width: 51px;
+  height: 13px;
+  background-image: url('../img/icons.png');
+  background-position: 0px -45px;
 }
 
