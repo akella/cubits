@@ -18,6 +18,6 @@ gulp.task('server', function() {
     ghostMode: false,
     online: false,
     // tunnel: 'cubits',
-    open: false,
+    open: false
   });
 });

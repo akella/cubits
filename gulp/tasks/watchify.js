@@ -40,6 +40,6 @@ gulp.task('watchify', function() {
         once: true
       }));
   }
-  return bundle();
 
+  return bundle();
 });

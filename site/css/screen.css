@@ -291,6 +291,7 @@ b.title, strong.title { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sa
 .form__title > b, .form__title strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
 .form__text { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.37; color: #343558; }
+.form__text .checkbox { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; }
 .form__text:not(:last-child) { margin-bottom: 12px; }
 
 .form__body { position: relative; }
@@ -414,6 +415,8 @@ a.btn_share { line-height: 58px; }
 .checkbox > span:after { display: none; top: 5px; left: 4px; width: 0px; height: 0px; border: 4px solid; border-radius: 50%; }
 .checkbox input:checked ~ span:after { display: block; }
 
+.checkbox_dark { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; color: #343558; }
+
 .header { height: 100px; line-height: 100px; margin-bottom: 70px; box-sizing: border-box; padding: 0 50px 0 60px; color: #FFF; background: #343558; }
 .header:after { content: " "; display: table; clear: both; }
 
@@ -468,7 +471,7 @@ a.btn_share { line-height: 58px; }
 .footer_bg:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; height: 39px; background: #FFF; }
 .footer_bg .l-center-narrow { position: relative; z-index: 1; }
 
-.toparea { position: relative; margin-bottom: 118px; z-index: 0; height: 100vh; min-height: 812px; max-height: 1000px; color: #FFF; }
+.toparea { position: relative; margin-bottom: 118px; box-sizing: border-box; min-height: 850px; padding-bottom: 40px; z-index: 0; color: #FFF; }
 .toparea:after { content: " "; display: table; clear: both; }
 
 .toparea_b2b:before { content: ""; position: absolute; top: 100px; left: 0; right: 0; bottom: 0; background: url("../img/toparea-merchant.jpg") no-repeat center center; background-size: cover; }
@@ -477,7 +480,7 @@ a.btn_share { line-height: 58px; }
 .toparea__bg:before { content: ""; position: absolute; left: 0; height: 100%; width: 62.5%; background: #C1A988 url("../img/toparea-iphone.jpg") no-repeat center center; background-size: cover; }
 .toparea__bg:after { content: ""; position: absolute; z-index: 1; top: 0; right: -140px; bottom: 0; width: 62.5%; min-width: 840px; background: #93C4D2; -webkit-transform: skewX(-16.6deg); -ms-transform: skewX(-16.6deg); transform: skewX(-16.6deg); }
 
-.toparea__content { float: right; position: relative; z-index: 1; padding: 25px 0 40px; max-width: 404px; clear: both; }
+.toparea__content { float: right; position: relative; z-index: 1; margin-top: 25px; max-width: 404px; clear: both; }
 .toparea__content .bold-title { margin-bottom: 3px; }
 .toparea__content .list-circle { margin-left: 45px; }
 .toparea__content .form { margin-top: 50px; }
@@ -876,13 +879,13 @@ label.office { cursor: pointer; }
 
 .tile__quote { font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; line-height: 1.6; }
 
-.tile__logo { display: block; margin-top: 40px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; }
+.tile__logo { display: block; margin-top: 15px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; }
 .tile__logo img { max-width: 100%; display: block; }
 .tile__logo:before { content: ""; display: block; margin-bottom: 14px; width: 60px; height: 0; border-top: 2px solid; }
 
-.tile__read-more { position: absolute; bottom: 37px; left: 35px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; color: #93C4D2; text-decoration: none; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
+.tile__read-more { position: absolute; bottom: 25px; left: 35px; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; color: #93C4D2; text-decoration: none; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
 
-.tile_large { width: 320px; height: 320px; padding: 40px 35px 55px 30px; text-align: left; white-space: normal; font-size: 18px; }
+.tile_large { width: 320px; height: 320px; padding: 25px 35px 45px 30px; text-align: left; white-space: normal; font-size: 18px; }
 .tile_large:hover { color: #343558; }
 .tile_large:hover .tile__read-more { color: #FFF; }
 .tile_large:before { display: none; }
@@ -996,6 +999,9 @@ label.office { cursor: pointer; }
 .interface-slider__prev, .interface-slider__next { background: none; display: inline-block; vertical-align: middle; font-size: 24px; color: #343558; -webkit-transition: color 0.15s linear; transition: color 0.15s linear; }
 .interface-slider__prev:hover, .interface-slider__next:hover { color: #F8CF5E; }
 
+.media-container { margin: 20px 0; }
+.media-container > img { display: block; margin: auto; max-width: 100%; }
+
 @media only screen and (min-width: 767px) { .hide-on-desktop { display: none !important; } }
 
 @media only screen and (max-width: 767px) { .hide-on-mobile { display: none !important; } }
@@ -1006,10 +1012,10 @@ label.office { cursor: pointer; }
   .main-page .logo { width: 100px; height: 30px; }
   .main-page .nav__menu { display: none; }
   .main-page .nav__login:before { display: none; }
-  .main-page .toparea { min-height: 0; max-height: none; height: auto; margin-bottom: 33px; }
+  .main-page .toparea { min-height: 0; max-height: none; height: auto; margin-bottom: 33px; padding-bottom: 25px; }
   .main-page .toparea__bg:before { top: 0; right: 0; left: 0; height: 270px; width: 100%; background-position: top center; }
   .main-page .toparea__bg:after { top: 250px; left: 0; right: 0; bottom: 0; width: 100%; -webkit-transform: skewY(4.85deg); -ms-transform: skewY(4.85deg); transform: skewY(4.85deg); }
-  .main-page .toparea__content { padding: 0 0 25px; float: none; margin: 240px auto 0; }
+  .main-page .toparea__content { float: none; margin: 240px auto 0; }
   .main-page .toparea__content .list-circle { margin: 0; font-size: 14px; font-family: "AvenirNext-Medium", Helvetica, Arial, sans-serif; font-weight: normal; }
   .main-page .toparea__content .bold-title { font-size: 20px; text-align: left; margin-bottom: 8px; }
   .main-page .toparea__content .form { margin-top: 30px; border: none; box-shadow: none; padding: 0; }

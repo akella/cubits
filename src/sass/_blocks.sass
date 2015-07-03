@@ -169,6 +169,8 @@ strong.title
   +f(m, 14)
   line-height: 1.37
   color: $darkblue
+  .checkbox
+    +f(m)
   &:not(:last-child)
     margin-bottom: 12px
 
@@ -507,3 +509,6 @@ a.btn_share
   input:checked ~ span:after
     display: block
 
+.checkbox_dark
+  +f(m)
+  color: $darkblue
