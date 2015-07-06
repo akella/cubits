@@ -424,6 +424,10 @@ ul.marked-list { list-style-type: disc; }
 
 ol.marked-list { list-style-type: decimal; }
 
+.marked-list_no-mrg > li { margin: 0; }
+
+.footnote { display: block; font-size: 10px; text-align: right; margin-top: 10px; }
+
 .header { height: 100px; line-height: 100px; margin-bottom: 70px; box-sizing: border-box; padding: 0 50px 0 60px; color: #FFF; background: #343558; }
 .header:after { content: " "; display: table; clear: both; }
 
@@ -745,10 +749,10 @@ ol.marked-list { list-style-type: decimal; }
 .advantage__number strong { font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 45px; }
 .advantage__number .icon { font-size: 40px; margin: 0 5px; }
 
-.advantage_small { max-width: 400px; margin: 50px auto; }
+.advantage_small { max-width: 500px; margin: 50px auto; }
 .advantage_small .icon-moneybox, .advantage_small .icon-people { font-size: 112px; }
 .advantage_small .title { margin-bottom: 15px; }
-.advantage_small .advantage__pic { text-align: right; width: 125px; padding: 88px 30px 0 0; vertical-align: middle; }
+.advantage_small .advantage__pic { text-align: right; width: 125px; padding: 135px 30px 0 0; vertical-align: top; }
 .advantage_small .advantage__text { padding: 0; }
 
 .advantage_white { color: #FFF; }
