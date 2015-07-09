@@ -1026,7 +1026,8 @@ label.office { cursor: pointer; }
 
 @media only screen and (max-width: 767px) { .hide-on-mobile { display: none !important; } }
 
-@media only screen and (max-width: 767px) { .header { padding: 10px 10px 0; line-height: 30px; height: 50px; margin-bottom: 100px; }
+@media only screen and (max-width: 767px) { .footer { display: none; }
+  .header { padding: 10px 10px 0; line-height: 30px; height: 50px; margin-bottom: 100px; }
   .footer { margin-top: 100px; }
   .logo { width: 100px; height: 30px; }
   .nav__menu { display: none; }
