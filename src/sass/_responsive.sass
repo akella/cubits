@@ -5,8 +5,32 @@
 .hide-on-mobile
   +r(767)
     display: none !important
++r(767)
+  .header
+    padding: 10px 10px 0
+    line-height: 30px
+    height: 50px
+    margin-bottom: 100px
+  .footer
+    margin-top: 100px 
 
-.main-page
+  .logo
+    width: 100px
+    height: 30px
+
+  .nav__menu
+    display: none
+  .nav__login
+    &:before
+      display: none
+
+  .toparea
+    min-height: 0
+    max-height: none
+    height: auto 
+    margin-bottom: 33px
+    padding-bottom: 25px
+.main-page 
   +r(1040)
 
     .header
