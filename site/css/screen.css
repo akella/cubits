@@ -311,6 +311,9 @@ b.title, strong.title { font-family: "AvenirNext-DemiBold", Helvetica, Arial, sa
 
 .form_narrow { max-width: 320px; margin-left: auto; margin-right: auto; }
 
+@media only screen and (max-width: 700px) { .form_sign-in .form__aside { float: none; width: auto; margin-top: 30px; } }
+@media only screen and (max-width: 700px) { .form_sign-in .form__column { float: none; width: auto; } }
+
 .form-message { position: absolute; z-index: 2; top: 0; left: 0; right: 0; bottom: 0; text-align: center; font-size: 0; white-space: nowrap; background: #FFF; border: 2px solid; }
 .form-message:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 
