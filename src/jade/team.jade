@@ -58,7 +58,9 @@ block content
               Vestibulum ante ipsum primis in faucibus orci luctus et
               ultrices posuere cubilia Curae; Proin vel ante a orci
               tempus eleifend ut et magna.
-
+        .btn-wrapper
+          a.btn.btn_large.btn_darkblue(href="#")
+            | View our team members
       .tab-content
         ul.board
           li.board__tile
@@ -331,7 +333,9 @@ block content
                   Foundation Ukraine and Satoshi Square Kiev and even obtained a management
                   position in UK based Bitcoin Startup. Outside of professional life you
                   can find Max riding any kind of a board.
-
+        .btn-wrapper
+          a.btn.btn_large.btn_darkblue(href="#")
+            | View our team members
 
       .tab-content
         .member
@@ -372,14 +376,16 @@ block content
               Vestibulum ante ipsum primis in faucibus orci luctus et
               ultrices posuere cubilia Curae; Proin vel ante a orci
               tempus eleifend ut et magna.
-
+        .btn-wrapper
+          a.btn.btn_large.btn_darkblue(href="#")
+            | View our team members
     .l-column
       .tab
-        button.tab__btn.is-active(type="button") Founders
-        button.tab__btn(type="button") Team
-        button.tab__btn(type="button") Board/Advisors
+        button.tab__btn.is-active(type="button",data-title="Title1") Founders
+        button.tab__btn(type="button",data-title="Title2") Team
+        button.tab__btn(type="button",data-title="Title3") Board/Advisors
   //END board
 
-  .btn-wrapper
-    a.btn.btn_large.btn_darkblue(href="#")
-      | View our team members
+  //- .btn-wrapper
+  //-   a.btn.btn_large.btn_darkblue(href="#")
+  //-     | View our team members

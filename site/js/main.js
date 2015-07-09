@@ -1,2 +1,353 @@
-!function t(e,i,s){function n(o,a){if(!i[o]){if(!e[o]){var c="function"==typeof require&&require;if(!a&&c)return c(o,!0);if(r)return r(o,!0);var p=new Error("Cannot find module '"+o+"'");throw p.code="MODULE_NOT_FOUND",p}var u=i[o]={exports:{}};e[o][0].call(u.exports,function(t){var i=e[o][1][t];return n(i?i:t)},u,u.exports,t,e,i,s)}return i[o].exports}for(var r="function"==typeof require&&require,o=0;o<s.length;o++)n(s[o]);return n}({1:[function(t,e,i){var s=t("./modules/press-slider.js"),n=t("./modules/tabs.js"),r=t("./modules/phone-slider.js"),o=t("./modules/testimonials-slider.js"),a=t("./modules/filter.js");$(document).ready(function(){var t=$(".press-slider"),e=$(".js-contacts"),i=$(".js-tabs"),c=$(".js-tooltip"),p=$(".interface-slider"),u=$(".js-testimonials"),l=$(".jobs-tiles"),d=751,f=$(window),h=f.width();t.length&&(t=new s(t)),i.length&&i.each(function(t,e){new n(e,".tab__btn",".tab-content")}),e.length&&(e=new n(e,".office",".tab-content")),l.length&&(l=new a(l,".office",{itemSelector:".jobs-tiles__item"})),p.length&&d>=h&&(p=new r(p)),u.length&&d>=h&&(u=new o(u)),f.on("resize",function(){h=f.width(),d>=h?(p.length&&!p.active&&(p=new r(p)),u.active===!1?u.init():u.length&&(u=new o(u))):u.active&&u.destroy()}),c&&c.tooltipster({animation:"fade",position:"bottom",speed:300,delay:300,offsetX:0,offsetY:20,maxWidth:480,interactive:!0,trigger:"hover",functionInit:function(){var t=this.find(".member__about");return t}})})},{"./modules/filter.js":2,"./modules/phone-slider.js":3,"./modules/press-slider.js":4,"./modules/tabs.js":5,"./modules/testimonials-slider.js":6}],2:[function(t,e,i){function s(t,e,i){this.wrapper=t instanceof jQuery?t:$(t),this.filterBtn=$(e),this.activeClass="is-active",this.props=i||{},this.init()}s.prototype._initEvents=function(){var t=this;t.filterBtn.on("click",function(e){e.preventDefault();var i=$(this),s=i.data("group");t.wrapper.shuffle("shuffle",s),t.filterBtn.removeClass(t.activeClass),i.addClass(t.activeClass)})},s.prototype.init=function(t){var e=this,i={speed:350,easing:"ease-out",itemSelector:"",gutterWidth:0,columnWidth:0};$.extend(i,e.props),e._initEvents(),e.wrapper.shuffle(i)},e.exports=s},{}],3:[function(t,e,i){function s(t,e){return this.wrapper=t instanceof jQuery?t:$(t),this.phone=this.wrapper.find(".interface-slider__screenshots"),this.text=this.wrapper.find(".interface-slider__text"),this.prevArrow=this.wrapper.find(".interface-slider__prev"),this.nextArrow=this.wrapper.find(".interface-slider__next"),this.active=!1,this.init(),this}s.prototype.init=function(){var t=this;t.active||(t.phone.slick({autoplay:!1,arrows:!1,asNavFor:t.text}),t.text.slick({asNavFor:t.phone,arrows:!0,fade:!0,autoplay:!1,prevArrow:t.prevArrow,nextArrow:t.nextArrow}),t.active=!0)},e.exports=s},{}],4:[function(t,e,i){function s(t){this.wrapper=t instanceof jQuery?t:$(t),this.slider=this.wrapper.find(".press-slider__slides"),this.arrow=this.wrapper.find(".press-slider__arrow"),this.navButton=this.wrapper.find(".press-slider__btn"),this.activeClass="is-active",this.currentSlideIndex=0,this.positions=[],this.init()}s.prototype._initEvents=function(){var t=this;t.navButton.on("click",function(e){e.preventDefault();var i=$(this).index();t.slider.slick("slickGoTo",i)}),t.slider.on("beforeChange",function(e,i,s,n){t.currentSlideIndex=n,t._updateButtons(s),t._updateArrowPos()}),$(window).on("resize",function(){t._updatePositions(),t._updateArrowPos()})},s.prototype._updateArrowPos=function(){var t=this,e=($(t.navButton[t.currentSlideIndex]),t.positions[t.currentSlideIndex]);t.arrow.css("left",e)},s.prototype._updateButtons=function(t){var e=this;"number"==typeof t&&t>=0?$(e.navButton[t]).removeClass(e.activeClass):e.navButton.removeClass(e.activeClass),$(e.navButton[e.currentSlideIndex]).addClass(e.activeClass)},s.prototype._updatePositions=function(){var t=this;t.positions=[],t.navButton.each(function(e,i){var s=$(i),n=Math.ceil(s.position().left+s.outerWidth()/2);t.positions.push(n)})},s.prototype.init=function(){var t=this;t._initEvents(),t._updatePositions(),t._updateButtons(),t._updateArrowPos(),t.slider.slick({accessibility:!1,autoplay:!0,arrows:!1,dots:!1,autoplaySpeed:1e4,slide:".press-slider__slide"})},e.exports=s},{}],5:[function(t,e,i){function s(t,e,i){this.tabs=$(t).find(e||".js-tab"),this.content=$(t).find(i||".js-tab-content"),this.activeClass="is-active",this.activeTabIndex=0,this._init()}s.prototype._initEvents=function(){var t=this;t.tabs.each(function(e,i){$(this).on("click",function(i){i.preventDefault(),t.changeContent(e)})})},s.prototype._init=function(){var t=this;t.tabs.each(function(e,i){$(i).hasClass(t.activeClass)&&(t.activeTabIndex=e)}),t._initEvents()},s.prototype.changeContent=function(t){var e=this;$(e.tabs[e.activeTabIndex]).removeClass(e.activeClass),$(e.tabs[t]).addClass(e.activeClass),$(e.content[e.activeTabIndex]).removeClass(e.activeClass),$(e.content[t]).addClass(e.activeClass),e.activeTabIndex=t},e.exports=s},{}],6:[function(t,e,i){function s(t){return this.wrapper=t instanceof jQuery?t:$(t),this.active=!1,this.init(),this}s.prototype.init=function(){var t=this;t.active||(this.wrapper.slick({arrows:!0,autoplay:!1,prevArrow:'<button type="button" class="icon icon-prev"></button>',nextArrow:'<button type="button" class="icon icon-next"></button>'}),t.active=!0)},s.prototype.destroy=function(){var t=this;t.active&&(t.wrapper.slick("unslick"),t.active=!1)},e.exports=s},{}]},{},[1]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var Slider             = require('./modules/press-slider.js');
+var Tabs               = require('./modules/tabs.js');
+var PhoneSlider        = require('./modules/phone-slider.js');
+var TestimonialsSlider = require('./modules/testimonials-slider.js');
+var Filter             = require('./modules/filter.js');
+
+$(document).ready(function() {
+
+  var slider          = $('.press-slider');
+  var contactTabs     = $('.js-contacts');
+  var tabs            = $('.js-tabs');
+  var tooltip         = $('.js-tooltip');
+  var interfaceSlider = $('.interface-slider');
+  var testimonials    = $('.js-testimonials');
+  var jobs            = $('.jobs-tiles');
+  var breakpoint      = 751;
+  var win             = $(window);
+  var winWidth        = win.width();
+
+  // press slider on main page
+  if (slider.length) {
+    slider = new Slider(slider);
+  }
+
+  // tabs
+  if (tabs.length) {
+    tabs.each(function(index, el) {
+      new Tabs(el, '.tab__btn', '.tab-content');
+    });
+  }
+
+  $('.tab__btn[data-title]').click(function(event) {
+    $('.title').text($(this).data('title'));
+  });
+  if (contactTabs.length) {
+    contactTabs = new Tabs(contactTabs, '.office', '.tab-content');
+  }
+
+  // filtering jobs
+  if (jobs.length) {
+    jobs = new Filter(jobs, '.office', {
+      itemSelector: '.jobs-tiles__item'
+    });
+  }
+
+  // slider in iphone on main page
+  if (interfaceSlider.length && winWidth <= breakpoint) {
+    interfaceSlider = new PhoneSlider(interfaceSlider);
+  }
+
+  if (testimonials.length && winWidth <= breakpoint) {
+    testimonials = new TestimonialsSlider(testimonials);
+  }
+
+  win.on('resize', function() {
+    winWidth = win.width();
+
+    if (winWidth <= breakpoint) {
+
+      if (interfaceSlider.length && !interfaceSlider.active) {
+        interfaceSlider = new PhoneSlider(interfaceSlider);
+      }
+
+      if (testimonials.active === false) {
+        testimonials.init();
+      } else if (testimonials.length) {
+        testimonials = new TestimonialsSlider(testimonials);
+      }
+    } else {
+
+      if (testimonials.active) {
+        testimonials.destroy();
+      }
+    }
+  });
+
+  // tooltip
+  if (tooltip) {
+    tooltip.tooltipster({
+      animation: 'fade',
+      position: 'bottom',
+      speed: 300,
+      delay: 300,
+      offsetX: 0,
+      offsetY: 20,
+      maxWidth: 480,
+      interactive: true,
+      trigger: 'hover',
+      functionInit: function() {
+        var content = this.find('.member__about');
+        return content;
+      }
+    });
+  }
+});
+
+},{"./modules/filter.js":2,"./modules/phone-slider.js":3,"./modules/press-slider.js":4,"./modules/tabs.js":5,"./modules/testimonials-slider.js":6}],2:[function(require,module,exports){
+function Filter(element, filterBtnSelector, props) {
+  this.wrapper     = element instanceof jQuery ? element : $(element);
+  this.filterBtn   = $(filterBtnSelector);
+  this.activeClass = 'is-active';
+  this.props       = props || {};
+
+  this.init();
+}
+
+Filter.prototype._initEvents = function() {
+  var _ = this;
+
+  _.filterBtn.on('click', function(e) {
+    e.preventDefault();
+    var btn = $(this);
+    var group = btn.data('group');
+    _.wrapper.shuffle('shuffle', group);
+    _.filterBtn.removeClass(_.activeClass);
+    btn.addClass(_.activeClass);
+  });
+};
+
+Filter.prototype.init = function(argument) {
+  var _        = this;
+  var defaults = {
+    speed: 350,
+    easing: 'ease-out',
+    itemSelector: '',
+    gutterWidth: 0,
+    columnWidth: 0
+  };
+
+  $.extend(defaults, _.props);
+
+  _._initEvents();
+  _.wrapper.shuffle(defaults);
+};
+
+module.exports = Filter;
+
+},{}],3:[function(require,module,exports){
+function PhoneSlider(element, breakpoint) {
+    this.wrapper    = element instanceof jQuery ? element : $(element);
+    this.phone      = this.wrapper.find('.interface-slider__screenshots');
+    this.text       = this.wrapper.find('.interface-slider__text');
+    this.prevArrow  = this.wrapper.find('.interface-slider__prev');
+    this.nextArrow  = this.wrapper.find('.interface-slider__next');
+    this.active     = false;
+
+    this.init();
+    return this;
+}
+
+PhoneSlider.prototype.init = function() {
+    var _ = this;
+    if ( _.active ) return;
+
+    _.phone.slick({
+        autoplay: false,
+        arrows: false,
+        asNavFor: _.text
+    });
+    _.text.slick({
+        asNavFor: _.phone,
+        arrows: true,
+        fade: true,
+        autoplay: false,
+        prevArrow: _.prevArrow,
+        nextArrow: _.nextArrow,
+    });
+
+    _.active = true;
+};
+
+module.exports = PhoneSlider;
+},{}],4:[function(require,module,exports){
+// require('slick-carousel');
+
+function Slider(selector) {
+    this.wrapper           = selector instanceof jQuery ? selector : $(selector);
+    this.slider            = this.wrapper.find('.press-slider__slides');
+    this.arrow             = this.wrapper.find('.press-slider__arrow');
+    this.navButton         = this.wrapper.find('.press-slider__btn');
+    this.activeClass       = 'is-active';
+    this.currentSlideIndex = 0;
+    this.positions         = [];
+    this.init();
+}
+
+
+Slider.prototype._initEvents = function() {
+    var _ = this;
+
+    _.navButton.on('click', function(e) {
+        e.preventDefault();
+        var index = $(this).index();
+        _.slider.slick('slickGoTo', index);
+    });
+
+    _.slider.on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+        _.currentSlideIndex = nextSlide;
+        _._updateButtons(currentSlide);
+        _._updateArrowPos();
+    });
+
+    $(window).on('resize', function() {
+        _._updatePositions();
+        _._updateArrowPos();
+    });
+};
+
+
+Slider.prototype._updateArrowPos = function() {
+    var _   = this,
+        btn = $(_.navButton[_.currentSlideIndex]),
+        pos = _.positions[_.currentSlideIndex];
+
+    _.arrow.css('left', pos);
+};
+
+
+Slider.prototype._updateButtons = function(index) {
+    var _ = this;
+
+    if ( typeof index == 'number' && index >= 0 ) {
+        $(_.navButton[index]).removeClass(_.activeClass);
+    }
+    else {
+        _.navButton.removeClass(_.activeClass);
+    }
+
+    $(_.navButton[_.currentSlideIndex]).addClass(_.activeClass);
+};
+
+
+Slider.prototype._updatePositions = function() {
+    var _ = this;
+
+    _.positions = [];
+
+    _.navButton.each(function(index, el) {
+        var btn = $(el),
+            pos = Math.ceil(btn.position().left + btn.outerWidth() / 2);
+
+        _.positions.push(pos);
+    });
+};
+
+
+Slider.prototype.init = function() {
+    var _ = this;
+
+    _._initEvents();
+    _._updatePositions();
+    _._updateButtons();
+    _._updateArrowPos();
+
+    _.slider.slick({
+        accessibility: false,
+        autoplay: true,
+        // fade: true,
+        // speed: 300,
+        arrows: false,
+        dots: false,
+        autoplaySpeed: 10000,
+        slide: '.press-slider__slide'
+    });
+};
+
+module.exports = Slider;
+},{}],5:[function(require,module,exports){
+function Tabs(wrapper, tab, content) {
+  this.tabs = $(wrapper).find(tab || '.js-tab');
+  this.content = $(wrapper).find(content || '.js-tab-content');
+  this.activeClass = 'is-active';
+  this.activeTabIndex = 0;
+
+  this._init();
+}
+
+Tabs.prototype._initEvents = function() {
+  var _ = this;
+
+  _.tabs.each(function(index, el) {
+    $(this).on('click', function(e) {
+      e.preventDefault();
+      _.changeContent(index);
+    });
+  });
+};
+
+Tabs.prototype._init = function() {
+  var _ = this;
+
+  _.tabs.each(function(index, el) {
+    if ($(el).hasClass(_.activeClass)) _.activeTabIndex = index;
+  });
+  _._initEvents();
+};
+
+Tabs.prototype.changeContent = function(index) {
+  var _ = this;
+
+  $(_.tabs[_.activeTabIndex]).removeClass(_.activeClass);
+  $(_.tabs[index]).addClass(_.activeClass);
+  $(_.content[_.activeTabIndex])
+      .removeClass(_.activeClass);
+
+  // .hide();
+  $(_.content[index])
+
+      // .show()
+      .addClass(_.activeClass);
+
+  _.activeTabIndex = index;
+};
+
+module.exports = Tabs;
+
+},{}],6:[function(require,module,exports){
+function TestimonialsSlider(element) {
+    this.wrapper = element instanceof jQuery ? element : $(element);
+    this.active = false;
+    this.init();
+    return this;
+}
+
+TestimonialsSlider.prototype.init = function() {
+    var _ = this;
+
+    if ( _.active ) return;
+
+    this.wrapper.slick({
+        arrows: true,
+        autoplay: false,
+        prevArrow: '<button type="button" class="icon icon-prev"></button>',
+        nextArrow: '<button type="button" class="icon icon-next"></button>',
+    });
+    _.active = true;
+};
+
+TestimonialsSlider.prototype.destroy = function() {
+    var _ = this;
+
+    if ( !_.active ) return;
+
+    _.wrapper.slick('unslick');
+    _.active = false;
+};
+
+module.exports = TestimonialsSlider;
+},{}]},{},[1])
+
+
 //# sourceMappingURL=main.js.map

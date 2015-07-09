@@ -29,6 +29,9 @@ $(document).ready(function() {
     });
   }
 
+  $('.tab__btn[data-title]').click(function(event) {
+    $('.title').text($(this).data('title'));
+  });
   if (contactTabs.length) {
     contactTabs = new Tabs(contactTabs, '.office', '.tab-content');
   }
