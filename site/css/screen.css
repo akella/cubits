@@ -510,6 +510,7 @@ ol.marked-list { list-style-type: decimal; }
 .step__title { display: block; margin-bottom: 19px; font-family: "AvenirNext-DemiBold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 28px; text-transform: uppercase; }
 
 .step__text { max-width: 200px; margin: auto; }
+.step__text a:hover { color: #F8CF5E; }
 
 .usage-map { float: left; width: 45.83333%; margin-left: -45px; }
 .usage-map img { display: block; margin: auto; max-width: 100%; }
@@ -781,7 +782,8 @@ ol.marked-list { list-style-type: decimal; }
 
 .statement__list > li:not(:first-child) { margin-top: 230px; }
 
-.roadmap { position: relative; max-width: 1300px; box-sizing: border-box; margin: auto; }
+.roadmap { position: relative; max-width: 1300px; box-sizing: border-box; margin: auto; margin-top: -50px; }
+@media only screen and (max-width: 600px) { .roadmap { margin-top: 0; } }
 .roadmap:before { content: ""; display: block; width: 100%; padding-bottom: 30.76923%; }
 
 .roadmap__list { position: absolute; top: 46%; left: 25px; right: 140px; height: 6px; margin-top: -3px; background: #343558; font-size: 0; }
