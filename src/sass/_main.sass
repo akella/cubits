@@ -860,9 +860,9 @@
   // height: 400px
   box-sizing: border-box
   margin: auto
-  margin-top: -50px 
+  margin-top: -50px
   +r(600)
-    margin-top: 0 
+    margin-top: 0
   &:before
     content: ""
     display: block
@@ -1271,16 +1271,19 @@ label.office
 
 
 .press-tiles
-  margin: percentage(-80/1140) -20px 80px
+  // margin: percentage(-80/1140) -20px 80px
+  margin: -80px -20px 80px
   display: flex
   justify-content: space-between
   align-content: space-between
   flex-wrap: wrap
   +r(1100)
     justify-content: center
-  .press-tiles__item
-    margin-top: percentage(80/1140)
-    padding: 0 20px
+
+.press-tiles__item
+  // margin-top: percentage(80/1140)
+  margin-top: 80px
+  padding: 0 20px
 
 
 .logotypes

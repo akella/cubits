@@ -835,16 +835,16 @@ ol.marked-list { list-style-type: decimal; }
 
 .tab:not(:first-child) { margin-top: 25px; }
 
-.tab__btn { display: block; width: 100%; box-sizing: border-box; padding: 0 10px 0 20.83333%; background: none; height: 52px; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; color: #343558; text-align: left; -webkit-transition: background 0.15s linear; transition: background 0.15s linear; box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset; }
-.tab__btn > span { display: inline-block; vertical-align: middle; line-height: 1.4; white-space: normal; }
-.tab__btn:first-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
-.tab__btn:last-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 -6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
-.tab__btn:only-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 6px 6px -6px rgba(5, 5, 5, 0.11) inset, 0 -6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
-.tab__btn:hover { background: #F8CF5E; color: #343558; }
-.tab__btn:active { background: #93C4D2; }
-.tab__btn.is-active { background: #F2F6F8; cursor: default; }
+.tab__btn, .non_tab__btn { display: block; width: 100%; box-sizing: border-box; padding: 0 10px 0 20.83333%; background: none; height: 52px; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; font-family: "AvenirNext-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; text-transform: uppercase; color: #343558; text-align: left; -webkit-transition: background 0.15s linear; transition: background 0.15s linear; box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset; }
+.tab__btn > span, .non_tab__btn > span { display: inline-block; vertical-align: middle; line-height: 1.4; white-space: normal; }
+.tab__btn:first-child, .non_tab__btn:first-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
+.tab__btn:last-child, .non_tab__btn:last-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 -6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
+.tab__btn:only-child, .non_tab__btn:only-child { box-shadow: 6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, -6px 0 6px -6px rgba(5, 5, 5, 0.11) inset, 0 6px 6px -6px rgba(5, 5, 5, 0.11) inset, 0 -6px 6px -6px rgba(5, 5, 5, 0.11) inset; }
+.tab__btn:hover, .non_tab__btn:hover { background: #F8CF5E; color: #343558; }
+.tab__btn:active, .non_tab__btn:active { background: #93C4D2; }
+.tab__btn.is-active, .non_tab__btn.is-active { background: #F2F6F8; cursor: default; }
 
-a.tab__btn { line-height: 52px; text-decoration: none; }
+a.tab__btn, a.non_tab__btn { line-height: 52px; text-decoration: none; }
 
 .offices { font-size: 0; text-align: center; }
 .offices .office { display: inline-block; }
@@ -920,9 +920,10 @@ label.office { cursor: pointer; }
 .tab-content > .title:first-child { margin-top: 0; }
 .tab-content.is-active { display: block; }
 
-.press-tiles { margin: -7.01754% -20px 80px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.press-tiles { margin: -80px -20px 80px; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-align-content: space-between; -ms-flex-line-pack: justify; align-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 @media only screen and (max-width: 1100px) { .press-tiles { -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; } }
-.press-tiles .press-tiles__item { margin-top: 7.01754%; padding: 0 20px; }
+
+.press-tiles__item { margin-top: 80px; padding: 0 20px; }
 
 .logotypes { text-align: center; max-width: 860px; margin: auto; }
 .logotypes:after { content: " "; display: table; clear: both; }

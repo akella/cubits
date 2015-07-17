@@ -33,9 +33,10 @@ $(document).ready(function() {
   $('.tab__btn[data-title]').click(function(event) {
     $('.title').text($(this).data('title'));
   });
+
   //randomize team members
   var ul = document.querySelector('.board');
-  if(ul){
+  if (ul) {
     for (var i = ul.children.length; i >= 0; i--) {
       ul.appendChild(ul.children[Math.random() * i | 0]);
     }
